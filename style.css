@@ -5,6 +5,13 @@ html{
 body {
     margin          : 0px;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
 ul{
     text-decoration : none;
     list-style      : none;
@@ -80,13 +87,55 @@ h1 {
     margin          : 0%;
 }
 .line-headline{
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     width: 100%;
 }
-.line-headline .line{
-    border: 0.5px solid black;
+.line{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     width: 800px;
+}
+.all-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+}
+.image {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+}
+.headline-bottom .h2 {
+    text-align: center;
+    max-width: 90%;
+}
+.feature1 {
+    display: flex;
+    flex-direction: row;
+}
+.feature1 .text{
+    flex-direction: column;
+    width: 900px;
+}
+.feature1 .image{
+    height: 200px;
+    width: 200px;
+}
+.feature2 {
+    display: flex;
+    flex-direction: row;
+}
+.feature2 .text{
+    flex-direction: column;
+}
+.feature3 {
+    display: flex;
+    flex-direction: row;
+}
+.feature3 .text{
+    flex-direction: column;
 }
