@@ -1,87 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 html{
-    font-family: "Montserrat";
+    font-family         : "Montserrat";
 }
 body {
-    margin          : 0px;
+    margin              : 0px;
 }
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    display             : flex;
+    flex-direction      : column;
+    align-items         : center;
+    justify-content     : center;
+    width               : 80%;
 }
 ul{
-    text-decoration : none;
-    list-style      : none;
+    text-decoration     : none;
+    list-style          : none;
 }
 p {
-    font-size       : 20px;
+    font-size           : 20px;
 }
 h1 {
-    font-size       : 60px ;
+    font-size           : 60px ;
 }
 .container{
-    background-color: #A3CFBB;
-    width           : 100%;
-    height          : 95;
-    display         : flex;
+    background-color    : #A3CFBB;
+    width               : 100%;
+    height              : 95;
+    display             : flex;
 }
 .item {
-    padding         : 0.5rem;
+    padding             : 0.5rem;
 }
 .item li {
-    display         : inline;
-    padding-right   : 20px ;
+    display             : inline;
+    padding-right       : 20px ;
 }
 .logo {
-    flex-grow       : 1;
+    flex-grow           : 1;
 }
 .container {
-    display         : flex;
-    align-items     : center;
+    display             : flex;
+    align-items         : center;
 }
 .profil{
-    display         : flex;
-    align-items     : center;
-    background-color: blanchedalmond;
-    height          : 25px;
-    width           : 25px;
-    border-radius   : 10rem;
-    flex-direction  : column;
-    gap             : 2px;
-    margin-right    : 20px;
+    display             : flex;
+    align-items         : center;
+    background-color    : blanchedalmond;
+    height              : 25px;
+    width               : 25px;
+    border-radius       : 10rem;
+    flex-direction      : column;
+    gap                 : 2px;
+    margin-right        : 20px;
 }
 .profil .kepala{
-    background-color: black;
-    height          : 15px;
-    width           : 15px;
-    border-radius   : 10rem;
+    background-color    : black;
+    height              : 15px;
+    width               : 15px;
+    border-radius       : 10rem;
 }
 .profil .badan{
-    background-color: black;
-    height          : 10px;
-    width           : 20px;
-    border-radius   : 10px 10px 20px 20px/10px 10px 10px 10px;
+    background-color    : black;
+    height              : 10px;
+    width               : 20px;
+    border-radius       : 10px 10px 20px 20px/10px 10px 10px 10px;
 }
 .headline{
-    height: auto;
-    width: 100%;
+    height              : auto;
+    width               : 100%;
 }
 .hero {
-    height: 550px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 20px;
-    max-width: 800px;
+    height              : 550px;
+    width               : 100%;
+    display             : flex;
+    justify-content     : center;
+    align-items         : start;
+    flex-direction      : column;
+    padding-left        : 20px;
+    max-width           : 800px;
 }
 .hero h1{
-    margin          : 0%;
-    font-weight: 500;
+    margin              : 0%;
+    font-weight         : 500;
 }
 .hero p{
     margin          : 0%;
@@ -113,7 +113,7 @@ h1 {
     text-align: center;
     max-width: 90%;
 }
-.feature1 {
+/* .feature1 {
     display: flex;
     flex-direction: row;
 }
@@ -138,4 +138,4 @@ h1 {
 }
 .feature3 .text{
     flex-direction: column;
-}
+} */

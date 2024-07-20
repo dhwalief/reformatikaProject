@@ -1,0 +1,87 @@
+* {
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0 ;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    background-color: #118271;
+    width: 260px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.main-content {
+    background-color: aliceblue;
+    flex-grow: 1;
+}
+
+.sidebar .description-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar .header .list-item {
+    display: flex;
+    flex-direction: row;/*! Jika ingin ke tengah ganti menjadi column*/
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.sidebar .header .list-item .icon {
+    margin-right: 12 px;/*! Belum ada*/
+}
+
+.sidebar .header .ilustration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 10px 0 22px 0;
+}
+
+.sidebar .main .list-item .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.sidebar .main .list-item .icon {
+    /* padding: 10px 0px 0px 0px; */
+    margin-right: 12px;
+}
+
+.sidebar .main .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    width: 212px;
+    box-sizing: border-box;
+}
+
+.sidebar .main .list-item:hover {
+    background: #0c6154;
+    transition: all ease-in .2s;
+}
