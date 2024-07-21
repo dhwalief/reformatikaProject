@@ -3,10 +3,12 @@
     padding: 0;
     margin: 0 ;
 }
+/* *Layout */
 .container {
     display: flex;
     min-height: 100vh;
 }
+
 .sidebar {
     background-color: #118271;
     width: 260px;
@@ -17,10 +19,9 @@
 }
 
 .main-content {
-    background-color: aliceblue;
     flex-grow: 1;
 }
-
+/* *SideBar */
 .sidebar .description-header {
     font-style: normal;
     font-weight: 700;
@@ -45,7 +46,7 @@
 }
 
 .sidebar .header .list-item .icon {
-    margin-right: 12 px;/*! Belum ada*/
+    margin-right: 12 px;
 }
 
 .sidebar .header .ilustration {
@@ -84,4 +85,127 @@
 .sidebar .main .list-item:hover {
     background: #0c6154;
     transition: all ease-in .2s;
+}
+
+.main-content .header .list-item {
+    /* ! Jangan lupa dihapus */
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/** Search-Toggle */
+.main-content .header .list-item .search-toggle {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-content .header .list-item .search {
+    --padding: 8px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: var(--padding);
+    border-radius: 28px;
+    background-color: #f6f6f6;
+}
+
+.main-content .header .list-item .search-input {
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+}
+/* *Notification */
+.main-content .header .list-item .notification {
+    --padding: 8px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: var(--padding);
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+/* *Profile */
+.main-content .header .list-item .profile {
+    --padding: 8px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: var(--padding);
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.main-content .headline {
+    padding: 24px;
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/** Box */
+.main-content .content {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content .box {
+    padding: 24px;
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.content .box-content .list-item {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+.box-content a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#p1 {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#p2 {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#p3 {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#p4 {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#p5 {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 8px;
 }

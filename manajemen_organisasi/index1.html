@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>    
+    <title>Manajemen Organisasi</title>    
     <!-- fonts Google -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -12,6 +12,8 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- * SideBar -->
 
         <section class="sidebar">
             <div class="header">
@@ -62,25 +64,73 @@
 
         </section>
 
+        <!-- *Content -->
+
         <section class="main-content">
+            
+            <!-- * Header -->
+            
             <div class="header">
                 <div class="list-item">
-                    <div class="search">
-
+                    <div class="menu-botton">
+                        
+                    </div>
+                    <div class="search-toggle">
+                        <div class="search">
+                            <img src="assets/bi--search.png" alt="" height="20px" width="20px">
+                            <input class="search-input" type="search" placeholder="Search">    
+                        </div>
                     </div>
                     <div class="theme">
-                    
+                        <!-- TODO: Buat Tema? -->
                     </div>
                     <div class="notification">
-                    
+                        <img src="assets/notification-line-black.png" alt="" height="20px" width="20px">
                     </div>
                     <div class="profile">
-                        
+                        <img src="assets/profile-black.png" alt="" height="20px" width="20px">
                     </div>
                 </div>
             </div>
+
+            <!--* Headline -->
+
+            <div class="headline">
+                <div class="title">
+                    <h2>Kegiatan</h2>
+                </div>
+            </div>
+
+            <!--* Konten -->
+            
+            <div class="content">
+                <div class="box">
+                    <div class="box-content">
+                        <div class="list-item">
+                            <p id="p1">#</p>
+                            <p id="p2">Nama</p>
+                            <p id="p3">Tanggal</p>
+                            <p id="p4">Ketua Panitia</p>
+                            <p id="p5">Status</p>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="list-item">
+                            <a href="#">
+                                <p id="p1">1</p>
+                                <p id="p2">Rapat</p>
+                                <p id="p3">2 Maret 2024</p>
+                                <p id="p4">Budi</p>
+                                <p id="p5">Selesai</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         
     </div>
 </body>
+<script src="scriptIndex.js"></script>
 </html>
