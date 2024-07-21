@@ -151,6 +151,19 @@
     gap: 12px;
 }
 
+.main-content .headline .page {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.main-content .headline .page a {
+    text-decoration: none;
+    color: #333333;
+}
+
 /** Box */
 .main-content .content {
     display: flex;
@@ -171,41 +184,30 @@
     flex-direction: row;
     box-sizing: border-box;
     font-size: 16px;
+    margin-bottom: 8px; /* Menambah margin antar item */
 }
-
-
 
 .box-content a {
     text-decoration: none;
     color: #333333;
+    display: flex; /* Menggunakan flex agar item dalam link juga fleksibel */
+    flex-direction: row;
 }
 
-#p1 {
+.box-content a:hover {
+    background-color: #f0f0f0; /* Menambah efek hover */
+}
+
+.item-column {
     flex-grow: 1;
     padding: 12px;
     border-radius: 8px;
 }
 
-#p2 {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 8px;
+.box-content:nth-child(even) .list-item {
+    background-color: #f9f9f9; /* Warna berbeda untuk baris genap */
 }
 
-#p3 {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 8px;
-}
-
-#p4 {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 8px;
-}
-
-#p5 {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 8px;
+.box-content:nth-child(odd) .list-item {
+    background-color: #ffffff; /* Warna berbeda untuk baris ganjil */
 }
