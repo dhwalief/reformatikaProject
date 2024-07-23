@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0 ;
 }
-/* *Layout */
+/* ! Layout */
 .container {
     display: flex;
     min-height: 100vh;
@@ -21,7 +21,7 @@
 .main-content {
     flex-grow: 1;
 }
-/* *SideBar */
+/* ! SideBar */
 .sidebar .description-header {
     font-style: normal;
     font-weight: 700;
@@ -87,6 +87,8 @@
     transition: all ease-in .2s;
 }
 
+/* ! Header list */
+
 .main-content .header .list-item {
     /* ! Jangan lupa dihapus */
     padding: 12px;
@@ -142,6 +144,7 @@
     cursor: pointer;
 }
 
+/* !Konten */
 .main-content .headline {
     padding: 24px;
     display: flex;
@@ -164,38 +167,39 @@
     color: #333333;
 }
 
-/** Box */
+/*! Box */
 .main-content .content {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin: 25px;
 }
 
-.main-content .box {
+/* .main-content .box {
     padding: 24px;
     width: 90%;
     background-color: #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 24px;
-}
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    }
 
 .content .box-content .list-item {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     font-size: 16px;
-    margin-bottom: 8px; /* Menambah margin antar item */
+    margin-bottom: 8px; 
 }
 
 .box-content a {
     text-decoration: none;
     color: #333333;
-    display: flex; /* Menggunakan flex agar item dalam link juga fleksibel */
+    display: flex;
     flex-direction: row;
 }
 
 .box-content a:hover {
-    background-color: #f0f0f0; /* Menambah efek hover */
+    background-color: #f0f0f0;
 }
 
 .item-column {
@@ -205,9 +209,9 @@
 }
 
 .box-content:nth-child(even) .list-item {
-    background-color: #f9f9f9; /* Warna berbeda untuk baris genap */
+    background-color: #f9f9f9;
 }
 
 .box-content:nth-child(odd) .list-item {
-    background-color: #ffffff; /* Warna berbeda untuk baris ganjil */
-}
+    background-color: #ffffff; 
+} */

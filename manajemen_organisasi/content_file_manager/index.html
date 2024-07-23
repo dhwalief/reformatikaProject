@@ -9,6 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -37,25 +39,25 @@
                     </a>
                 </div>
                 <div class="list-item">
-                    <a href="#">
+                    <a href="../content-kegiatan/index.html">
                         <img src="../.assets/task.svg" alt="" class="icon" > <!--TODO: Ada yang perlu diperbaiki-->
                         <span class="description">Kegiatan</span>
                     </a>
                 </div>
                 <div class="list-item">
-                    <a href="#">
+                    <a href="../content-keuangan/index.html">
                         <img src="../.assets/dasboard-white.svg" alt="" class="icon" > <!--!Belum ada icon-->
                         <span class="description">Keuangan</span>
                     </a>
                 </div>
                 <div class="list-item">
-                    <a href="#">
+                    <a href="../content-file-manager/index.html">
                         <img src="../.assets/folder.svg" alt="" class="icon" > <!--!Belum ada icon-->
                         <span class="description">File Manager</span>
                     </a>
                 </div>
                 <div class="list-item">
-                    <a href="#">
+                    <a href="../content-arsip/index.html">
                         <img src="../.assets/dasboard-white.svg" alt="" class="icon" > <!--!Belum ada icon-->
                         <span class="description">Arsip</span>
                     </a>
@@ -97,75 +99,66 @@
 
             <div class="headline">
                 <div class="title">
-                    <h2>Kegiatan</h2>
+                    <h2>File Manager</h2>
                 </div>
                 <div class="page">
                     <a href="#">Home</a>
                     <img src="../.assets/right-arrow-Black.png" alt="" height="20px" width="20px">
-                    <a href="#">Kegiatan</a>
+                    <a href="#">File manager</a>
                 </div>
             </div>
 
             <!--* Konten -->
             
             <div class="content">
-    <div class="box">
-        <div class="box-content">
-            <div class="list-item">
-                <p class="item-column">#</p>
-                <p class="item-column">Nama</p>
-                <p class="item-column">Tanggal</p>
-                <p class="item-column">Ketua Panitia</p>
-                <p class="item-column">Status</p>
+
+                <x class="group-folder">
+                    <div class="box">
+                        <img src="../.assets/logo-google-drive.png" alt="googgle-drive logo" height="60px" width="60px">
+                        <div class="text">
+                            <a href="#">HMUIN@gmail.com</a>
+                            <div class="chart">
+                                <div class="progress">
+                                    <div class="percent">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../.assets/logo-google-drive.png" alt="googgle-drive logo" height="60px" width="60px">
+                        <div class="text">
+                            <a href="#">HMJUIN@gmail.com</a>
+                            <div class="chart">
+                                <div class="progress">
+                                    <div class="percent">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="file-content">
+                    <div class="box">
+                        <div class="head">
+                            <div class="search-toggle">
+                                <div class="search">
+                                    <img src="../.assets/bi--search.png" alt="" height="20px" width="20px">
+                                    <input class="search-input" type="search" placeholder="Search">    
+                                </div>
+                            </div>
+                            <div class="manage-file">
+                                <div class="add">
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                    <p>New Folder</p>
+                                </div>
+                                <div class="upload">
+                                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                    <p>Upload File</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="box-content">
-            <a href="#" class="list-item">
-                <p class="item-column">1</p>
-                <p class="item-column">Rapat</p>
-                <p class="item-column">2 Maret 2024</p>
-                <p class="item-column">Budi</p>
-                <p class="item-column">Selesai</p>
-            </a>
-        </div>
-        <div class="box-content">
-            <a href="#" class="list-item">
-                <p class="item-column">2</p>
-                <p class="item-column">Rapat</p>
-                <p class="item-column">2 Maret 2024</p>
-                <p class="item-column">Budi</p>
-                <p class="item-column">Sedang berlangsung</p>
-            </a>
-        </div>
-        <div class="box-content">
-            <a href="#" class="list-item">
-                <p class="item-column">3</p>
-                <p class="item-column">Rapat</p>
-                <p class="item-column">2 Maret 2024</p>
-                <p class="item-column">Budi</p>
-                <p class="item-column">Ditunda</p>
-            </a>
-        </div>
-        <div class="box-content">
-            <a href="#" class="list-item">
-                <p class="item-column">4</p>
-                <p class="item-column">Rapat</p>
-                <p class="item-column">2 Maret 2024</p>
-                <p class="item-column">Budi</p>
-                <p class="item-column">Dibatalkan</p>
-            </a>
-        </div>
-        <div class="box-content">
-            <a href="#" class="list-item">
-                <p class="item-column">5</p>
-                <p class="item-column">Rapat</p>
-                <p class="item-column">2 Maret 2024</p>
-                <p class="item-column">Budi</p>
-                <p class="item-column">Akan berlangsung</p>
-            </a>
-        </div>
-    </div>
-</div>
 
             
 

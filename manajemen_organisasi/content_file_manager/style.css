@@ -3,7 +3,9 @@
     padding: 0;
     margin: 0 ;
 }
-/* *Layout */
+
+/* !Layout */
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -20,8 +22,11 @@
 
 .main-content {
     flex-grow: 1;
+    background-color: #F5F5F5;
 }
-/* *SideBar */
+
+/* !SideBar_konten */
+
 .sidebar .description-header {
     font-style: normal;
     font-weight: 700;
@@ -94,13 +99,15 @@
     align-items: center;
     gap: 10px;
 }
-/** Search-Toggle */
-.main-content .header .list-item .search-toggle {
+
+/* !Search-Toggle */
+
+.main-content .search-toggle {
     display: flex;
     flex-grow: 1;
 }
 
-.main-content .header .list-item .search {
+.main-content .search-toggle .search {
     --padding: 8px;
     display: flex;
     align-items: center;
@@ -110,7 +117,7 @@
     background-color: #f6f6f6;
 }
 
-.main-content .header .list-item .search-input {
+.main-content .search-toggle .search-input {
     font-size: 16px;
     font-family: "Montserrat";
     color: #333333;
@@ -119,7 +126,9 @@
     border: none;
     background: transparent;
 }
-/* *Notification */
+
+/* !Notification */
+
 .main-content .header .list-item .notification {
     --padding: 8px;
     display: flex;
@@ -130,7 +139,9 @@
     background-color: #f6f6f6;
     cursor: pointer;
 }
-/* *Profile */
+
+/* !Profile */
+
 .main-content .header .list-item .profile {
     --padding: 8px;
     display: flex;
@@ -164,50 +175,120 @@
     color: #333333;
 }
 
-/** Box */
-.main-content .content {
+/* !Konten */
+
+/* .main-content .content {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px ;
+} */
+
+.main-content .content .group-folder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-content .content .box { /*! Rujukan box*/
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    padding: 24px;
+    margin-left: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .content .box .text {
+    box-sizing: border-box;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.main-content .content .box .text a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.main-content .content .box .text .chart {
+    box-sizing: border-box;
+    margin-top: 25px;
+    width: 160px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.main-content .content .box .text .chart .progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+.main-content .content .box .text .chart .progress .percent {
+    color: #f6f6f6;
+    font-size: 13px;
+    align-items: center;
     justify-content: center;
 }
 
-.main-content .box {
-    padding: 24px;
-    width: 90%;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 24px;
+/* !File Box */
+.main-content .file-content .box {
+    margin-top: 30px;
 }
 
-.content .box-content .list-item {
+/* ! head */
+.file-content .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    gap: 12px;
+}
+
+/* ! Search */
+.file-content .head .search-toggle .search {
+    background-color: #FFFFFF;
+}
+
+.file-content .head .search-toggle .search-input {
+    color: #333333;
+}
+/* ! Manage file */
+.file-content .head .manage-file {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
-    font-size: 16px;
-    margin-bottom: 8px; /* Menambah margin antar item */
+    gap: 20px ;
 }
-
-.box-content a {
-    text-decoration: none;
-    color: #333333;
-    display: flex; /* Menggunakan flex agar item dalam link juga fleksibel */
+/* *add file */
+.file-content .head .manage-file .add {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    cursor: pointer;
+    background-color: rgb(69, 135, 211);
+    box-sizing: border-box;
+    border-radius: 10px;
 }
-
-.box-content a:hover {
-    background-color: #f0f0f0; /* Menambah efek hover */
-}
-
-.item-column {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 8px;
-}
-
-.box-content:nth-child(even) .list-item {
-    background-color: #f9f9f9; /* Warna berbeda untuk baris genap */
-}
-
-.box-content:nth-child(odd) .list-item {
-    background-color: #ffffff; /* Warna berbeda untuk baris ganjil */
+/* *upload */
+.file-content .head .manage-file .upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    cursor: pointer;
+    background-color: #118271;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
 }
