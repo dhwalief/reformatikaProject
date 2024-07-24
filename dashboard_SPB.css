@@ -1,0 +1,436 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.background-section {
+  background: url("/MATERIAL_ASSET/gambar.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+}
+
+.toggle-dark-mode {
+  background-color: #118271;
+  font-size: 50px;
+  margin-left: 65px;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.background-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.top-navbar {
+  background-color: #118271;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 200px);
+  left: 200px;
+  z-index: 1000;
+}
+
+.top-navbar .nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.top-navbar .nav-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.top-navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.top-navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.top-navbar .nav-links a:hover {
+  background-color: #007b42;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 200px;
+  transition: margin-left 0.3s ease;
+  -webkit-transition: margin-left 0.3s ease;
+  -moz-transition: margin-left 0.3s ease;
+  -ms-transition: margin-left 0.3s ease;
+  -o-transition: margin-left 0.3s ease;
+}
+
+nav.sidebar {
+  background-color: #118271;
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.sidebar .logo img {
+  width: 155px;
+}
+
+.sidebar .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.sidebar .nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar .nav-links a:hover {
+  background-color: #007b42;
+  padding-left: 30px;
+}
+
+header {
+  background: url("/MATERIAL_ASSET/gambar.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header .header-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  animation: textSlideIn 1.5s ease-out;
+}
+
+header p {
+  font-size: 1.5rem;
+  animation: textSlideIn 1.5s ease-out;
+  animation-delay: 0.5s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #00a859;
+  margin: 10px auto 0;
+}
+
+#tentang .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-content img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+  transform: scale(1.1);
+}
+
+.about-content p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#dampak {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#dampak .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 5fr));
+  gap: 50px;
+}
+
+.impact-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.impact-item:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.impact-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #007b42;
+}
+
+.impact-item:hover::before {
+  height: 100%;
+}
+
+#solusi {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#solusi p {
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  -webkit-animation: fadeInUp 1s ease-in-out;
+}
+
+#solusi button {
+  background-color: #00a859;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#solusi button:hover {
+  background-color: #007b42;
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #118271;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  animation: fadeInUp 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  nav.sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+
+  #solusi p {
+    font-size: 1rem;
+  }
+
+  #solusi button {
+    font-size: 0.875rem;
+  }
+}
+
+/* Default light mode */
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar, sidebar, and footer adjustments */
+nav.top-navbar,
+nav.sidebar,
+footer {
+  background-color: #118271;
+}
+
+body.dark-mode nav.top-navbar,
+body.dark-mode nav.sidebar,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .top-navbar .nav-links a,
+body.dark-mode .sidebar .nav-links a,
+body.dark-mode footer {
+  color: #e0e0e0;
+}
+
+/* Add any other necessary style adjustments here */
