@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  image-rendering: optimizeQuality;
+  background: url("/MATERIAL_ASSET/kontakkami.jpg") no-repeat center
+    center/cover;
+}
+.header {
+  background-color: #4caf50;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.header img {
+  width: 45px;
+  display: flex;
+}
+
+.header nav a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+}
+.content {
+  text-align: justify;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  background-color: #222;
+  text-align: center;
+}
+.footer p {
+  text-align: start;
+}
