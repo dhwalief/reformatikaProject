@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-SPB</title>
+    <link rel="stylesheet" href="dashboard_SPB.css" />
+  </head>
+  <body>
+    <!-- Small Top Navbar -->
+    <nav class="top-navbar">
+      <div class="nav-logo">
+        <img
+          src="/MATERIAL_ASSET/logo_UIN.png"
+          alt="Logo"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="Form_Laporan.html">Laporan</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#dampak">Dampak</a></li>
+        <li><a href="#solusi">Solusi</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="logo">
+        <img
+          src="/MATERIAL_ASSET/logo_UIN.png"
+          alt="Logo Kampus"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="Form_Laporan.html">Laporan</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#dampak">Dampak</a></li>
+        <li><a href="#solusi">Solusi</a></li>
+        <div>
+        <!--Dark Mode-->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌙</button>
+      </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Header Section -->
+      <header id="home">
+        <div class="header-content">
+          <h1>SISTEM PELAPORAN BULLYING</h1>
+          <p>Solusi baru untuk kampus peradaban yang lebih maju</p>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Tentang Section -->
+        <section id="tentang" class="background-section">
+          <div class="section-content">
+            <h2>Tentang</h2>
+            <div class="about-content">
+              <img src="/MATERIAL_ASSET/bully.png" alt="Gambar Bullying" />
+              <p>
+                Bullying Pembulian adalah bentuk perilaku agresif di mana
+                seseorang dengan sengaja dan berulang kali menyebabkan kerugian,
+                baik secara fisik maupun emosional, kepada orang lain.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dampak Bullying Section -->
+        <section id="dampak" class="background-section">
+          <div class="section-content">
+            <h2>Dampak Bullying</h2>
+            <div class="impact-grid">
+              <div class="impact-item">
+                <strong>1. Masalah Mental:</strong> Korban mengalami kecemasan,
+                depresi, harga diri rendah, dan gangguan mental lainnya.
+              </div>
+              <div class="impact-item">
+                <strong>2. Gangguan Tidur:</strong> Korban mengalami insomnia,
+                mimpi buruk, dan gangguan tidur lainnya.
+              </div>
+              <div class="impact-item">
+                <strong>3. Performa Akademik:</strong> Korban mengalami
+                penurunan dalam prestasi akademik. Secara umum nilai-nilai
+                turun.
+              </div>
+              <div class="impact-item">
+                <strong>4. Melukai Diri Sendiri:</strong> Korban mungkin melukai
+                diri sendiri atau berpikir tentang bunuh diri.
+              </div>
+              <div class="impact-item">
+                <strong>5. Pola Makan:</strong> Korban mengalami masalah makan
+                seperti makan terlalu sedikit atau terlalu banyak.
+              </div>
+              <div class="impact-item">
+                <strong>6. Isolasi Sosial:</strong> Korban mengalami kesulitan
+                dalam berinteraksi dengan orang lain dan mungkin menghindari
+                situasi sosial.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Solusi Section -->
+        <section id="solusi" class="background-section">
+          <div class="section-content">
+            <h2>Solusi</h2>
+            <p>
+              Diberikan beberapa langkah perubahan yang tersedia untuk mengatasi
+              bullying di kampus dan mengurangi dampak negatifnya.
+            </p>
+            <button class="laporkan">
+              <b
+                ><a href="/WORK_STATION/Form_Laporan.html"
+                  >Laporkan Sekarang</a
+                ></b
+              >
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer id="contact">
+        <p>&copy; 2024 Dashboard-SPB. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="dashboard_SPB.js"></script>
+  </body>
+</html>
