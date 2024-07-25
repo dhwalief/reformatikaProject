@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Data Terpusat UIN Alauddin Makassar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navigasi Bar Start -->
+    <header>
+      <nav>
+        <img src="UINLogo.png" alt="Logo UIN Alauddin Makassar" class="logo" />
+        <ul>
+          <li class="nav-item">
+            <a href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portal">Portal</a>
+            <ul class="dropdown-menu">
+              <li><a href="#sub1">Submenu 1</a></li>
+              <li><a href="#sub2">Submenu 2</a></li>
+              <li><a href="#sub3">Submenu 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#lentera">Lentera</a>
+            <ul class="dropdown-menu">
+              <li><a href="#sub1">Submenu 1</a></li>
+              <li><a href="#sub2">Submenu 2</a></li>
+              <li><a href="#sub3">Submenu 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#organisasi">Organisasi</a>
+            <ul class="dropdown-menu">
+              <li><a href="#sub1">Submenu 1</a></li>
+              <li><a href="#sub2">Submenu 2</a></li>
+              <li><a href="#sub3">Submenu 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#report">Report</a>
+            <ul class="dropdown-menu">
+              <li><a href="#sub1">Submenu 1</a></li>
+              <li><a href="#sub2">Submenu 2</a></li>
+              <li><a href="#sub3">Submenu 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#profile">
+              <img src="profile.png" alt="Profile" class="profile-pic" />
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="UINhomePage.png"
+        alt="UIN Alauddin Makassar"
+        class="main-image"
+      />
+      <div class="caption">
+        <h1 class="isiCaption">
+          <span id="typing-text-line1"></span><br />
+          <span id="typing-text-line2"></span>
+        </h1>
+        <br />
+        <p id="typing-subtext"></p>
+      </div>
+    </header>
+    <!-- Navigasi Bar End -->
+
+    <!-- Slider Start -->
+
+    <main>
+      <section id="features">
+        <h2>Fitur Utama</h2>
+        <p>
+          Akses berbagai fitur di Pusat Data UIN Alauddin Makassar sesuai dengan
+          keinginan
+        </p>
+        <div class="slider">
+          <div class="slider-wrapper">
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption_Slider">
+                  <h2>PORTAL MAHASISWA</h2>
+                  <p>
+                    Temukan kemudahan dalam mengelola aktivitas akademik Anda di
+                    satu tempat. Dengan Portal Akademik, semua informasi penting
+                    tentang jadwal, nilai, dan pengumuman dapat diakses dengan
+                    cepat dan mudah.
+                  </p>
+                  <button>Masuk Portal</button>
+                </div>
+              </div>
+              <div class="gambarSlide">
+                <img src="portal.png" alt="Portal Mahasiswa" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption_Slider">
+                  <h2>LENTERA PENGETAHUAN</h2>
+                  <p>
+                    Inspirasi dan informasi terbaru untuk Anda yang haus akan
+                    pengetahuan. Dengan Lentera Pengetahuan, Anda dapat
+                    mengakses sumber daya belajar yang kaya dan mendalam setiap
+                    saat.
+                  </p>
+                  <button>Lihat Lentera</button>
+                </div>
+              </div>
+              <div class="gambarSlide">
+                <img src="Lentera.png" alt="Lentera" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption_Slider">
+                  <h2>MANAJEMEN ORGANISASI</h2>
+                  <p>
+                    Kelola organisasi dengan mudah dan efektif bersama kami.
+                    Fitur Manajemen Organisasi kami dirancang untuk membantu
+                    Anda mengatur struktur, mengelola anggota, dan meningkatkan
+                    kolaborasi tim secara efisien.
+                  </p>
+                  <button>Masuk Sistem</button>
+                </div>
+              </div>
+              <div class="gambarSlide">
+                <img src="manajemenOrganisasi.png" alt="Manajemen Organisasi" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption_Slider">
+                  <h2>LAPORAN BULLYING</h2>
+                  <p>
+                    Suara Anda penting: Laporkan bullying untuk menciptakan
+                    lingkungan yang lebih aman. Dengan sistem laporan kami yang
+                    anonim dan aman, Anda dapat membantu menghentikan bullying
+                    dan melindungi diri serta orang lain.
+                  </p>
+                  <button>Laporkan</button>
+                </div>
+              </div>
+              <div class="gambarSlide">
+                <img src="LaporanBullying.png" alt="Laporan Bullying" />
+              </div>
+            </div>
+          </div>
+          <div class="navigation-container">
+            <button class="prev" onclick="plusSlides(-1)">&lt;</button>
+            <span id="slider-title">Portal Mahasiswa</span>
+            <button class="next" onclick="plusSlides(1)">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider End  -->
+
+      <!-- Informasi akademik star -->
+
+      <section id="academic-info">
+        <h2>Informasi Akademik</h2>
+        <p>
+          Temukan program beasiswa, kegiatan akademik, dan kolaborasi
+          internasional terbaru. Dapatkan dukungan finansial dan peluang
+          pengembangan diri.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <img
+              src="https://storage.nu.or.id/storage/post/1_1/mid/1000334059_1719995675.webp"
+              alt="Beasiswa Kominfo & Chevening"
+            />
+            <div class="captionInformation">
+              <p>20/19/2024</p>
+              <b><p>Beasiswa Kominfo & Chevening</p></b>
+              <p>
+                Dukung program beasiswa yang berfokus pada peradaban Islam,
+                menciptakan kemampuan dan kemandirian bagi mahasiswa.
+              </p>
+            </div>
+          </div>
+          <!-- More cards as needed -->
+        </div>
+      </section>
+
+      <!-- Informasi akademik end -->
+
+      <!-- More News -->
+      <div class="moreNews">
+        <div class="videoCampus">
+          <section id="videos">
+            <h2>Campus Video</h2>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/your-video-id"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
+        </div>
+        <div class="beritaKampus">
+          <section id="news">
+            <h2>Berita Kampus & Update</h2>
+            <div class="news-cards">
+              <div class="news-card">
+                <p>25/06/2024</p>
+                <p>
+                  Mahasiswa Teknik Informatika UIN Alauddin Makassar Raih Juara
+                  1 dan 2 Pada Event Hackathon Devforge
+                </p>
+              </div>
+              <div class="news-card">
+                <p>06/09/2023</p>
+                <p>
+                  Prodi Teknik Informatika UIN Alauddin Makassar Sambut 101
+                  Mahasiswa Baru, Dua Diantaranya Asal Sudan
+                </p>
+              </div>
+              <div class="news-card">
+                <p>06/09/2023</p>
+                <p>
+                  Prodi Teknik Informatika UIN Alauddin Makassar Sambut 101
+                  Mahasiswa Baru, Dua Diantaranya Asal Sudan
+                </p>
+              </div>
+
+              <!-- More news cards as needed -->
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Contact US -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Hubungi kami untuk informasi lebih lanjut atau pertanyaan melalui form
+          di sebelah. Kami siap membantu Anda dengan cepat dan efisien.
+        </p>
+        <div class="kontak">
+          <div class="kontakForm">
+            <form>
+              <input type="text" placeholder="Nama" />
+              <input type="email" placeholder="Email" />
+              <textarea placeholder="Pesan"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=your-map-embed-id"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h3>Tentang Kami</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam
+            purus sit amet luctus venenatis.
+          </p>
+        </div>
+        <div class="footer-center">
+          <h3>Hubungi Kami</h3>
+          <p>Jl. Contoh No. 123, Makassar, Indonesia</p>
+          <p>Email: info@uin-alauddin.ac.id</p>
+          <p>Phone: +62 123 456 789</p>
+        </div>
+        <div class="footer-right">
+          <h3>Sosial Media</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Universitas Islam Negeri Alauddin Makassar. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
