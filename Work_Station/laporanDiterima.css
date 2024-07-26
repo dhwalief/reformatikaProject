@@ -1,26 +1,11 @@
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: auto;
   background-color: #ffffff;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.header {
-  background-color: #118271;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.header .navbar-brand img {
-  width: 50px;
-  max-width: 100%;
-  height: auto;
 }
 
 .content {
@@ -32,6 +17,10 @@ body {
   margin: 20px;
   max-width: 100%;
   box-sizing: border-box;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .content .checkmark {
@@ -60,6 +49,14 @@ body {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -ms-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
 }
 
 .home:hover {
@@ -71,6 +68,7 @@ body {
   background-color: #118271;
   color: #ffffff;
   padding: 20px;
+  margin-top: 95px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -80,6 +78,7 @@ body {
 
 .footer p {
   margin: 5px 0;
+  text-align: left;
   font-size: 16px;
 }
 
