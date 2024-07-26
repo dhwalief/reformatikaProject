@@ -2,12 +2,11 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #ffffff;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(/MATERIAL_ASSET/terima.jpg) no-repeat center center/cover;
 }
 
 .header {
