@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   margin: 0;
-  background: url(/MATERIAL_ASSET/form.jpg) no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,10 +60,6 @@ button {
   border-radius: 6px;
   font-size: 1em;
   transition: border-color 0.3s, box-shadow 0.3s;
-  -webkit-transition: border-color 0.3s, box-shadow 0.3s;
-  -moz-transition: border-color 0.3s, box-shadow 0.3s;
-  -ms-transition: border-color 0.3s, box-shadow 0.3s;
-  -o-transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus,
@@ -103,10 +98,7 @@ input[type="file"] {
 
 button {
   width: 100%;
-  /*Changefromfixedwidthtofullwidthforbetterresponsiveness*/
   max-width: 200px;
-  /*Optional:;
-  Limitbuttonwidthonlargerscreens*/
   padding: 12px;
   background-color: #118271;
   color: white;
@@ -115,19 +107,11 @@ button {
   font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  -webkit-transition: background-color 0.3s, transform 0.3s;
-  -moz-transition: background-color 0.3s, transform 0.3s;
-  -ms-transition: background-color 0.3s, transform 0.3s;
-  -o-transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
   background-color: #118271;
   transform: translateY(-2px);
-  -webkit-transform: translateY(-2px);
-  -moz-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  -o-transform: translateY(-2px);
 }
 
 footer {
@@ -146,8 +130,10 @@ footer {
   font-size: 0.9em;
 }
 
-@media (max-width: 1024px) {
+/* Media Queries */
+@media (max-width: 768px) {
   .container {
+    max-width: 600px;
     width: 95%;
     padding: 15px;
   }
@@ -156,39 +142,38 @@ footer {
     font-size: 28px;
   }
 
+  .note {
+    font-size: 14px;
+    padding: 10px;
+  }
+
   input,
   select,
   textarea,
   button {
     font-size: 0.9em;
   }
+
+  button {
+    max-width: 180px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .container {
-    width: 95%;
-    padding: 15px;
+    max-width: 100%;
+    width: 100%;
+    margin: 15px auto;
+    padding: 10px;
   }
 
   header h1 {
     font-size: 24px;
   }
 
-  input,
-  select,
-  textarea,
-  button {
-    font-size: 0.85em;
-  }
-
-  button {
-    max-width: 100%; /* Ensure button fits container on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 20px;
+  .note {
+    font-size: 13px;
+    padding: 8px;
   }
 
   input,
@@ -196,23 +181,64 @@ footer {
   textarea,
   button {
     font-size: 0.8em;
+    padding: 10px;
+  }
+
+  button {
+    max-width: 150px;
   }
 }
 
-input,
-select,
-textarea,
-button {
-  font-size: 16px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+@media (max-width: 375px) {
+  .container {
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .note {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.75em;
+    padding: 8px;
+  }
+
+  button {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 5px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .note {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.7em;
+    padding: 6px;
+  }
+
+  button {
+    max-width: 120px;
+  }
 }
