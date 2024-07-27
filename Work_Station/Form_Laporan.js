@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const btnSubmit = document.querySelector(".btn-submit a");
-  const closeBtn = document.querySelector(".close-btn");
   const confirmSubmit = document.getElementById("confirm-submit");
   const cancelSubmit = document.getElementById("cancel-submit");
 
   btnSubmit.addEventListener("click", (event) => {
     event.preventDefault();
     modal.style.display = "block";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
   });
 
   cancelSubmit.addEventListener("click", () => {
