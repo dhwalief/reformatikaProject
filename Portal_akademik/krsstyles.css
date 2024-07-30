@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.container {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+header{
+    background-color: #004d26;
+}
+
+footer{
+    background-color: #004d26;
+}
+
+.footer{
+    color: white;
+}
+
+.footer a{
+    color: white;
+}
+
+/* sidebar */
+
+#sidenav {
+    background-color: #004d26;
+    color: white;
+    max-height: 100vh;
+    height: 100vh;
+    max-width: 70vw;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all .3s ease-in-out;
+    transform: translate(-150%, 0px);
+    -webkit-transform: translate(-150%, 0px);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -ms-transform: translate(-150%, 0px);
+}
+
+#sidenav.active {
+    transition: all .3s ease-in-out;
+    transform: translate(0%, 0px);
+    -webkit-transform: translate(0%, 0px);
+    -ms-transform: translate(0%, 0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .4);
+}
+
+/* ######## END FOCUS CSS CODE HERE */
+
+.burger {
+    height: 16px
+}
+.burger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+}
+.pointer {
+    cursor: pointer;
+}
+.close {
+    width: 23px;
+    height: 23px;
+}
+.cross {
+    height: 23px;
+    width: 2px;
+    border-radius: 3px;
+}
+.cross.left {
+    transform: rotate(45deg);
+}
+.cross.right {
+    transform: rotate(-45deg);
+}
+.align-middle {
+    vertical-align: middle
+}
+
+.align-middle a{
+    text-decoration: none;
+    color: white;
+}
+
+.openbtn:hover {
+    background-color: rgba(30, 144, 255, 0.2); /* Light blue background with transparency */
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.1);
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.course-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.course-table th {
+    background-color: #f7f7f7;
+}
+
+.total {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #005a2e;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004a1e;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/*  */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #004d26;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005a2e;
+}
+
+#courseInfo {
+    margin-top: 10px;
+}
+
+#courseInfo p {
+    margin: 5px 0;
+}
+
+.hapusBtn{
+    background-color: #dc3545;
+}
+.hapusBtn:hover{
+    background-color: #b71c1c;
+}

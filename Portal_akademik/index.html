@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Akademik - UIN Alauddin Makassar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/ace-css/css/ace.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header class="bg px2 py1 m0 flex items-center white">
+		<div class="burger pointer flex flex-column justify-between mr2">
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+		</div>
+		<a class="white caps text-decoration-none h3 bold" href="#">PORTAL AKADEMIK UIN ALAUDDIN</a>
+		<nav class="ml-auto">
+			<ul class="list-reset m0 h5 caps">
+				<li class="inline-block btn p0">V1.1</li>
+			</ul>
+		</nav>
+	</header>
+<!-- ######## START FOCUS SIDEBAR CODE HERE -->
+	<div id="sidenav" class="fixed z4 top-0 left-0 bg p2">
+		<div class="close flex items-center justify-center relative pointer mb2 right">
+			<div class="absolute cross bg-gray left"></div>
+			<div class="absolute cross bg-gray right"></div>
+		</div>
+
+		<div class="bg- circle mb2 flex items-center justify-center white" style="width: 68px;height: 68px">
+			<img src="uinbg.png" alt="uin alauddin">
+		</div>
+		<p class="m0 muted bold">V1.1</p>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Landing</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-house" ></i>
+				<span class="align-middle"><a href="#">Home</a></span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-gear"></i>
+				<span class="align-middle">Ubah Password</span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-right-from-bracket"></i>
+				<span class="align-middle"><a href="#">Logout</a></span>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Academics</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="biodata.html">Biodata</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+					<i class="fa-solid fa-layer-group"></i>
+					<span class="align-middle"><a href="#">Data Orang Tua</a></span>
+				</li>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Data Sma</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Mata Kuliah Yang Ditawarkan</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="krs.html">Kartu Rencana Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="hasilstudy.html">Kartu hasil Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Transkip Nilai</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">SKIP</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Informasi Akademik</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Kegiatan Mahasiswa</a></span>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- ######## END FOCUS SIDEBAR CODE HERE -->
+
+        <div id="main">
+        <main>
+            <section class="welcome-section">
+                <div class="profile">
+                    <img src="aaa.png" alt="Profile Picture">
+                    <div class="profile-info">
+                        <p><strong>Nama:</strong> Ali Mikhailovna</p>
+                        <p><strong>NIM:</strong> 60200127100</p>
+                        <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                        <p><strong>Status:</strong> Mahasiswa Aktif</p>
+                    </div>
+                </div>
+            </section>
+            <section class="academics">
+                <h2>Academics</h2>
+                <div class="academic-options">
+                    <div class="option dropdown" id="student-data">
+                        <div class="icon"><i class="fa-solid fa-folder"></i></div>
+                        <p>Data Mahasiswa</p>
+                        <div class="dropdown-content">
+                            <a href="biodata.html">Biodata</a>
+                            <a href="#">Data Orang Tua</a>
+                            <a href="#">Data SMA</a>
+                        </div>
+                    </div>
+                    <div class="option dropdown" id="study">
+                        <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <p>Studi</p>
+                        <div class="dropdown-content">
+                            <a href="#">Mata Kuliah yang Ditawarkan</a>
+                            <a href="krs.html">Kartu Rencana Studi</a>
+                            <a href="#">Kartu Hasil Studi</a>
+							<a href="#">Transkip Nilai</a>
+                        </div>
+                    </div>
+                    <div class="option dropdown" id="guidance">
+                        <div class="icon"><i class="fa-solid fa-book"></i></div>
+                        <p>Panduan</p>
+						<div class="dropdown-content">
+                            <a href="#" title="panduan"><i class="fa-solid fa-download"></i></a>
+							<b>Download</b>
+                        </div>
+                    </div>
+                    <div class="option dropdown" id="others">
+                        <div class="icon"><i class="fa-solid fa-plus"></i></div>
+                        <p>Opsional</p>
+                        <div class="dropdown-content">
+                            <a href="#">SKIP</a>
+                            <a href="#">Informasi Akademik</a>
+                            <a href="#">Kegiatan Mahasiswa</a>
+                        </div>
+                    </div>
+                    <!-- <div class="option dropdown" id="account-settings">
+                        <div class="icon"><i class="fa-solid fa-gear"></i></div>
+                            <p>Pengaturan Akun</p>
+                        <div class="dropdown-content">
+                            <a href="#">Ubah Password</a>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+    </div>
+	<footer class="px2 py3 bg navy center">
+		<div class="footer">
+			<p class="muted">Copyright ©2024 → <a class="text-decoration-none navy"
+				href="#">uinalauddin.com</a>. All rights reserved. <a
+				class="text-decoration-none navy" href="https://insertapps.com/privacy/">Privacy</a></p>
+		</div>
+	</footer>
+    <script src="script.js"></script>
+	<script src="https://kit.fontawesome.com/c46b8d745e.js" crossorigin="anonymous"></script>
+</body>
+</html>

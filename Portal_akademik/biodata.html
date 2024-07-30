@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <link rel="stylesheet" href="bio2styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ace-css/css/ace.min.css">
+</head>
+<body>
+    <header class="bg px2 py1 m0 flex items-center white">
+		<div class="burger pointer flex flex-column justify-between mr2">
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+		</div>
+		<a class="white caps text-decoration-none h3 bold" href="#">PORTAL AKADEMIK UIN ALAUDDIN</a>
+		<nav class="ml-auto">
+			<ul class="list-reset m0 h5 caps">
+				<li class="inline-block btn p0">V1.1</li>
+			</ul>
+		</nav>
+	</header>
+<!-- ######## START FOCUS SIDEBAR CODE HERE -->
+	<div id="sidenav" class="fixed z4 top-0 left-0 bg p2">
+		<div class="close flex items-center justify-center relative pointer mb2 right">
+			<div class="absolute cross bg-gray left"></div>
+			<div class="absolute cross bg-gray right"></div>
+		</div>
+
+		<div class="bg circle mb2 flex items-center justify-center white" style="width: 68px;height: 68px">
+			<img src="uinbg.png" alt="uin alauddin">
+		</div>
+		<p class="m0 muted bold">V1.1</p>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Landing</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-house" ></i>
+				<span class="align-middle"><a href="#">Home</a></span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-gear"></i>
+				<span class="align-middle">Ubah Password</span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-right-from-bracket"></i>
+				<span class="align-middle"><a href="#">Logout</a></span>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Academics</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="biodata.html">Biodata</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+					<i class="fa-solid fa-layer-group"></i>
+					<span class="align-middle"><a href="#">Data Orang Tua</a></span>
+				</li>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Data Sma</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Mata Kuliah Yang Ditawarkan</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="krs.html">Kartu Rencana Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="hasilstudy.html">Kartu hasil Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Transkip Nilai</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">SKIP</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Informasi Akademik</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Kegiatan Mahasiswa</a></span>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- ######## END FOCUS SIDEBAR CODE HERE -->
+
+<div class="container">
+                    <h2>biodata</h2>
+                    <table>
+                        <tr>
+                            <td>NAMA</td>
+                            <td id="displayName"></td>
+                        </tr>
+                        <tr>
+                            <td>NIK / No. KTP</td>
+                            <td id="displayNik"></td>
+                        </tr>
+                        <tr>
+                            <td>NISN</td>
+                            <td id="displayNisn"></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td id="displayGender"></td>
+                        </tr>
+                        <tr>
+                            <td>Tempat Lahir</td>
+                            <td id="displayBirthPlace"></td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td id="displayBirthDate"></td>
+                        </tr>
+                        <tr>
+                            <td>Golongan Darah</td>
+                            <td id="displayBloodType"></td>
+                        </tr>
+                        <tr>
+                            <td>Tinggi Badan</td>
+                            <td id="displayHeight"></td>
+                        </tr>
+                        <tr>
+                            <td>Berat Badan</td>
+                            <td id="displayWeight"></td>
+                        </tr>
+                        <tr>
+                            <td>Kondisi Buta Warna</td>
+                            <td id="displayColorBlind"></td>
+                        </tr>
+                        <tr>
+                            <td>Memakai Kacamata</td>
+                            <td id="displayGlasses"></td>
+                        </tr>
+                        <tr>
+                            <td>Kondisi Gigi</td>
+                            <td id="displayTeeth"></td>
+                        </tr>
+                    </table>
+
+                    <h2>Kemahasiswaan</h2>
+                    <table>
+                            <tr>
+                                <td>Program Studi</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Periode Masuk</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Angkatan</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Test</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Jalur Masuk</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Daftar</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Gelombang Pendaftaran</td>
+                                <td id="display-"></td>
+                            </tr>
+                            <tr>
+                                <td>Status Masuk</td>
+                                <td id="display-"></td>
+                            </tr>
+                    </table>
+
+                    <h2>Kewarganegaraan</h2>
+                    <table>
+                            <tr>
+                                <td>Agama</td>
+                                <td id="displayReligion"></td>
+                            </tr>
+                            <tr>
+                                <td>Status Nikah</td>
+                                <td id="displayMaritalStatus"></td>
+                            </tr>
+                            <tr>
+                                <td>Kewarganegaraan</td>
+                                <td id="displayCitizenship"></td>
+                            </tr>
+                            <tr>
+                                <td>Status Rumah</td>
+                                <td id="displayHouseStatus"></td>
+                            </tr>
+                            <tr>
+                                <td>Propinsi Tempat Tinggal</td>
+                                <td id="displayProvince"></td>
+                            </tr>
+                            <tr>
+                                <td>Kota Tempat Tinggal</td>
+                                <td id="displayCity"></td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td id="displayAddress"></td>
+                            </tr>
+                            <tr>
+                                <td>Kelurahan</td>
+                                <td id="displaySubdistrict"></td>
+                            </tr>
+                            <tr>
+                                <td>Kecamatan</td>
+                                <td id="displayDistrict"></td>
+                            </tr>
+                            <tr>
+                                <td>Kode Pos</td>
+                                <td id="displayPostalCode"></td>
+                            </tr>
+                            <tr>
+                                <td>Negara</td>
+                                <td id="displayCountry"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td id="displayEmail"></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Telepon / HP</td>
+                                <td id="displayPhone"></td>
+                            </tr>
+                            <tr>
+                                <td>Kepemilikan Nomor Telepon / HP</td>
+                                <td id="displayPhoneOwnership"></td>
+                            </tr>
+                            <tr>
+                                <td>Bantuan Kartu Perdana</td>
+                                <td id="displayCardSupport"></td>
+                            </tr>
+                    </table>
+                    
+                        <table>
+                        <h2>Lain-lain</h2>
+                        <!-- <p>Hubungan Biaya: <span id="displayExpenseRelationship"></span></p> -->
+                        <tr>
+                            <td>hubungan-biaya</td>
+                            <td id="displayExpenseRelationship"></td>
+                        </tr>
+                        <!-- <p>Sumber Dana: <span id="displaySourceOfFunds"></span></p> -->
+                        <tr>
+                            <td>Sumber Dana</td>
+                            <td id="displaySourceOfFunds"></td>
+                        </tr>
+                        <!-- <p>Sumber Dana Beasiswa: <span id="displayScholarshipSource"></span></p> -->
+                        <tr>
+                            <td>Sumber Dana</td>
+                            <td id="displayScholarshipSource"></td>
+                        </tr>
+                        <!-- <p>Jumlah Saudara: <span id="displayNumberOfSiblings"></span></p> -->
+                        <tr>
+                            <td>Jumlah Saudara</td>
+                            <td id="displayNumberOfSiblings"></td>
+                        </tr>
+                        <!-- <p>Status Bekerja: <span id="displayEmploymentStatus"></span></p> -->
+                        <tr>
+                            <td>Status Bekerja</td>
+                            <td id="displayEmploymentStatus"></td>
+                        </tr>
+                        <!-- <p>No. Asuransi: <span id="displayInsuranceNumber"></span></p> -->
+                        <tr>
+                            <td>Nomor Asuransi</td>
+                            <td id="displayInsuranceNumber"></td>
+                        </tr>
+                        <!-- <p>Hobi: <span id="displayHobbies"></span></p> -->
+                        <tr>
+                            <td>Hobi</td>
+                            <td id="displayHobbies"></td>
+                        </tr>
+                        <!-- <p>Tahu Kampus ini dari: <span id="displaySourceOfKnowledge"></span></p> -->
+                        <tr>
+                            <td>Tahu Kampus Ini dari</td>
+                            <td id="displaySourceOfKnowledge"></td>
+                        </tr>
+                        </table>
+                    
+                
+                    <!-- Pengalaman Organisasi section -->
+                    
+                        <div>
+                            <h2>Pengalaman Organisasi</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>TEMPAT</th>
+                                    <th>PENGALAMAN ORGANISASI</th>
+                                </tr>
+                            </thead>
+                            <tbody id="organizationExperienceTable">
+                                <!-- Data will be appended here dynamically -->
+                            </tbody>
+                        </table>
+                        <button id="addOrganizationExperienceButton">Tambah</button>
+                        </div>
+                    
+                    <br><br>
+                    <button id="editButton">Ubah</button>
+        <footer>
+            <p>&copy; 2024 Biodata. All rights reserved.</p>
+        </footer>
+    
+
+    <!-- Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editForm">
+
+                <!-- Biodata -->
+                <h2> Edit Biodata</h2>
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" value="">
+
+                <label for="nik">NIK / No. KTP</label>
+                <input type="text" id="nik" name="nik" value="">
+
+                <label for="nisn">NISN</label>
+                <input type="text" id="nisn" name="nisn" value="">
+
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender">
+                    <option value="Laki-Laki" selected>Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+
+                <label for="birthPlace">Tempat Lahir</label>
+                <input type="text" id="birthPlace" name="birthPlace" value="">
+
+                <label for="birthDate">Tanggal Lahir</label>
+                <input type="date" id="birthDate" name="birthDate" value="">
+
+                <label for="bloodType">Golongan Darah</label>
+                <select id="bloodType" name="bloodType">
+                    <option value="A">A</option>
+                    <option value="B" selected>B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+
+                <label for="height">Tinggi Badan</label>
+                <input type="number" id="height" name="height" value="">
+
+                <label for="weight">Berat Badan</label>
+                <input type="number" id="weight" name="weight" value="">
+
+                <label for="colorBlind">Kondisi Buta Warna</label>
+                <select id="colorBlind" name="colorBlind">
+                    <option value="Tidak" selected>Tidak</option>
+                    <option value="Ya">Ya</option>
+                </select>
+
+                <label for="glasses">Memakai Kacamata</label>
+                <select id="glasses" name="glasses">
+                    <option value="Tidak" selected>Tidak</option>
+                    <option value="Ya">Ya</option>
+                </select>
+
+                <label for="teeth">Kondisi Gigi</label>
+                <select id="teeth" name="teeth">
+                    <option value="Lengkap" selected>Lengkap</option>
+                    <option value="Tidak Lengkap">Tidak Lengkap</option>
+                </select>
+
+                <!-- edit kewarganegaraan -->
+                 <h2>edit kewarganegaraan</h2>
+                 <label for="religion">Agama</label>
+                 <select id="religion">
+                     <option value="ISLAM">ISLAM</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="maritalStatus">Status Nikah</label>
+                 <select id="maritalStatus">
+                     <option value="Belum Kawin">Belum Kawin</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="citizenship">Kewarganegaraan</label>
+                 <select id="citizenship">
+                     <option value="WNI">WNI</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="houseStatus">Status Rumah</label>
+                 <select id="houseStatus">
+                     <option value="Rumah Orang Tua">Rumah Orang Tua</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="province">Propinsi Tempat Tinggal</label>
+                 <select id="province">
+                     <option value="NUSA TENGGARA BARAT">NUSA TENGGARA BARAT</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="city">Kota Tempat Tinggal</label>
+                 <select id="city">
+                     <option value="Kab. Bima">Kab. Bima</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="address">Alamat</label>
+                 <input type="text" id="address" maxlength="50">
+
+                 <label for="subdistrict">Kelurahan</label>
+                 <input type="text" id="subdistrict">
+
+                 <label for="district">Kecamatan</label>
+                 <input type="text" id="district">
+
+                 <label for="postalCode">Kode Pos</label>
+                 <input type="text" id="postalCode">
+
+                 <label for="country">Negara</label>
+                 <select id="country">
+                     <option value="INDONESIA">INDONESIA</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="email">Email</label>
+                 <input type="email" id="email">
+
+                 <label for="phone">Nomor Telepon / HP</label>
+                 <input type="text" id="phone">
+
+                 <label for="phoneOwnership">Kepemilikan Nomor Telepon / HP</label>
+                 <select id="phoneOwnership">
+                     <option value="Milik Sendiri">Milik Sendiri</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <label for="cardSupport">Bantuan Kartu Perdana</label>
+                 <select id="cardSupport">
+                     <option value="Telkomsel">Telkomsel</option>
+                     <!-- Other options -->
+                 </select>
+
+                 <!-- Add new input fields for "Lain-lain" section -->
+                <label for="expenseRelationship">Hubungan Biaya:</label>
+                <input type="text" id="expenseRelationship" name="expenseRelationship"><br><br>
+
+                <label for="sourceOfFunds">Sumber Dana:</label>
+                <input type="text" id="sourceOfFunds" name="sourceOfFunds"><br><br>
+
+                <label for="scholarshipSource">Sumber Dana Beasiswa:</label>
+                <input type="text" id="scholarshipSource" name="scholarshipSource"><br><br>
+
+                <label for="numberOfSiblings">Jumlah Saudara:</label>
+                <input type="number" id="numberOfSiblings" name="numberOfSiblings"><br><br>
+
+                <label for="employmentStatus">Status Bekerja:</label>
+                <input type="text" id="employmentStatus" name="employmentStatus"><br><br>
+
+                <label for="insuranceNumber">No. Asuransi:</label>
+                <input type="text" id="insuranceNumber" name="insuranceNumber"><br><br>
+
+                <label for="hobbies">Hobi:</label>
+                <input type="text" id="hobbies" name="hobbies"><br><br>
+
+                <label for="sourceOfKnowledge">Tahu Kampus ini dari:</label>
+                <input type="text" id="sourceOfKnowledge" name="sourceOfKnowledge"><br><br>
+
+                <!-- Add new input fields for "Pengalaman Organisasi" section -->
+                <h2>Pengalaman Organisasi</h2>
+                <label for="organizationPlace">Tempat:</label>
+                <input type="text" id="organizationPlace" name="organizationPlace"><br><br>
+
+                <label for="organizationExperience">Pengalaman Organisasi:</label>
+                <input type="text" id="organizationExperience" name="organizationExperience"><br><br>
+                
+                <button type ="submit">Simpan</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="bio2script.js"></script>
+    <script src="https://kit.fontawesome.com/c46b8d745e.js" crossorigin="anonymous"></script>
+</body>
+</html>
