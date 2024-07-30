@@ -91,7 +91,7 @@
         <textarea
           id="deskripsi-kejadian"
           name="deskripsi-kejadian"
-          maxlength="750"
+          maxlength="500"
         ></textarea>
 
         <label for="lampiran-bukti">Lampiran Bukti (Opsional)</label>
@@ -111,6 +111,16 @@
         <button type="submit" class="btn btn-submit">
           <a href="/WORK_STATION/laporanDiterima.html">Kirim</a>
         </button>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <p class="peringatan">peringatan !</p>
+            <p>Apakah Anda yakin ingin mengirimkan data tersebut?</p>
+            <button id="confirm-submit" class="btn btn-confirm">
+              <a href="/WORK_STATION/laporanDiterima.html">Setuju</a>
+            </button>
+            <button id="cancel-submit" class="btn btn-cancel">Batal</button>
+          </div>
+        </div>
       </form>
     </div>
     <footer>
