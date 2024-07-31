@@ -5,19 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- style.css -->
+	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
 	<link rel="stylesheet" href="style.css">
 
-	<title>Document</title>
+	<title>Dasboard Manajemen Organisasi</title>
 </head>
 <body>
 
 
 	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand">
+	<div id="sidebar">
+		<div class="brand">
+			<!-- <i class='bx bx-menu' ></i> -->
 			<i class='bx bxs-spreadsheet'></i>
 			<span class="text">Admin</span>
-		</a>
+			<div class="close" id="close-btn">
+				<i class='bx bx-x'></i>
+			</div>
+		</div>
 		<ul class="side-menu top">
 			<li class="active">
 				<a href="../content-dashboard/index.html">
@@ -33,7 +39,7 @@
 			</li>
 			<li>
 				<a href="../content-keuangan/index.html">
-					<i class='bx bx-wallet'></i>
+					<i class='bx bxs-wallet'></i>
 					<span class="text">Keuangan</span>
 				</a>
 			</li>
@@ -45,45 +51,66 @@
 			</li>
 			<li>
 				<a href="../content-arsip/index.html">
-					<i class='bx bx-archive-in'></i>
+					<i class='bx bxs-archive-in'></i>
 					<span class="text">Arsip</span>
 				</a>
 			</li>
 		</ul>
 
-	</section>
+	</div>
 	<!-- SIDEBAR -->
 
 
 
 	<!-- CONTENT -->
-	<section id="content">
+	<div id="content">
 		<!-- NAVBAR -->
 		<nav>
-			<i class='bx bx-menu' ></i>
+			<button class="menu" id="menu-btn">
+				<i class='bx bx-menu' ></i>
+			</button>
 			<form action="#">
 				<div class="form-input">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 					<input type="search" placeholder="Search...">
 				</div>
 			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-            <div class="notif-div">
-                <a href="#" class="notification">
+			<!-- Tema Gelap -->
+			<!-- <input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label> -->
+			<div class="notif-div">	
+                <div href="#" class="notification">
                     <i class='bx bxs-bell' ></i>
                     <span class="num">8</span>
-                </a>
+					<!-- <div class="notification-dropdown">
+						<div class="update">
+							<p>Email dari <b>hmm@uin-alauddin.ac.id</b></p>
+							<small>2 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Musyawarah Besar tinggal <b>10 hari lagi</b></p>
+							<small>4 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Email dari <b>hmm@unhas.ac.id</b></p>
+							<small>15 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Email dari <b>hmm@unhas.ac.id</b></p>
+							<small>15 menit lalu</small>
+						</div>
+					</div> -->
+				</div>
             </div>
             <div class="profile-div">
                 <a href="#" class="profile">
-                    <i class="fa-solid fa-user"></i>
+                	<i class='bx bxs-user-circle'></i>
                 </a>
             </div>
 		</nav>
-		<!-- NAVBAR -->
+		<!-- ========= NAVBAR ========= -->
 
-		<!-- MAIN -->
+		<!-- ========= MAIN ========= -->
 		<main>
 			<div class="head-title">
 				<div class="left">
@@ -104,9 +131,10 @@
 				</a>
 			</div>
 
+			<!-- ========= Box Info ========= -->
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
+					<i class='bx bx-calendar-check' ></i>
 					<span class="text">
 						<h3>6</h3>
 						<p>Acara Selesai</p>
@@ -120,15 +148,16 @@
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-dollar-circle' ></i>
+					<i class='bx bx-wallet'></i>
 					<span class="text">
 						<h3>Rp 2.342.000</h3>
 						<p>Saldo</p>
 					</span>
 				</li>
 			</ul>
+			<!-- ========= Box Info ========= -->
 
-
+			<!-- ========= Tabel ========= -->
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
@@ -163,7 +192,7 @@
 								<td>
 									<p>Seminar</p>
 								</td>
-								<td>023-11-2024</td>
+								<td>23-11-2024</td>
 								<td><span class="status process">Berlangsung</span></td>
 							</tr>
 							<tr>
@@ -183,6 +212,8 @@
 						</tbody>
 					</table>
 				</div>
+
+				<!-- ========= Tabel todo ========= -->
 				<div class="todo">
 					<div class="head">
 						<h3>Todo</h3>
@@ -212,13 +243,16 @@
 						</li>
 					</ul>
 				</div>
+				<!-- ========= Tabel todo ========= -->
+
 			</div>
 		</main>
-		<!-- MAIN -->
-	</section>
+		<!-- ========= MAIN ========= -->
+	</div>
 	<!-- CONTENT -->
-	
 
+	<!-- JS AND CDN -->
+	<script src="../.assets/js/mainJs.js"></script>
 	<script src="script.js"></script>
     <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </body>
