@@ -23,8 +23,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
-// Fungsi untuk toggle (menyembunyikan/menampilkan) sidebar
 function toggleSidebar() {
   const sidebar = document.querySelector(".sidebar");
+  const mainContent = document.querySelector(".main-content");
   sidebar.classList.toggle("active");
+  mainContent.classList.toggle("active");
 }
+
+document.getElementById("hamburger").addEventListener("click", function () {
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("main-content");
+
+  sidebar.classList.toggle("active");
+  mainContent.classList.toggle("shifted");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.querySelector(".sidebar");
+  const hamburger = document.querySelector(".hamburger");
+  const mainContent = document.querySelector(".main-content");
+
+  hamburger.addEventListener("click", function () {
+    sidebar.classList.toggle("active");
+    mainContent.classList.toggle("shifted");
+  });
+});
