@@ -30,9 +30,7 @@
       </header>
       <form>
         <label for="status-pelapor"
-          >Status pelapor <style></style>(<span style="color: rgb(254, 6, 6)"
-            >*</span
-          >)</label
+          >Status pelapor (<span style="color: rgb(254, 6, 6)">*</span>)</label
         >
         <select id="status-pelapor" name="status-pelapor" required>
           <option value="">--Pilih Status--</option>
@@ -46,7 +44,9 @@
         >
         <input type="text" id="nama-korban" name="nama-korban" required />
 
-        <label for="nim-korban">NIM Korban (Opsional)</label>
+        <label for="nim-korban"
+          >NIM Korban(<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
         <input type="text" id="nim-korban" name="nim-korban" />
 
         <label for="prodi-korban"
@@ -100,11 +100,23 @@
         ></textarea>
 
         <label for="lampiran-bukti">Lampiran Bukti (Opsional)</label>
+
+        <!-- Div untuk gambar preview -->
+        <div id="preview-container">
+          <img id="preview-image" alt="" />
+        </div>
+
         <div class="camera">
           <img src="/Media_Asset/camera.png" alt="x" />
         </div>
-        <input type="file" id="lampiran-bukti" name="lampiran-bukti" />
 
+        <p id="file-size" class="file-info"></p>
+        <input
+          type="file"
+          id="lampiran-bukti"
+          name="lampiran-bukti"
+          accept="image/*"
+        />
         <label for="nomor-kontak"
           >Nomor Handphone (<span style="color: rgb(254, 6, 6)">*</span>)</label
         >
@@ -118,9 +130,16 @@
         </button>
         <div id="modal" class="modal">
           <div class="modal-content">
-            <p class="peringatan">peringatan !</p>
-            <p>Apakah Anda yakin ingin mengirimkan data tersebut?</p>
-            <button id="confirm-submit" class="btn btn-confirm">
+            <p class="peringatan">Peringatan !</p>
+            <p>
+              Apakah Anda yakin ingin mengirimkan data ini? <br />
+              data tidak dapat diubah setelah ini
+            </p>
+            <button
+              id="confirm-submit"
+              class="btn btn-confirm"
+              onclick="laporanDiterima()"
+            >
               <a href="/Sistem_Pelaporan_Bulyying/laporanDiterima.html"
                 >Setuju</a
               >
@@ -132,7 +151,7 @@
     </div>
     <footer>
       <div class="footer">
-        <p>Copyright &copy; 2024</p>
+        <p>Powered by UIN Alauddin Makassar</p>
       </div>
     </footer>
   </body>

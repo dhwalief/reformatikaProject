@@ -1,11 +1,13 @@
 body {
   font-family: "Montserrat", sans-serif;
-  margin: auto;
+  margin: 0; /* Hapus margin auto untuk mereset margin body */
   background-color: #e0e0e0;
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .content {
@@ -17,15 +19,11 @@ body {
   margin: 20px;
   max-width: 100%;
   box-sizing: border-box;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
 .content .checkmark {
   font-size: 100px;
-  color: rgb(255, 255, 255);
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -49,18 +47,10 @@ body {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  -moz-transition: background-color 0.3s, color 0.3s;
-  -ms-transition: background-color 0.3s, color 0.3s;
-  -o-transition: background-color 0.3s, color 0.3s;
 }
 
 .home:hover {
-  background-color: #118271;
+  background-color: #17a28d;
   color: #ffffff;
 }
 
@@ -68,8 +58,12 @@ body {
   background-color: #118271;
   color: #ffffff;
   padding: 20px;
-  margin-top: 165px;
   width: 100%;
+  margin-top: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   position: relative;
   box-sizing: border-box;
@@ -77,14 +71,13 @@ body {
 
 .footer p {
   margin: 5px 0;
-  text-align: center;
   font-size: 14px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .content {
-    padding: 30px 10px;
+    margin: 0;
   }
 
   .content h2 {
@@ -98,10 +91,6 @@ body {
   .home {
     padding: 12px 25px;
     font-size: 16px;
-  }
-
-  .footer p {
-    font-size: 14px;
   }
 }
 
@@ -122,10 +111,6 @@ body {
     padding: 10px 20px;
     font-size: 14px;
   }
-
-  .footer p {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 375px) {
@@ -144,10 +129,6 @@ body {
   .home {
     padding: 8px 16px;
     font-size: 12px;
-  }
-
-  .footer p {
-    font-size: 10px;
   }
 }
 

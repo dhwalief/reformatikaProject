@@ -159,24 +159,35 @@ document
   });
 
 // Dropdown
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", (event) => {
   const profileLink = document.getElementById("profile-link");
   const dropdown = document.getElementById("dropdown");
 
-  profileLink.addEventListener("click", function (event) {
+  profileLink.addEventListener("click", (event) => {
     event.preventDefault();
-    dropdown.classList.toggle("show");
+    const isDropdownVisible = dropdown.style.display === "block";
+    dropdown.style.display = isDropdownVisible ? "none" : "block";
   });
 
-  window.addEventListener("click", function (event) {
+  // Close the dropdown if user clicks outside of it
+  document.addEventListener("click", (event) => {
     if (
-      !event.target.matches(".profile-pic") &&
-      !event.target.matches(".dropdown-content") &&
-      !event.target.closest(".dropdown-content")
+      !profileLink.contains(event.target) &&
+      !dropdown.contains(event.target)
     ) {
-      if (dropdown.classList.contains("show")) {
-        dropdown.classList.remove("show");
-      }
+      dropdown.style.display = "none";
     }
+  });
+});
+
+//Login
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "loginPage.html";
+  }
+
+  document.getElementById("logout").addEventListener("click", function () {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "loginPage.html";
   });
 });

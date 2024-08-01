@@ -14,10 +14,47 @@
     <link rel="stylesheet" href="dashboard_SPB.css" />
   </head>
   <body>
+    <nav>
+      <div class="hero">
+        <img
+          src="/Sistem_data_terpusat/uin-white (1).png"
+          alt="Logo UIN Alauddin Makassar"
+          class="logo"
+        />
+        <h1>UIN Center</h1>
+      </div>
+      <ul>
+        <li class="nav">
+          <a href="/Sistem_data_terpusat/homePage.html">Home</a>
+          <a href="/Portal_akademik/index.html">Portal</a>
+          <a href="https://lentera.uin-alauddin.ac.id/">Lentera</a>
+          <a href="#organisasi">Organisasi</a>
+          <a href="/Sistem_Pelaporan_Bulyying/dashboard_SPB.html">Report</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="profile-link">
+            <img
+              src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
+              alt="Profil"
+              class="profile-pic"
+            />
+          </a>
+          <div id="dropdown" class="dropdown-content">
+            <img
+              src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
+              alt="Profil"
+              class="dropdown-profile-pic"
+            />
+            <p><strong>Wira Fadhil</strong></p>
+            <p>wirafadhil20@gmail.com</p>
+            <p><a href="#logout">Logout</a></p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
     <!-- Sidebar -->
     <nav class="sidebar">
-      <div class="logo">
-        <img src="/Media_Asset/logo_UIN.png" alt="Logo Kampus" />
       </div>
       <ul class="nav-links">
         <li><a href="Form_Laporan.html">Laporan</a></li>
@@ -53,9 +90,13 @@
             <div class="about-content">
               <img src="/Media_Asset/bully.png" alt="Gambar Bullying" />
               <p>
-                Bullying Pembulian adalah bentuk perilaku agresif di mana
-                seseorang dengan sengaja dan berulang kali menyebabkan kerugian,
-                baik secara fisik maupun emosional, kepada orang lain.
+                Bullying Atau Pembulian secara bahasa disebut menyakat yang
+                artinya mengusik (supaya menjadi takut, menangis, dan
+                sebagainya), sedangkan secara istilah berarti tindakan agresif
+                yang dilakukan seseorang untuk mengintimidasi atau mendominasi
+                orang lain yang dinilai lebih lemah. Bullying dapat terjadi di
+                mana saja, mulai dari lingkungan pendidikan hingga lingkungan
+                kerja.
               </p>
             </div>
           </div>
@@ -106,7 +147,7 @@
               agar dapat di tindaklanjuti secara mendalam <br /><br />
               <i>klik disini untuk mulai melaporkan</i>
             </p>
-            <button class="laporkan">
+            <button class="laporkan" onclick="pindahHalaman()">
               <b
                 ><a href="/Sistem_Pelaporan_Bulyying/Form_Laporan.html"
                   >Laporkan Sekarang</a

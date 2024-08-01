@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link
-      rel="shortcut icon"
-      href="/Media_Asset/logo_UIN.png"
-      type="image/x-icon"
-    />
     <link rel="stylesheet" href="login.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
@@ -26,7 +21,7 @@
       <div class="login-container">
         <div class="login-form">
           <h1>Login</h1>
-          <form action="#" method="post">
+          <form id="loginForm" action="#" method="post">
             <div class="form-group">
               <label for="username">Username</label>
               <input type="username" id="username" name="username" required />
@@ -43,5 +38,26 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          const validUsername = "60200123086"; // Ganti dengan username yang valid
+          const validPassword = "wirafadhil"; // Ganti dengan password yang valid
+
+          if (username === validUsername && password === validPassword) {
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "homepage.html";
+          } else {
+            alert("Username atau Password salah!");
+          }
+        });
+    </script>
   </body>
 </html>
