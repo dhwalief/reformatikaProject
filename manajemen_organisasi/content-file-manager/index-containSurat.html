@@ -7,9 +7,9 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-email1.css">
 
-	<title>Dasboard Manajemen Organisasi</title>
+	<title>File manager | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -44,9 +44,9 @@
 				</a>
 			</li>
 			<li>
-				<a href="../content-arsip/index.html">
+				<a href="../content-surat/index.html">
 					<i class='bx bxs-envelope'></i>
-					<span class="text">Arsip</span>
+					<span class="text">Surat</span>
 				</a>
 			</li>
 			<li>
@@ -72,7 +72,7 @@
 			<!-- Tema Gelap -->
 			<!-- <input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label> -->
-			<div class="right">
+			<div class="right">	
 				<div class="notif-div">	
 					<div href="#" class="notification">
 						<i class='bx bxs-bell' ></i>
@@ -92,14 +92,18 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+					<h1>File Manager</h1>
 					<ul class="path">
 						<li>
-							<a href="#">Admin</a>
+							<a class="active" href="index.html">File manager</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Dashboard</a>
+							<a class="active" href="index - email1.html">hmmuin@uin-alauddin.ac.id</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a href="#">Surat</a>
 						</li>
 					</ul>
 				</div>
@@ -108,111 +112,95 @@
 			<!-- ========= Box Info ========= -->
 			<ul class="box-info">
 				<li>
-					<i class='bx bx-calendar-check' ></i>
-					<span class="text">
-						<h3>16</h3>
-						<p>Acara mendatang</p>
-					</span>
+					<a href="../content-file-manager/index - email.html" id="boxInfo-active">
+						<img src="../.assets/icon/logo-google-drive.png" alt="">
+						<div class="information-container">
+							<h3>hm@uin-alauddin.ac.id</h3>
+							<div class="capacity-container">
+								<div class="capacity-text">
+									<p>21.4 GB</p>
+									<p>50 GB</p>
+								</div>
+								<div class="capacity-block">
+									<div class="capacity-block-contain"></div>
+								</div>
+							</div>
+						</div>
+					</a>
 				</li>
 				<li>
-					<i class='bx bx-envelope'></i>
-					<span class="text">
-						<h3>283</h3>
-						<p>Surat</p>
-					</span>
+					<a href="../content-file-manager/index - email.html" id="boxInfo-nonactive">
+						<img src="../.assets/icon/logo-google-drive.png" alt="">
+						<div class="information-container">
+							<h3>hmuin-backup@gmail.com</h3>
+							<div class="capacity-container">
+								<div class="capacity-text">
+									<p>21.4 GB</p>
+									<p>50 GB</p>
+								</div>
+								<div class="capacity-block">
+									<div class="capacity-block-contain"></div>
+								</div>
+							</div>
+						</div>
+					</a>
 				</li>
-				<li>
-					<i class='bx bx-wallet'></i>
-					<span class="text">
-						<h3>Rp 2.342.000</h3>
-						<p>Saldo</p>
-					</span>
-				</li>
-			</ul>
-			<!-- ========= Box Info ========= -->
+			</ul>			
 
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
-				<div class="order">
+				<!-- ======= TABEL FILE ====== -->
+				<div class="folder">
 					<div class="head">
-						<h3>Kegiatan mendatang</h3>
-						<!-- <i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i> -->
+						<form action="#">
+							<div class="form-input">
+								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+								<input type="search" placeholder="Search...">
+							</div>
+						</form>
+						<a href="#" class="btn-upload">
+							<i class='bx bxs-cloud-upload' ></i>
+							<span class="text">Upload</span>
+						</a>
 					</div>
 					<table>
 						<thead>
 							<tr>
-								<th>Nama</th>
-								<th>Tanggal</th>
-								<th>Status</th>
+								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th>Ukuran<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th>Modifikasi terakhir<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>
-									<p>Rapat Internal</p>
-								</td>
-								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
+								<td><a href="index - email1.html"><i class='bx bxs-folder'></i>..</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
 							</tr>
 							<tr>
-								<td>
-									<p>Kunjungan Desa</p>
-								</td>
-								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
+								<td><a href="index-containSurat.html"><i class='bx bxs-folder'></i>Surat Masuk</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
 							</tr>
 							<tr>
-								<td>
-									<p>Seminar</p>
-								</td>
-								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
-							</tr>
-							<tr>
-								<td>
-									<p>Rapat</p>
-								</td>
-								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-							</tr>
-							<tr>
-								<td>
-									<p>Talkshow</p>
-								</td>
-								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
+								<td><a href="#"><i class='bx bxs-folder'></i>Surat Keluar</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel Keuangan ========= -->
-				<div class="finance">
-					<div class="head">
-						<h3>Laporan keuangan terkini</h3>
-						<!-- <i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i> -->
-					</div>
-					<ul class="finance-list">
-						<li><p>Operasional kegiatan</p>	<span class="reject">-Rp250.000</span></li>
-						<li><p>Hasil Galdan</p>			<span class="completed">+Rp200.000</span></li>
-						<li><p>Iuran</p>				<span class="completed">+Rp300.000</span></li>
-						<li><p>Operasional sekret</p>	<span class="reject">-Rp50.000</span></li>
-						<li><p>Bansos</p>				<span class="completed">+Rp500.000</span></li>
-						<li><p>Hasil Galdan</p>			<span class="completed">+Rp200.000</span></li>
-						<li><p>Iuran</p>				<span class="completed">+Rp300.000</span></li>
-						<li><p>Operasional sekret</p>	<span class="reject">-Rp50.000</span></li>
-					</ul>
-					<!-- <div class="showall">
-						<a href="../content-keuangan/">Show All</a>
-					</div> -->
-				</div>
-				<!-- ========= Tabel todo ========= -->
+			
 
 			</div>
 		</main>
-		<!-- ========= MAIN ========= -->
+		
 	</div>
 	<!-- CONTENT -->
 

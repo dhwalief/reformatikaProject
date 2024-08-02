@@ -19,17 +19,15 @@ li {
 	/** Daftar warna */
 	--color-light: #F9F9F9;
 	--color-blue: #3C91E6;
-	/* --color-lightBlue: #CFE8FF; */
-	--color-grey: #EEEEEE;
 	/*  Tes */
+	/* --color-grey: #EEEEEE; */
+	--color-grey: #f6f6f6;
 	/* --color-grey: #dce1eb;  */
-	/* --color-darkGrey: #AAAAAA; */
+	--color-darkGrey: rgba(132, 139, 200, 0.18);
 	--color-dark: #342E37;
 	--color-red: #DB504A;
 	--color-yellow: #FFCE26;
-	/* --color-lightYellow: #FFF2C6; */
 	--color-orange: #FD7238;  
-	/* --color-lightOrange: #FFE0D3; */
 
 	--color-green: #118271;
 	--color-darkGreen: #0c5c50;
@@ -40,6 +38,8 @@ li {
 	--card-borderRadiusSmall: 10px;
 	--card-borderRadiusMedium: 15px;
 	--card-borderRadiusSquare: 0;
+	/* Box shadow */
+	--box-shadow: 0 0.5rem 1rem rgba(132, 139, 200, 0.18);
 }
 
 .primary {
@@ -208,9 +208,11 @@ body {
 	grid-gap: 24px;
 	font-family: var(--font);
 	position: sticky;
+	box-shadow: var(--box-shadow);
 	top: 0;
 	left: 0;
 	z-index: 1;
+	justify-content: flex-end;
 }
 
 #content nav a {
@@ -240,34 +242,10 @@ body {
 	color: var(--color-blue);
 } */
 
-#content nav form {
-	max-width: 400px;
-	width: 100%;
-	margin-right: auto;
-}
-
-#content nav form .form-input {
-	--padding: 10px;
-	display: flex;
-	align-items: center;
-	border-radius:var(--card-borderRadiusSmall);
-	padding: var(--padding);
-	background: var(--color-light);    
-}
-
-#content nav form .form-input input {
-	flex-grow: 1;
-	border: none;
-	background: var(--color-light);
-	outline: none;
-	color: var(--color-dark);
-}
-
-#content nav form .form-input button {
-	border: none;
-	background: var(--color-light);
-	margin-right: 8px;
-	color: var(--color-dark);
+#content nav .right {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 17px;
 }
 
 #content nav .notification {
@@ -498,6 +476,7 @@ body {
 	}
 	#content nav {
 		box-shadow: 0 0.5rem 1rem var(--color-shadow);
+		justify-content: space-between;
 	}
 }
 
@@ -527,4 +506,12 @@ body {
 	#content nav form.show ~ .profile {
 		display: none;
     }
+	#content nav .right {
+		display: inline-flex;
+		flex-direction: row;
+		gap: 17px;
+	}
+	#contact nav {
+		justify-content: space-between;
+	}
 }

@@ -1,3 +1,4 @@
+//? Tabel
 const table_headings = document.querySelectorAll('table th'),
         table_rows = document.querySelectorAll('table tr');
 
@@ -20,7 +21,9 @@ table_headings.forEach((head, i) => {
 })
 
 
-// Tanggal
+
+
+//? Tanggal
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 let selectedYear = currentYear;

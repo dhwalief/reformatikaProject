@@ -25,7 +25,7 @@
 }
 
 #content main .head-title .left .path li a {
-	color: var(--color-darkGrey);
+	color: var(--color-dark);
 	pointer-events: none;
 }
 
@@ -60,7 +60,9 @@
 #content main .box-info li {
 	padding: 24px;
 	background: var(--color-light);
+	border: 0.1px solid rgba(132, 139, 200, 0.18);
 	border-radius: var(--card-borderRadiusMedium);
+	box-shadow: var(--box-shadow);
 	display: flex;
 	align-items: center;
 	grid-gap: 24px;
@@ -100,7 +102,12 @@
 #content main .box-info li .text p {
 	color: var(--color-dark);	
 }
+
 /*? ========== TABEL BOX INFO ========== */
+
+
+
+
 
 /*? ========== TABEL ========== */
 #content main .table-data {
@@ -136,9 +143,13 @@
 	cursor: pointer;
 }
 
+
+/* Tabel  */
 #content main .table-data .order {
 	flex-grow: 1;
 	flex-basis: 500px;
+	border-radius: var(--card-borderRadiusMedium);
+	box-shadow: var(--box-shadow);
 }
 
 #content main .table-data .order table {
@@ -151,21 +162,22 @@
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
-	border-bottom: 1px solid var(--color-grey);
+	border-bottom: 1px solid var(--color-darkGrey);
 }
 
 #content main .table-data .order table td {
 	padding: 16px 0;
+	border-bottom: 1px solid var(--color-darkGrey);
 }
 /* #content main table tbody td {
 	border-bottom: 10 solid var(--color-dark);
 } */
-#content main .table-data .order table tr td:first-child {
+/* #content main .table-data .order table tr td:first-child {
 	display: flex;
 	align-items: center;
 	grid-gap: 12px;
 	padding-left: 6px;
-}
+} */
 
 /* #content main .table-data .order table td img {
 	width: 36px;
@@ -185,62 +197,69 @@
 	border-radius: var(--card-borderRadiusMedium)var(--card-borderRadiusSmall);
 	font-weight: 700;
 } */
-/** fungsi status terhadap background*/
-#content main .table-data .order table tr td .status.completed {
-	color: var(--color-blue);
+/*? fungsi warna pada font*/
+#content .completed {
+	color: var(--color-green);
 }
 
-#content main .table-data .order table tr td .status.process {
+#content .process {
 	color: var(--color-yellow);
 }
 
-#content main .table-data .order table tr td .status.pending {
+#content .pending {
 	color: var(--color-orange);
 }
-
-#content main .table-data .order table tr td .status.soon {
+#content .reject {
+	color: var(--color-red)
+}
+#content .soon {
 	color: var(--color-darkGrey);
 }
 /*? ========== TABEL ========== */
 
 
 
-/*? ========== TABEL TODO ========== */
-#content main .table-data .todo {
+/*? ========== TABEL KEUANGAN ========== */
+#content main .table-data .finance {
 	flex-grow: 1;
 	flex-basis: 300px;
-}
-
-#content main .table-data .todo .todo-list {
-	width: 100%;
-}
-
-#content main .table-data .todo .todo-list li {
-	width: 100%;
-	margin-bottom: 16px;
-	background: var(--color-grey);
 	border-radius: var(--card-borderRadiusMedium);
+	box-shadow: var(--box-shadow);
+}
+
+#content main .table-data .finance .finance-list {
+	width: 100%;
+}
+
+#content main .table-data .finance .finance-list li {
+	width: 100%;
+	/* margin-bottom: 16px; */
+	/* background: var(--color-grey); */
+	/* border-radius: var(--card-borderRadiusMedium); */
 	padding: 14px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid var(--color-darkGrey);
 }
 
-#content main .table-data .todo .todo-list li .bx {
+#content main .table-data .finance .finance-list li .bx {
 	cursor: pointer;
 }
  
-/* #content main .table-data .todo .todo-list li.completed {
-	border-right: 10px solid var(--color-green);
-}
-
-#content main .table-data .todo .todo-list li.not-completed {
-	border-right: 10px solid var(--color-orange);
-} */
-
-#content main .table-data .todo .todo-list li:last-child {
+#content main .table-data .finance .finance-list li:last-child {
 	margin-bottom: 0;
 }
+
+
+/* #content main .table-data .finance .showall {
+	width: 100%;
+}
+
+#content main .table-data .finance .showall a {
+	justify-content: center;
+} */
+
 /*? ========== TABEL TODO ========== */
 
 
@@ -273,10 +292,10 @@
 	#content table thead th:nth-child(2){
 		display: none;
 	}
-	#content main .table-data .todo .todo-list {
+	#content main .table-data .finance .finance-list {
 		min-width: 420px;
 	}
-	#content main .table-data .todo {
+	#content main .table-data .finance {
 		flex-basis: 2500px;
 	}
 }

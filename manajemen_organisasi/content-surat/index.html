@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- style.css --> 
+	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
 	<link rel="stylesheet" href="style.css">
 
-	<title>Kegiatan | Manajemen Organisasi</title>
+	<title>Keuangan | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -44,7 +44,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="../content-arsip/index.html">
+				<a href="../content-surat/index.html">
 					<i class='bx bxs-envelope'></i>
 					<span class="text">Surat</span>
 				</a>
@@ -69,22 +69,44 @@
 			<button class="menu" id="menu-btn">
 				<i class='bx bx-menu' ></i>
 			</button>
+			<form action="#">
+				<div class="form-input">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+					<input type="search" placeholder="Search...">
+				</div>
+			</form>
 			<!-- Tema Gelap -->
 			<!-- <input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label> -->
-			<div class="right">
-				<div class="notif-div">	
-					<div href="#" class="notification">
-						<i class='bx bxs-bell' ></i>
-						<span class="num">8</span>
-					</div>
+			<div class="notif-div">	
+                <div href="#" class="notification">
+                    <i class='bx bxs-bell' ></i>
+                    <span class="num">8</span>
+					<!-- <div class="notification-dropdown">
+						<div class="update">
+							<p>Email dari <b>hmm@uin-alauddin.ac.id</b></p>
+							<small>2 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Musyawarah Besar tinggal <b>10 hari lagi</b></p>
+							<small>4 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Email dari <b>hmm@unhas.ac.id</b></p>
+							<small>15 menit lalu</small>
+						</div>
+						<div class="update">
+							<p>Email dari <b>hmm@unhas.ac.id</b></p>
+							<small>15 menit lalu</small>
+						</div>
+					</div> -->
 				</div>
-				<div class="profile-div">
-					<a href="#" class="profile">
-						<i class='bx bxs-user-circle'></i>
-					</a>
-				</div>
-			</div>
+            </div>
+            <div class="profile-div">
+                <a href="#" class="profile">
+                	<i class='bx bxs-user-circle'></i>
+                </a>
+            </div>
 		</nav>
 		<!-- ========= NAVBAR ========= -->
 
@@ -92,48 +114,52 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Kegiatan</h1>
+					<h1>Surat</h1>
 					<ul class="path">
 						<li>
 							<a href="#">Admin</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Kegiatan</a>
+							<a class="active" href="#">Surat</a>
 						</li>
 					</ul>
-					<div class="year-container">
-						<div id="controls">
-							<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
-							<div id="year-display"></div>
-							<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
-						</div>
+				</div>
+				<div class="year-container">
+					<div id="controls">
+						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
+						<div id="year-display"></div>
+						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
 					</div>
 				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
 			</div>
 
 			<!-- ========= Box Info ========= -->
 			<ul class="box-info">
 				<li>
-					<i class='bx bx-calendar-check' ></i>
+					<!-- <i class='bx bx-envelope'></i> -->
 					<span class="text">
-						<h3>9</h3>
-						<p>Acara selesai</p>
+						<h3>27</h3>
+						<p>Surat masuk</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bx-calendar-exclamation'></i>
+					<!-- <i class='bx bx-calendar-check' ></i> -->
 					<span class="text">
-						<h3>283</h3>
-						<p>Acara mendatang</p>
+						<h3>35</h3>
+						<p>Surat keluar</p>
 					</span>
 				</li>
-			</ul>
-			<!-- ========= Box Info ========= -->
+			</ul>			
 
+			<!-- ========= Tabel ========= -->
 			<div class="table-data">
-				<!-- ========= TABEL KEGIATAN ========= -->
-				<div class="event">
+				<!-- ======= TABEL KEUANGAN ====== -->
+				<div class="mail">
 					<div class="head">
 						<form action="#">
 							<div class="form-input">
@@ -150,70 +176,70 @@
 							<tr>
 								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
 								<th>Tanggal<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Status<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th>Pengirim/Penerima<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><p>Rapat Internal</p></td>
+								<td>Operasional sekret</td>
 								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
+								<td><span class="reject">-Rp250.000</span></td>
 								<td>Detail</td>
 							</tr>
 							<tr>
-								<td><p>Kunjungan Desa</p></td>
+								<td>Hasil galdan</td>
 								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
+								<td><span class="completed">+Rp200.000</span></td>
 								<td>Detail</td>
 							</tr>
 							<tr>
-								<td><p>Seminar</p></td>
+								<td>Iuran</td>
 								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
+								<td><span class="completed">+Rp300.000</span></td>
 								<td>Detail</td>
 							</tr>
 							<tr>
-								<td><p>Rapat</p></td>
+								<td>Operasional sekret</td>
 								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
+								<td><span class="reject">-Rp50.000</span></td>
 								<td>Detail</td>
 							</tr>
 							<tr>
-								<td><p>Talkshow</p></td>
+								<td>Bansos</td>
 								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
+								<td><span class="completed">+Rp500.000</span></td>
 								<td>Detail</td>
 							</tr>
+							<tr>
+								<td>Hasil galdan</td>
+								<td>04-11-2024</td>
+								<td><span class="completed">+Rp150.000</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td>Iuran</td>
+								<td>23-11-2024</td>
+								<td><span class="completed">+Rp100.000</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td>Operasional sekret</td>
+								<td>24-11-2024</td>
+								<td><span class="reject">-Rp50.000</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
 						</tbody>
 					</table>
 				</div>
-				<!-- ========= TABEL KEGIATAN ========= -->	
+				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel TODO ========= -->
-				<div class="todo">
-					<div class="head">
-						<h3>To do</h3>
-						<i class='bx bx-plus' ></i>
-					</div>
-					<ul class="todo-list">
-						<li><input type="checkbox"><p>Evaluasi</p></li>
-						<li><input type="checkbox"><p>Cek dana</p></li>
-						<li><input type="checkbox"><p>Mencari sponsor</p></li>
-						<li><input type="checkbox"><p>Menghadap rektor</p></li>
-						<li><input type="checkbox"><p>Galdan</p></li>
-						<li><input type="checkbox"><p>Iuran</p></li>
-						<li><input type="checkbox"><p>Beli token</p></li>
-					</ul>
-					<!-- <div class="showall">
-						<a href="../content-keuangan/">Show All</a>
-					</div> -->
-				</div>
-				<!-- ========= Tabel todo ========= -->
+			
 
 			</div>
 		</main>
-		<!-- ========= MAIN ========= -->
+		
 	</div>
 	<!-- CONTENT -->
 

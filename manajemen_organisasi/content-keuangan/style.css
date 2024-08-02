@@ -73,19 +73,27 @@
 /*? ========== CONTENT TITLE ========== */
 
 
+
+
 /*? ========== TABEL BOX INFO ========== */
 #content main .box-info {
-	display: grid;
-	grid-template-columns: repeat(4, minmax(300px, 1fr));
+	/* display: grid;
+	grid-template-columns: repeat( 4, minmax(250px, 1fr)); */
+	/* grid-template-columns: minmax(240px, 1fr); */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	grid-gap: 24px;
 	margin-top: 36px;
 }
 
 #content main .box-info li {
+	min-width: fit-content;
+	width: 230px;
 	padding: 24px;
 	background: var(--color-light);
-	border: 1px solid rgba(132, 139, 200, 0.18);
 	border-radius: var(--card-borderRadiusMedium);
+	border: 1px solid rgba(132, 139, 200, 0.18);
 	box-shadow: var(--box-shadow);
 	display: flex;
 	align-items: center;
@@ -113,8 +121,8 @@
 }
 
 #content main .box-info li:nth-child(3) .bx {
-	background: var(--light-orange);
-	color: var(--color-orange);
+	background: var(--light-red);
+	color: var(--color-red);
 } */
 
 #content main .box-info li .text h3 {
@@ -126,10 +134,7 @@
 #content main .box-info li .text p {
 	color: var(--color-dark);	
 }
-
 /*? ========== TABEL BOX INFO ========== */
-
-
 
 
 
@@ -143,10 +148,11 @@
 	color: var(--color-dark);
 }
 /*? ========== TABEL ========== */
-/*? ========== TABEL KEGIATAN========== */
+/*? ========== TABEL KEUANGAN ========== */
 #content main .table-data > div {
 	border-radius: var(--card-borderRadiusMedium);
 	border: 1px solid rgba(132, 139, 200, 0.18);
+	box-shadow: var(--box-shadow);
 	background: var(--color-light);
 	padding: 24px;
 	overflow-x: auto;
@@ -171,26 +177,25 @@
 
 
 /* Tabel  */
-#content main .table-data .event {
+#content main .table-data .finance {
 	flex-grow: 1;
 	flex-basis: 500px;
 	border-radius: var(--card-borderRadiusMedium);
-	box-shadow: var(--box-shadow);
 }
 
-#content main .table-data .event table {
+#content main .table-data .finance table {
 	width: 100%;
 	border-collapse: collapse;
 	border-radius: var(--card-borderRadiusMedium);
 }
 
-#content main .table-data .event .head form {
+#content main .table-data .finance .head form {
 	max-width: 400px;
 	width: 100%;
 	margin-right: auto;
 }
 
-#content main .table-data .event .head form .form-input {
+#content main .table-data .finance .head form .form-input {
 	--padding: 10px;
 	display: flex;
 	align-items: center;
@@ -200,7 +205,7 @@
 	background: var(--color-grey);    
 }
 
-#content main .table-data .event .head form .form-input input {
+#content main .table-data .finance .head form .form-input input {
 	flex-grow: 1;
 	border: none;
 	background: var(--color-grey);
@@ -208,14 +213,14 @@
 	color: var(--color-dark);
 }
 
-#content main .table-data .event .head form .form-input button {
+#content main .table-data .finance .head form .form-input button {
 	border: none;
 	background: var(--color-grey);
 	margin-right: 8px;
 	color: var(--color-dark);
 }
 
-#content main .table-data .event table th {
+#content main .table-data .finance table th {
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
@@ -223,54 +228,54 @@
 	cursor: pointer;
 }
 
-#content main .table-data .event table th.active {
+#content main .table-data .finance table th.active {
 	color: var(--color-green);
 }
 
-#content main .table-data .event table th:last-child {
+#content main .table-data .finance table th:last-child {
 	display: none;
 }
 
-#content main .table-data .event table th span.icon-arrow {
+#content main .table-data .finance table th span.icon-arrow {
 	display: inline-block;
 	margin-left: 5px;
 }
 
-#content main .table-data .event table th.asc span.icon-arrow {
+#content main .table-data .finance table th.asc span.icon-arrow {
 	transform: rotate(180deg);
 }
 
-#content main .table-data .event table td {
+#content main .table-data .finance table td {
 	padding: 16px 0;
 	border-bottom: 1px solid var(--color-darkGrey);
 }
 
-#content main .table-data .event table td:last-child {
+#content main .table-data .finance table td:last-child {
 	cursor: pointer;
 }
 
 /* #content main table tbody td {
 	border-bottom: 10 solid var(--color-dark);
 } */
-/* #content main .table-data .event table tr td:first-child {
+/* #content main .table-data .finance table tr td:first-child {
 	display: flex;
 	align-items: center;
 	grid-gap: 12px;
 	padding-left: 6px;
 } */
 
-/* #content main .table-data .event table td img {
+/* #content main .table-data .finance table td img {
 	width: 36px;
 	height: 36px;
 	border-radius: var(--card-borderRadiusMedium)50%;
 	object-fit: cover;
 } */
 
-#content main .table-data .event table tbody tr:hover {
+#content main .table-data .finance table tbody tr:hover {
 	background: var(--color-grey);
 }
 
-/* #content main .table-data .event table tr td .status {
+/* #content main .table-data .finance table tr td .status {
 	font-size: 10px;
 	padding: 6px 16px;
 	color: var(--color-light);
@@ -295,45 +300,98 @@
 #content .soon {
 	color: var(--color-darkGrey);
 }
-/*? ========== TABEL ========== */
-
-
-
 /*? ========== TABEL KEUANGAN ========== */
+
+
+
+#content main .coming-event {
+    margin-top: 2rem;
+}
+
+#content main .coming-event h2 {
+    margin-bottom: 0.8rem;
+}
+
+#content main .coming-event table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-borderRadiusMedium);
+    padding: var(--card-padding);
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    transition: none;
+}
+
+#content main .coming-event table:hover{
+    box-shadow: none;
+}
+
+#content main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+#content main table tbody td:last-child td {
+    border: none;
+}
+
+#content main .coming-event a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*? ========== TABEL TODO ========== */
 #content main .table-data .todo {
-	max-width: 300px;
 	flex-grow: 1;
 	flex-basis: 300px;
-	border-radius: var(--card-borderRadiusMedium);
-	box-shadow: var(--box-shadow);
 }
 
 #content main .table-data .todo .todo-list {
 	width: 100%;
 }
 
-#content main .table-data .todo .head {
-	justify-content: space-between;
-}
-
 #content main .table-data .todo .todo-list li {
-	/* width: 100%; */
+	width: 100%;
+	margin-bottom: 16px;
+	background: var(--color-grey);
+	border-radius: var(--card-borderRadiusMedium);
 	padding: 14px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid var(--color-darkGrey);
 }
 
 #content main .table-data .todo .todo-list li .bx {
 	cursor: pointer;
 }
  
+/* #content main .table-data .todo .todo-list li.completed {
+	border-right: 10px solid var(--color-green);
+}
+
+#content main .table-data .todo .todo-list li.not-completed {
+	border-right: 10px solid var(--color-red);
+} */
+
 #content main .table-data .todo .todo-list li:last-child {
 	margin-bottom: 0;
 }
-
-/*? ========== TABEL todo ========== */
+/*? ========== TABEL TODO ========== */
 
 
 
@@ -359,15 +417,14 @@
 	#content main .table-data .head {
 		min-width: 420px;
 	}
-	#content main .table-data .event table {
-		min-width: 300px;
+	#content main .table-data .finance table {
+		min-width: 420px;
 	}
-	#content .table-data .event table thead th:nth-child(3),
-	#content .table-data .event table tbody td:nth-child(3){
+	#content table thead th:nth-child(2){
 		display: none;
 	}
 	#content main .table-data .todo .todo-list {
-		min-width: 300px;
+		min-width: 420px;
 	}
 	#content main .table-data .todo {
 		flex-basis: 2500px;
