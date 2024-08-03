@@ -11,7 +11,7 @@
 	font-size: 36px;
 	font-weight: 600;
 	margin-bottom: 10px;
-	color: var(--color-dark); 
+	color: var(--color-dark);
 }
 
 #content main .head-title .left .path {
@@ -73,19 +73,28 @@
 /*? ========== CONTENT TITLE ========== */
 
 
+
+
 /*? ========== TABEL BOX INFO ========== */
 #content main .box-info {
-	display: grid;
-	grid-template-columns: repeat(4, minmax(300px, 1fr));
+	/* display: grid;
+	grid-template-columns: repeat( 4, minmax(250px, 1fr)); */
+	/* grid-template-columns: minmax(240px, 1fr); */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	grid-gap: 24px;
 	margin-top: 36px;
+	z-index: 1;
 }
 
 #content main .box-info li {
+	min-width: fit-content;
+	width: 230px;
 	padding: 24px;
 	background: var(--color-light);
-	border: 1px solid rgba(132, 139, 200, 0.18);
 	border-radius: var(--card-borderRadiusMedium);
+	border: 1px solid rgba(132, 139, 200, 0.18);
 	box-shadow: var(--box-shadow);
 	display: flex;
 	align-items: center;
@@ -113,8 +122,8 @@
 }
 
 #content main .box-info li:nth-child(3) .bx {
-	background: var(--light-orange);
-	color: var(--color-orange);
+	background: var(--light-red);
+	color: var(--color-red);
 } */
 
 #content main .box-info li .text h3 {
@@ -126,10 +135,7 @@
 #content main .box-info li .text p {
 	color: var(--color-dark);	
 }
-
 /*? ========== TABEL BOX INFO ========== */
-
-
 
 
 
@@ -142,11 +148,10 @@
 	width: 100%;
 	color: var(--color-dark);
 }
-/*? ========== TABEL ========== */
-/*? ========== TABEL KEGIATAN========== */
 #content main .table-data > div {
 	border-radius: var(--card-borderRadiusMedium);
 	border: 1px solid rgba(132, 139, 200, 0.18);
+	box-shadow: var(--box-shadow);
 	background: var(--color-light);
 	padding: 24px;
 	overflow-x: auto;
@@ -165,21 +170,139 @@
 	font-weight: 600;
 }
 
-#content main .table-data .head .bx {
+/* #content main .table-data .head .bx {
+	cursor: pointer;
+} */
+/*? ========== TABEL ========== */
+
+/*? ========== TABEL KEUANGAN ========== */
+#content main .table-data .event {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 500px;
+	overflow-x: hidden;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#content main .table-data .event table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: var(--card-borderRadiusMedium);
+}
+
+#content main .table-data .event .head {
+	display: flex;
+	justify-content: space-between;
+}
+
+#content main .table-data .event .head form .search-container {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color-darkGrey);
+	border-radius: 10px;
+	padding: 10px;
+	background: var(--color-grey);    
+}
+
+#content main .table-data .event .head form .search-container input {
+	flex-grow: 1;
+	border: none;
+	background: var(--color-grey);
+	outline: none;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event .head form .search-container button {
+	border: none;
+	background: var(--color-grey);
+	margin-right: 8px;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event .head .add-btn {
+	border: none;
+	color: var(--color-light);
+	background: var(--color-green);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#content main .table-data .event table th {
+	text-align: left;
+}
+
+#content main .table-data .event table tbody td {
+	padding: 16px 0;
+	border-bottom: 1px solid var(--color-darkGrey);
+}
+
+.status-selesai {
+	color: var(--color-green);
+}
+.status-ditunda {
+	color: var(--color-orange);
+}
+.status-dibatalkan {
+	color: var(--color-red);
+}
+.status-akan-berlangsung {
+	color: var(--color-yellow);
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+/* .dropdown button {
+	border: none;
+	background: none;
+	cursor: pointer;
+} */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 5;
+}
+.dropdown-content button {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	border: none;
+	background: none;
 	cursor: pointer;
 }
 
+#dropdown{
+	max-width: fit-content;
+}
 
-/* Tabel  */
-#content main .table-data .event {
+.dropdown-content button:hover {
+	background-color: #f1f1f1;
+}
+/* ? ===== TABEL EVENT ===== */
+
+
+
+
+
+#content main .table-data .event .pagination{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+/*! Tabel  */
+/* #content main .table-data .event {
 	flex-grow: 1;
 	flex-basis: 500px;
 	border-radius: var(--card-borderRadiusMedium);
-	box-shadow: var(--box-shadow);
 }
 
 #content main .table-data .event table {
-	height: 70vh;
 	width: 100%;
 	border-collapse: collapse;
 	border-radius: var(--card-borderRadiusMedium);
@@ -217,7 +340,6 @@
 }
 
 #content main .table-data .event table th {
-	position: sticky;
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
@@ -251,41 +373,16 @@
 	cursor: pointer;
 }
 
-/* #content main table tbody td {
-	border-bottom: 10 solid var(--color-dark);
-} */
-/* #content main .table-data .event table tr td:first-child {
-	display: flex;
-	align-items: center;
-	grid-gap: 12px;
-	padding-left: 6px;
-} */
-
-/* #content main .table-data .event table td img {
-	width: 36px;
-	height: 36px;
-	border-radius: var(--card-borderRadiusMedium)50%;
-	object-fit: cover;
-} */
 
 #content main .table-data .event table tbody tr:hover {
 	background: var(--color-grey);
 }
-
-/* #content main .table-data .event table tr td .status {
-	font-size: 10px;
-	padding: 6px 16px;
-	color: var(--color-light);
-	border-radius: var(--card-borderRadiusMedium)var(--card-borderRadiusSmall);
-	font-weight: 700;
-} */
-/*? fungsi warna pada font*/
 #content .completed {
 	color: var(--color-green);
 }
 
 #content .process {
-	color: var(--color-blue);
+	color: var(--color-yellow);
 }
 
 #content .pending {
@@ -295,52 +392,149 @@
 	color: var(--color-red)
 }
 #content .soon {
-	color: var(--color-yellow);
+	color: var(--color-darkGrey);
+} */
+/*? ========== TABEL KEUANGAN ========== */
+
+
+
+/* #content main .todo {
+    margin-top: 2rem;
+} */
+
+/* #content main .event h2 {
+    margin-bottom: 0.8rem;
 }
-/*? ========== TABEL ========== */
+
+#content main .event table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-borderRadiusMedium);
+    padding: var(--card-padding);
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    transition: none;
+}
+
+#content main .event table:hover{
+    box-shadow: none;
+}
+
+#content main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+#content main table tbody td:last-child td {
+    border: none;
+}
+
+#content main .event a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+} */
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*? ========== TABEL TODO ========== */
 #content main .table-data .todo {
-	max-width: 300px;
 	flex-grow: 1;
-	flex-basis: 300px;
-	border-radius: var(--card-borderRadiusMedium);
-	box-shadow: var(--box-shadow);
+	flex-basis: 200px;
+	width: 100%;
 }
 
 #content main .table-data .todo .todo-list {
 	width: 100%;
 }
 
-#content main .table-data .todo .head {
-	justify-content: space-between;
-}
-
 #content main .table-data .todo .todo-list li {
-	/* width: 100%; */
+	width: 100%;
+	/* margin-bottom: 16px; */
+	border-bottom: 1px solid var(--color-darkGrey);
+	/* background: var(--color-grey); */
 	padding: 14px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid var(--color-darkGrey);
 }
 
 #content main .table-data .todo .todo-list li .bx {
 	cursor: pointer;
 }
- 
+
 #content main .table-data .todo .todo-list li:last-child {
 	margin-bottom: 0;
 }
+/*? ========== TABEL TODO ========== */
 
-/*? ========== TABEL todo ========== */
+/*? ========== MODAL ========== */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 30%;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.add-data-container,
+.edit-data-container {
+	display: flex;
+	flex-direction: column;
+}
+.add-data-container input,
+.add-data-container select,
+.edit-data-container input,
+.edit-data-container select {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.add-data-container button,
+.edit-data-container button {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+/*? ========== MODAL ========== */
 
 
 
 /*? ========== MEDIA QUERIS ========== */
- @media screen and (max-width:1200px) {
+@media screen and (max-width:1200px) {
 	#content .box-info {
 		grid-template-columns: 1fr;
 		grid-gap: 16px;
@@ -362,14 +556,13 @@
 		min-width: 420px;
 	}
 	#content main .table-data .event table {
-		min-width: 300px;
+		min-width: 420px;
 	}
-	#content .table-data .event table thead th:nth-child(3),
-	#content .table-data .event table tbody td:nth-child(3){
+	#content table thead th:nth-child(2){
 		display: none;
 	}
 	#content main .table-data .todo .todo-list {
-		min-width: 300px;
+		min-width: 420px;
 	}
 	#content main .table-data .todo {
 		flex-basis: 2500px;

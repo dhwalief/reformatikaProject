@@ -15,7 +15,7 @@ closeBtn.addEventListener('click', () => {
 // navbar
 document.addEventListener("DOMContentLoaded", (event) => {
     const profileLink = document.getElementById("profile-link");
-    const dropdown = document.getElementById("dropdown");
+    const dropdown = document.getElementById("dropdown-nav");
   
     profileLink.addEventListener("click", (event) => {
       event.preventDefault();

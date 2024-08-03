@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- style.css --> 
+	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
 	<link rel="stylesheet" href="style.css">
 
-	<title>Kegiatan | Manajemen Organisasi</title>
+	<title>Kegiatan | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 	<div id="sidebar">
 		<div class="brand">
 			<img src="../../MATERIAL_ASSET/logo_UIN.png" alt="Logo UIN Alauddin Makassar" class="logo"/>
-			<p>UIN Center <span class="text">Admin</span></p>
+			<p>UINAM Center <span class="text">Admin</span></p>
 			<!-- <i class='bx bx-menu' ></i> -->
 			<!-- <i class='bx bxs-spreadsheet'></i>
 			<span class="text">Admin</span> -->
@@ -46,7 +46,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="../content-arsip/index.html">
+				<a href="../content-surat/index.html">
 					<i class='bx bxs-envelope'></i>
 					<span class="text">Surat</span>
 				</a>
@@ -95,7 +95,7 @@
 					class="profile-pic"
 				  />
 				</a>
-				<div id="dropdown" class="dropdown-content">
+				<div id="dropdown-nav" class="dropdown-content-nav">
 				  <img
 					src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
 					alt="Profil"
@@ -111,7 +111,7 @@
 		<!-- ========= NAVBAR ========= -->
 
 		<!-- ========= MAIN ========= -->
-	<main>
+		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>Kegiatan</h1>
@@ -126,213 +126,140 @@
 					</ul>
 				</div>
 				<div class="year-container">
-					<div id="controls">
+					<!-- <div id="controls">
 						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
 						<div id="year-display"></div>
 						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
+					</div> -->
+					<div class="controls">
+						<button id="prev-year-btn"><i class='bx bx-chevron-left'></i></button>
+						<span id="year-display" class="year-display"></span>
+						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
 					</div>
 				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
 			</div>
 
 			<!-- ========= Box Info ========= -->
 			<ul class="box-info">
 				<li>
-					<i class='bx bx-calendar-check' ></i>
+					<!-- <i class='bx bx-envelope'></i> -->
 					<span class="text">
-						<h3>9</h3>
+						<h3>13</h3>
 						<p>Acara selesai</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bx-calendar-exclamation'></i>
+					<!-- <i class='bx bx-calendar-check' ></i> -->
 					<span class="text">
-						<h3>283</h3>
-						<p>Acara mendatang</p>
+						<h3>21</h3>
+						<p>Acara akan datang</p>
 					</span>
 				</li>
-			</ul>
-			<!-- ========= Box Info ========= -->
+			</ul>			
 
+			<!-- ========= Tabel ========= -->
 			<div class="table-data">
-				<!-- ========= TABEL KEGIATAN ========= -->
+				<!-- ======= TABEL KEUANGAN ====== -->
 				<div class="event">
+					<div class="top">
 					<div class="head">
 						<form action="#">
-							<div class="form-input">
+							<!-- <div class="form-input">
 								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 								<input type="search" placeholder="Search...">
+							</div> -->
+							<div class="search-container">
+								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
+								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
 							</div>
 						</form>
-						<div class="head-item">
-							<i class='bx bx-dots-vertical-rounded' ></i>
-							<!-- <div class="item-dropdown">
-								<ul>
-									<li><a href="#">Tambah kegiatan</a></li>
-									<li><a href="#">Pilih</a></li>
-									<li><a href="#">Tambah kegiatan</a></li>
-								</ul>
-							</div> -->
-						</div>
+						<button class="add-btn" onclick="showModal('add')">Tambah Kegiatan</button>
+						<!-- <button onclick="showAddModal()">Tambah Data</button>
+						<i class='bx bx-dots-vertical-rounded' ></i> -->
+						<!-- <i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i> -->
 					</div>
-					<table>
+					<table id="dataTable">
 						<thead>
 							<tr>
-								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Tanggal<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Status<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th></th>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Tanggal</th>
+								<th>Status</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td><p>Rapat Internal</p></td>
-								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Kunjungan Desa</p></td>
-								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Seminar</p></td>
-								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat</p></td>
-								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Talkshow</p></td>
-								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat Internal</p></td>
-								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Kunjungan Desa</p></td>
-								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Seminar</p></td>
-								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat</p></td>
-								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Talkshow</p></td>
-								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat Internal</p></td>
-								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Kunjungan Desa</p></td>
-								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Seminar</p></td>
-								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat</p></td>
-								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Talkshow</p></td>
-								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat Internal</p></td>
-								<td>01-10-2024</td>
-								<td><span class="completed">Selesai</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Kunjungan Desa</p></td>
-								<td>04-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Seminar</p></td>
-								<td>23-11-2024</td>
-								<td><span class="process">Berlangsung</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Rapat</p></td>
-								<td>24-11-2024</td>
-								<td><span class="pending">Ditunda</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td><p>Talkshow</p></td>
-								<td>30-11-2024</td>
-								<td><span class="soon">Segera</span></td>
-								<td>Detail</td>
-							</tr>
+						<tbody id="tableBody">
+							<!-- Rows will be inserted here by JavaScript -->
 						</tbody>
 					</table>
+					</div>
+					<div class="bottom">
+					<div class="pagination">
+						<button onclick="prevPage()"><i class='bx bx-chevron-left'></i></button>
+						<span id="pageNumber">1</span>
+						<button onclick="nextPage()"><i class='bx bx-chevron-right'></i></button>
+					</div>
+					</div>
 				</div>
-				
-				<!-- ========= TABEL KEGIATAN ========= -->	
+				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel TODO ========= -->
+				<!-- ========= Tabel todo ========= -->
+			 
 				<div class="todo">
 					<div class="head">
 						<h3>To do</h3>
-						<i class='bx bx-plus' ></i>
+						<!-- <i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i> -->
 					</div>
 					<ul class="todo-list">
-						<li><input type="checkbox"><p>Evaluasi</p></li>
-						<li><input type="checkbox"><p>Cek dana</p></li>
-						<li><input type="checkbox"><p>Mencari sponsor</p></li>
-						<li><input type="checkbox"><p>Menghadap rektor</p></li>
-						<li><input type="checkbox"><p>Galdan</p></li>
-						<li><input type="checkbox"><p>Iuran</p></li>
-						<li><input type="checkbox"><p>Beli token</p></li>
+						<li><input type="checkbox"><p>Operasional kegiatan</p>	</span></li>
+						<li><input type="checkbox"><p>Hasil Galdan</p>			</span></li>
+						<li><input type="checkbox"><p>Iuran</p>				</span></li>
+						<li><input type="checkbox"><p>Operasional sekret</p>	</span></li>
+						<li><input type="checkbox"><p>Bansos</p>				</span></li>
+						<li><input type="checkbox"><p>Hasil Galdan</p>			</span></li>
+						<li><input type="checkbox"><p>Iuran</p>				</span></li>
+						<li><input type="checkbox"><p>Operasional sekret</p>	</span></li>
 					</ul>
 					<!-- <div class="showall">
 						<a href="../content-keuangan/">Show All</a>
 					</div> -->
 				</div>
-				<!-- ========= Tabel todo ========= -->
 			</div>
+			<!-- ? ===== MODAL ====== -->
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal()">&times;</span>
+					<div class="add-data-container" id="modal-content-add">
+						<input type="text" id="nameInput" placeholder="Nama">
+						<input type="date" id="dateInput">
+						<select id="detailInput">
+							<option value="Selesai">Selesai</option>
+							<option value="Ditunda">Ditunda</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Akan Berlangsung">Akan Berlangsung</option>
+						</select>
+						<button onclick="addData()">Tambah</button>
+					</div>
+					<div class="edit-data-container" id="modal-content-edit" style="display: none;">
+						<input type="text" id="editNameInput" placeholder="Nama">
+						<input type="date" id="editDateInput">
+						<select id="editDetailInput">
+							<option value="Selesai">Selesai</option>
+							<option value="Ditunda">Ditunda</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Akan Berlangsung">Akan Berlangsung</option>
+						</select>
+						<button onclick="saveEditData()">Simpan</button>
+					</div>
+				</div>
+			</div>
+			<!-- ? ===== MODAL ====== -->
 		</main>
-		<!-- ========= MAIN ========= -->
 	</div>
 	<!-- CONTENT -->
 

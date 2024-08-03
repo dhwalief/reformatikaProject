@@ -496,7 +496,7 @@ body {
 	position: relative;
 }
   
-#content .dropdown-content {
+#content .dropdown-content-nav {
 	display: none;
 	position: absolute;
 	top: 80px; /* Adjust this value as needed */
@@ -510,17 +510,17 @@ body {
 	padding: 10px;
 }
   
-#content .dropdown-content img {
+#content .dropdown-content-nav img {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 }
   
-#content .profile-dropdown:hover .dropdown-content {
+#content .profile-dropdown:hover .dropdown-content-nav {
 	display: block;
 }
   
-#content .dropdown-content img.dropdown-profile-pic {
+#content .dropdown-content-nav img.dropdown-profile-pic {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -528,7 +528,7 @@ body {
 	margin: 1rem auto;
 }
   
-#content .dropdown-content p {
+#content .dropdown-content-nav p {
 	color: black;
 	padding: 1px 1px; /* Mengurangi padding atas dan bawah */
 	margin: 0; /* Menghapus margin */
@@ -537,16 +537,16 @@ body {
 	line-height: 1.5; /* Menyesuaikan line-height */
 }
   
-#content .dropdown-content a {
+#content .dropdown-content-nav a {
 	color: #007bff;
 	text-decoration: none;
 }
   
-#content .dropdown-content p a:hover {
+#content .dropdown-content-nav p a:hover {
 	text-decoration: underline;
 }
   
-#content .dropdown-content a:hover {
+#content .dropdown-content-nav a:hover {
 	text-decoration: underline;
 }
   
