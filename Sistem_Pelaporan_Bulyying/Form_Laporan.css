@@ -259,8 +259,13 @@ footer {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgb(254, 253, 253); /* Fallback color */
+  background-color: rgba(8, 8, 8, 0.6); /* Black w/ opacity */
+}
+
+.Peringatan {
+  width: 80px;
+  margin-top: 15px;
 }
 
 .modal-content {
@@ -270,16 +275,24 @@ footer {
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid #888;
-  width: 90%; /* Gunakan persentase agar responsif */
-  max-width: 520px; /* Batas lebar maksimum */
-  height: auto; /* Tinggi otomatis mengikuti konten */
-  max-height: 80%; /* Batas tinggi maksimum agar tidak keluar layar */
+  width: 90%;
+  /*Gunakanpersentaseagarresponsif*/
+  max-width: 520px;
+  /*Bataslebarmaksimum*/
+  height: 280px;
+  /*Batastinggimaksimumagartidakkeluarlayar*/
   box-sizing: border-box;
   text-align: center;
   font-size: 14px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 8px; /* Sudut melengkung untuk tampilan lebih lembut */
-  overflow-y: auto; /* Tambahkan scroll jika konten melebihi batas tinggi */
+  border-radius: 8px;
+  /*Sudutmelengkunguntuktampilanlebihlembut*/
+  overflow-y: auto;
+  overflow-x: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .peringatan {

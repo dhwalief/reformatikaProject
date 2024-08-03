@@ -4,19 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmSubmit = document.getElementById("confirm-submit");
   const cancelSubmit = document.getElementById("cancel-submit");
 
-  btnSubmit.addEventListener("click", (event) => {
-    event.preventDefault();
-    modal.style.display = "block";
-  });
+  if (btnSubmit) {
+    btnSubmit.addEventListener("click", (event) => {
+      event.preventDefault();
+      modal.style.display = "block";
+    });
+  }
 
-  cancelSubmit.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  if (cancelSubmit) {
+    cancelSubmit.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
 
-  confirmSubmit.addEventListener("click", () => {
-    // Submit the form
-    document.querySelector("form").submit();
-  });
+  if (confirmSubmit) {
+    confirmSubmit.addEventListener("click", () => {
+      // Submit the form
+      document.querySelector("form").submit();
+    });
+  }
 
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
@@ -25,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// UNTUK MEMBUAT FILE YANG DI INPUT DAPAT MENGHILANGKAN ICON PHOTO
+// Handle file input change event
 document
   .getElementById("lampiran-bukti")
   .addEventListener("change", function (event) {
@@ -40,23 +46,23 @@ document
       reader.onload = function (e) {
         previewImage.src = e.target.result;
         previewImage.style.display = "block";
-        cameraIcon.style.display = "none"; // Menyembunyikan gambar kamera
+        cameraIcon.style.display = "none"; // Hide camera icon
       };
 
       reader.readAsDataURL(file);
 
-      // Menghitung dan menampilkan ukuran file
-      const fileSizeInKB = (file.size / 1024).toFixed(2); // Ukuran dalam KB
-      fileSizeDisplay.textContent = ` ${fileSizeInKB} KB`;
+      // Calculate and display file size
+      const fileSizeInKB = (file.size / 1024).toFixed(2); // Size in KB
+      fileSizeDisplay.textContent = `${fileSizeInKB} KB`;
     } else {
       previewImage.src = "";
       previewImage.style.display = "none";
-      cameraIcon.style.display = "block"; // Menampilkan kembali gambar kamera
+      cameraIcon.style.display = "block"; // Show camera icon
       fileSizeDisplay.textContent = "";
     }
   });
-// Ukuran file:
 
+// Redirect to laporanDiterima page
 function laporanDiterima() {
   window.location.href = "/Sistem_Pelaporan_Bulyying/laporanDiterima.html";
 }
