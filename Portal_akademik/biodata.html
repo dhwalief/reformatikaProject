@@ -6,6 +6,7 @@
     <title>Biodata</title>
     <link rel="stylesheet" href="bio2styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://unpkg.com/ace-css/css/ace.min.css">
 </head>
 <body>
@@ -15,10 +16,32 @@
 			<span class="bg-white"></span>
 			<span class="bg-white"></span>
 		</div>
+        <img style="width: 68px;height: 50px" src="uinbg1.png" alt="uin alauddin">
 		<a class="white caps text-decoration-none h3 bold" href="#">PORTAL AKADEMIK UIN ALAUDDIN</a>
 		<nav class="ml-auto">
-			<ul class="list-reset m0 h5 caps">
+			<!-- <ul class="list-reset m0 h5 caps">
 				<li class="inline-block btn p0">V1.1</li>
+			</ul> -->
+			<ul>
+				<li class="nav-item">
+					<a href="#" id="profile-link">
+					  <img
+						src="aaa.png"
+						alt="Profil"
+						class="profile-pic"
+					  />
+					</a>
+					<div id="jatuh" class="jatuh-content">
+					  <img
+						src="aaa.png"
+						alt="Profil"
+						class="jatuh-profile-pic"
+					  />
+					  <p><strong>Wira Fadhil</strong></p>
+					  <p>wirafadhil20@gmail.com</p>
+					  <p><a href="#logout">Logout</a></p>
+					</div>
+				  </li>
 			</ul>
 		</nav>
 	</header>
@@ -29,8 +52,8 @@
 			<div class="absolute cross bg-gray right"></div>
 		</div>
 
-		<div class="bg circle mb2 flex items-center justify-center white" style="width: 68px;height: 68px">
-			<img src="uinbg.png" alt="uin alauddin">
+		<div class="bg circle mb2 flex items-center justify-center white">
+			<!-- <img src="uinbg.png" alt="uin alauddin"> -->
 		</div>
 		<p class="m0 muted bold">V1.1</p>
 
@@ -43,12 +66,20 @@
 				<span class="align-middle"><a href="#">Home</a></span>
 			</li>
 			<li class="pointer mb2">
-				<i class="fa-solid fa-gear"></i>
-				<span class="align-middle">Ubah Password</span>
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="index.html">Portal</a></span>
 			</li>
 			<li class="pointer mb2">
-				<i class="fa-solid fa-right-from-bracket"></i>
-				<span class="align-middle"><a href="#">Logout</a></span>
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Lentera</a></span>
+			</li>
+            <li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Organisasi</a></span>
+			</li>
+            <li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Report</a></span>
 			</li>
 		</ul>
 
@@ -112,227 +143,244 @@
 <!-- ######## END FOCUS SIDEBAR CODE HERE -->
 
 <div class="container">
-                    <h2>biodata</h2>
-                    <table>
+    <h1 data-aos="fade-down">Biodata mahasiswa</h1>
+                   <div class="biodata-section" data-aos="fade-up">
+                    <div class="biodata-header">
+                        informasi mahasiswa
+                       </div>
+                       <table class="biodata-table">
                         <tr>
-                            <td>NAMA</td>
-                            <td id="displayName"></td>
+                            <td data-aos="fade-right">NAMA</td>
+                            <td data-aos="fade-left" id="displayName"></td>
                         </tr>
                         <tr>
-                            <td>NIK / No. KTP</td>
-                            <td id="displayNik"></td>
+                            <td data-aos="fade-right">NIK / No. KTP</td>
+                            <td data-aos="fade-left" id="displayNik"></td>
                         </tr>
                         <tr>
-                            <td>NISN</td>
-                            <td id="displayNisn"></td>
+                            <td data-aos="fade-right">NISN</td>
+                            <td data-aos="fade-left" id="displayNisn"></td>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
-                            <td id="displayGender"></td>
+                            <td data-aos="fade-right">Jenis Kelamin</td>
+                            <td data-aos="fade-left" id="displayGender"></td>
                         </tr>
                         <tr>
-                            <td>Tempat Lahir</td>
-                            <td id="displayBirthPlace"></td>
+                            <td data-aos="fade-right">Tempat Lahir</td>
+                            <td data-aos="fade-left" id="displayBirthPlace"></td>
                         </tr>
                         <tr>
-                            <td>Tanggal Lahir</td>
-                            <td id="displayBirthDate"></td>
+                            <td data-aos="fade-right">Tanggal Lahir</td>
+                            <td data-aos="fade-left" id="displayBirthDate"></td>
                         </tr>
                         <tr>
-                            <td>Golongan Darah</td>
-                            <td id="displayBloodType"></td>
+                            <td data-aos="fade-right">Golongan Darah</td>
+                            <td data-aos="fade-left" id="displayBloodType"></td>
                         </tr>
                         <tr>
-                            <td>Tinggi Badan</td>
-                            <td id="displayHeight"></td>
+                            <td data-aos="fade-right">Tinggi Badan</td>
+                            <td data-aos="fade-left" id="displayHeight"></td>
                         </tr>
                         <tr>
-                            <td>Berat Badan</td>
-                            <td id="displayWeight"></td>
+                            <td data-aos="fade-right">Berat Badan</td>
+                            <td data-aos="fade-left" id="displayWeight"></td>
                         </tr>
                         <tr>
-                            <td>Kondisi Buta Warna</td>
-                            <td id="displayColorBlind"></td>
+                            <td data-aos="fade-right">Kondisi Buta Warna</td>
+                            <td data-aos="fade-left" id="displayColorBlind"></td>
                         </tr>
                         <tr>
-                            <td>Memakai Kacamata</td>
-                            <td id="displayGlasses"></td>
+                            <td data-aos="fade-right">Memakai Kacamata</td>
+                            <td data-aos="fade-left" id="displayGlasses"></td>
                         </tr>
                         <tr>
-                            <td>Kondisi Gigi</td>
-                            <td id="displayTeeth"></td>
+                            <td data-aos="fade-right">Kondisi Gigi</td>
+                            <td data-aos="fade-left" id="displayTeeth"></td>
                         </tr>
                     </table>
-
-                    <h2>Kemahasiswaan</h2>
-                    <table>
-                            <tr>
-                                <td>Program Studi</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Periode Masuk</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Angkatan</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Nomor Test</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Jalur Masuk</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Tanggal Daftar</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Gelombang Pendaftaran</td>
-                                <td id="display-"></td>
-                            </tr>
-                            <tr>
-                                <td>Status Masuk</td>
-                                <td id="display-"></td>
-                            </tr>
-                    </table>
-
-                    <h2>Kewarganegaraan</h2>
-                    <table>
-                            <tr>
-                                <td>Agama</td>
-                                <td id="displayReligion"></td>
-                            </tr>
-                            <tr>
-                                <td>Status Nikah</td>
-                                <td id="displayMaritalStatus"></td>
-                            </tr>
-                            <tr>
-                                <td>Kewarganegaraan</td>
-                                <td id="displayCitizenship"></td>
-                            </tr>
-                            <tr>
-                                <td>Status Rumah</td>
-                                <td id="displayHouseStatus"></td>
-                            </tr>
-                            <tr>
-                                <td>Propinsi Tempat Tinggal</td>
-                                <td id="displayProvince"></td>
-                            </tr>
-                            <tr>
-                                <td>Kota Tempat Tinggal</td>
-                                <td id="displayCity"></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat</td>
-                                <td id="displayAddress"></td>
-                            </tr>
-                            <tr>
-                                <td>Kelurahan</td>
-                                <td id="displaySubdistrict"></td>
-                            </tr>
-                            <tr>
-                                <td>Kecamatan</td>
-                                <td id="displayDistrict"></td>
-                            </tr>
-                            <tr>
-                                <td>Kode Pos</td>
-                                <td id="displayPostalCode"></td>
-                            </tr>
-                            <tr>
-                                <td>Negara</td>
-                                <td id="displayCountry"></td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td id="displayEmail"></td>
-                            </tr>
-                            <tr>
-                                <td>Nomor Telepon / HP</td>
-                                <td id="displayPhone"></td>
-                            </tr>
-                            <tr>
-                                <td>Kepemilikan Nomor Telepon / HP</td>
-                                <td id="displayPhoneOwnership"></td>
-                            </tr>
-                            <tr>
-                                <td>Bantuan Kartu Perdana</td>
-                                <td id="displayCardSupport"></td>
-                            </tr>
-                    </table>
-                    
-                        <table>
-                        <h2>Lain-lain</h2>
-                        <!-- <p>Hubungan Biaya: <span id="displayExpenseRelationship"></span></p> -->
-                        <tr>
-                            <td>hubungan-biaya</td>
-                            <td id="displayExpenseRelationship"></td>
-                        </tr>
-                        <!-- <p>Sumber Dana: <span id="displaySourceOfFunds"></span></p> -->
-                        <tr>
-                            <td>Sumber Dana</td>
-                            <td id="displaySourceOfFunds"></td>
-                        </tr>
-                        <!-- <p>Sumber Dana Beasiswa: <span id="displayScholarshipSource"></span></p> -->
-                        <tr>
-                            <td>Sumber Dana</td>
-                            <td id="displayScholarshipSource"></td>
-                        </tr>
-                        <!-- <p>Jumlah Saudara: <span id="displayNumberOfSiblings"></span></p> -->
-                        <tr>
-                            <td>Jumlah Saudara</td>
-                            <td id="displayNumberOfSiblings"></td>
-                        </tr>
-                        <!-- <p>Status Bekerja: <span id="displayEmploymentStatus"></span></p> -->
-                        <tr>
-                            <td>Status Bekerja</td>
-                            <td id="displayEmploymentStatus"></td>
-                        </tr>
-                        <!-- <p>No. Asuransi: <span id="displayInsuranceNumber"></span></p> -->
-                        <tr>
-                            <td>Nomor Asuransi</td>
-                            <td id="displayInsuranceNumber"></td>
-                        </tr>
-                        <!-- <p>Hobi: <span id="displayHobbies"></span></p> -->
-                        <tr>
-                            <td>Hobi</td>
-                            <td id="displayHobbies"></td>
-                        </tr>
-                        <!-- <p>Tahu Kampus ini dari: <span id="displaySourceOfKnowledge"></span></p> -->
-                        <tr>
-                            <td>Tahu Kampus Ini dari</td>
-                            <td id="displaySourceOfKnowledge"></td>
-                        </tr>
-                        </table>
-                    
-                
-                    <!-- Pengalaman Organisasi section -->
-                    
-                        <div>
-                            <h2>Pengalaman Organisasi</h2>
-                        <table>
-                            <thead>
+    
+                    <div class="biodata-header">
+                        Kemahasiswaan
+                       </div>
+                        <table class="biodata-table">
                                 <tr>
-                                    <th>NO</th>
-                                    <th>TEMPAT</th>
-                                    <th>PENGALAMAN ORGANISASI</th>
+                                    <td data-aos="fade-right">Program Studi</td>
+                                    <td data-aos="fade-left" id="display-"></td>
                                 </tr>
-                            </thead>
-                            <tbody id="organizationExperienceTable">
-                                <!-- Data will be appended here dynamically -->
-                            </tbody>
+                                <tr>
+                                    <td data-aos="fade-right">Periode Masuk</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Angkatan</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Nomor Test</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Jalur Masuk</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Tanggal Daftar</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Gelombang Pendaftaran</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Status Masuk</td>
+                                    <td data-aos="fade-left" id="display-"></td>
+                                </tr>
                         </table>
-                        <button id="addOrganizationExperienceButton">Tambah</button>
-                        </div>
+    
+                        <div class="biodata-header">
+                            kewarganegaraan
+                           </div>
+                        <table class="biodata-table">
+                                <tr>
+                                    <td data-aos="fade-right">Agama</td>
+                                    <td data-aos="fade-left" id="displayReligion"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Status Nikah</td>
+                                    <td data-aos="fade-left" id="displayMaritalStatus"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kewarganegaraan</td>
+                                    <td data-aos="fade-left" id="displayCitizenship"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Status Rumah</td>
+                                    <td data-aos="fade-left" id="displayHouseStatus"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Propinsi Tempat Tinggal</td>
+                                    <td data-aos="fade-left" id="displayProvince"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kota Tempat Tinggal</td>
+                                    <td data-aos="fade-left" id="displayCity"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Alamat</td>
+                                    <td data-aos="fade-left" id="displayAddress"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kelurahan</td>
+                                    <td data-aos="fade-left" id="displaySubdistrict"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kecamatan</td>
+                                    <td data-aos="fade-left" id="displayDistrict"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kode Pos</td>
+                                    <td data-aos="fade-left" id="displayPostalCode"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Negara</td>
+                                    <td data-aos="fade-left" id="displayCountry"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Email</td>
+                                    <td data-aos="fade-left" id="displayEmail"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Nomor Telepon / HP</td>
+                                    <td data-aos="fade-left" id="displayPhone"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Kepemilikan Nomor Telepon / HP</td>
+                                    <td data-aos="fade-left" id="displayPhoneOwnership"></td>
+                                </tr>
+                                <tr>
+                                    <td data-aos="fade-right">Bantuan Kartu Perdana</td>
+                                    <td data-aos="fade-left" id="displayCardSupport"></td>
+                                </tr>
+                        </table>
+                        
+                        <div class="biodata-header">
+                            lain lain
+                           </div>
+                            <table class="biodata-table">
+                            <!-- <p>Hubungan Biaya: <span id="displayExpenseRelationship"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">hubungan-biaya</td>
+                                <td data-aos="fade-left" id="displayExpenseRelationship"></td>
+                            </tr>
+                            <!-- <p>Sumber Dana: <span id="displaySourceOfFunds"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Sumber Dana</td>
+                                <td data-aos="fade-left" id="displaySourceOfFunds"></td>
+                            </tr>
+                            <!-- <p>Sumber Dana Beasiswa: <span id="displayScholarshipSource"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Sumber Dana</td>
+                                <td data-aos="fade-left" id="displayScholarshipSource"></td>
+                            </tr>
+                            <!-- <p>Jumlah Saudara: <span id="displayNumberOfSiblings"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Jumlah Saudara</td>
+                                <td data-aos="fade-left" id="displayNumberOfSiblings"></td>
+                            </tr>
+                            <!-- <p>Status Bekerja: <span id="displayEmploymentStatus"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Status Bekerja</td>
+                                <td data-aos="fade-left" id="displayEmploymentStatus"></td>
+                            </tr>
+                            <!-- <p>No. Asuransi: <span id="displayInsuranceNumber"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Nomor Asuransi</td>
+                                <td data-aos="fade-left" id="displayInsuranceNumber"></td>
+                            </tr>
+                            <!-- <p>Hobi: <span id="displayHobbies"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Hobi</td>
+                                <td data-aos="fade-left" id="displayHobbies"></td>
+                            </tr>
+                            <!-- <p>Tahu Kampus ini dari: <span id="displaySourceOfKnowledge"></span></p> -->
+                            <tr>
+                                <td data-aos="fade-right">Tahu Kampus Ini dari</td>
+                                <td data-aos="fade-left" id="displaySourceOfKnowledge"></td>
+                            </tr>
+                            </table>
+                        
+                    
+                        <!-- Pengalaman Organisasi section -->
+                        
+                        <div class="biodata-header">
+                        pengalaman organisasi
+                       </div>
+                            <div>
+                            <table class="biodata-table">
+                                <thead>
+                                    <tr>
+                                        <td data-aos="fade-right">NO</td>
+                                        <td data-aos="fade-right">TEMPAT</td>
+                                        <td data-aos="fade-right">PENGALAMAN ORGANISASI</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="organizationExperienceTable">
+                                    <!-- Data will be appended here dynamically -->
+                                </tbody>
+                            </table>
+                            <button id="addOrganizationExperienceButton">Tambah</button>
+                            </div>
+                   </div>
                     
                     <br><br>
                     <button id="editButton">Ubah</button>
-        <footer>
-            <p>&copy; 2024 Biodata. All rights reserved.</p>
-        </footer>
+        <footer class="px2 py3 bg navy center">
+		<div class="footer">
+			<p class="muted">Copyright ©2024 → <a class="text-decoration-none navy"
+				href="#">uinalauddin.com</a>. All rights reserved. <a
+				class="text-decoration-none navy" href="https://insertapps.com/privacy/">Privacy</a></p>
+		</div>
+	</footer>
     
 
     <!-- Modal -->
@@ -510,5 +558,9 @@
 </div>
     <script src="bio2script.js"></script>
     <script src="https://kit.fontawesome.com/c46b8d745e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

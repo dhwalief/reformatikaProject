@@ -17,6 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Navigasi Bar Start -->
@@ -32,10 +35,12 @@
         </div>
         <ul>
           <li class="nav">
-            <a href="/Sistem_data_terpusat/homePage.html">Home</a>
+            <a href="#Home">Home</a>
             <a href="/Portal_akademik/index.html">Portal</a>
             <a href="https://lentera.uin-alauddin.ac.id/">Lentera</a>
-            <a href="#organisasi">Organisasi</a>
+            <a href="/manajemen_organisasi/content-dashboard/index.html"
+              >Organisasi</a
+            >
             <a href="/Sistem_Pelaporan_Bulyying/dashboard_SPB.html">Report</a>
           </li>
           <li class="nav-item">
@@ -46,17 +51,23 @@
                 class="profile-pic"
               />
             </a>
-            <div id="dropdown" class="dropdown-content">
-              <img
-                src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
-                alt="Profil"
-                class="dropdown-profile-pic"
-              />
-              <p><strong>Wira Fadhil</strong></p>
-              <p>wirafadhil20@gmail.com</p>
-              <p><a href="#logout">Logout</a></p>
-            </div>
           </li>
+          <div id="dropdown" class="dropdown-content">
+            <img
+              src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
+              alt="Profil"
+              class="dropdown-profile-pic"
+            />
+            <p><strong>Wira Fadhil</strong></p>
+            <p>wirafadhil20@gmail.com</p>
+
+            <button class="logout">
+              <a href="#log-out" id="log-out"
+                ><i data-feather="log-out"></i>
+                <p>log-out</p></a
+              >
+            </button>
+          </div>
         </ul>
       </nav>
       <!-- Navigasi Bar End  -->
@@ -98,7 +109,10 @@
                     cepat dan mudah.
                   </p>
                   <button>
-                    <a href="/Portal_akademik/index.html" class="portal"
+                    <a
+                      href="/Portal_akademik/index.html"
+                      class="text-white"
+                      style="text-decoration: none"
                       >Masuk Portal</a
                     >
                   </button>
@@ -121,7 +135,8 @@
                   <button>
                     <a
                       href="https://lentera.uin-alauddin.ac.id/"
-                      class="lentera"
+                      class="text-white"
+                      style="text-decoration: none"
                       >Lihat Lentera</a
                     >
                   </button>
@@ -141,7 +156,14 @@
                     Anda mengatur struktur, mengelola anggota, dan meningkatkan
                     kolaborasi tim secara efisien.
                   </p>
-                  <button>Masuk Sistem</button>
+                  <button>
+                    <a
+                      href="/manajemen_organisasi/content-dashboard/index.html"
+                      class="text-white"
+                      style="text-decoration: none"
+                      >Masuk Sistem</a
+                    >
+                  </button>
                 </div>
               </div>
               <div class="gambarSlide">
@@ -161,14 +183,15 @@
                   <button>
                     <a
                       href="/Sistem_Pelaporan_Bulyying/dashboard_SPB.html"
-                      class="bully"
+                      class="text-white"
+                      style="text-decoration: none"
                       >Laporkan</a
                     >
                   </button>
                 </div>
               </div>
               <div class="gambarSlide">
-                <img src="LaporanBullying.jpg" alt="Laporan Bullying" />
+                <img src="LaporanBullying.png" alt="Laporan Bullying" />
               </div>
             </div>
           </div>
@@ -194,60 +217,88 @@
 
         <div class="card-group">
           <div class="card">
-            <img src="UINhomePage.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
+            <a
+              href="https://bsa.fah.uin-alauddin.ac.id/berita-23728-perpanjangan-beasiswa-cendekia-baznas-2024-untuk-mahasiswa-s1-d4"
+            >
+              <img src="beasiswaCendekia.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Beasiswa dalam Negeri Cendekia Baznaz tahun 2024 kini hadir
+                  lagi jangan lewatkan kesempatan ini dan daftarkan dirimu
+                </h5>
+                <p class="card-text">
+                  Beasiswa BAZNAS adalah program BAZNAS yang memiliki tugas
+                  menyediakan dana pendidikan demi terjaminnya keberlangsungan
+                  ...
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">29 Juli 2024</small>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <img src="UINhomePage.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
+            <a
+              href="https://uin-alauddin.ac.id/berita/detail/mahasiswa-teknik-informatika-uin-alauddin-makassar-raih-juara-1-dan-2-pada-event-hackathon-0624"
+            >
+              <img src="Hackathon.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Mahasiswa Teknik Informatika UIN Alauddin Makassar Raih Juara
+                  1 dan 2 Pada Event Hackathon Devforge
+                </h5>
+                <p class="card-text">
+                  Tiga tim dari prodi teknik informatika berhasil meloloskan
+                  diri dalam event Hackathon Devforge 2024 yang diadakan oleh
+                  ....
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">25 Juni 2024</small>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <img src="UINhomePage.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
+            <a
+              href="https://uin-alauddin.ac.id/berita/detail/tidak-lulus-smm-yuk-daftar-smm-tahap-ii-uin-alauddin-makassar-0824"
+            >
+              <img src="smm.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Tidak Lulus SMM, Yuk Daftar SMM Tahap II di Universitas Islam
+                  Negeri Alauddin Makassar, Jangan sampai terlewatkan yah
+                </h5>
+                <p class="card-text">
+                  UIN Alauddin Online - Universitas Islam Negeri (UIN) Alauddin
+                  Makassar kembali membuka pendaftaran Seleksi Masuk Mandiri
+                  (SMM) .....
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">02 Agustus 2024</small>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <img src="UINhomePage.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
+            <a
+              href="https://uin-alauddin.ac.id/berita/detail/prodi-teknik-informatika-uin-alauddin-makassar-sambut-101-mahasiswa-baru-dua-diantaranya-0923"
+            >
+              <img src="PKKMB.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Prodi Teknik Informatika UIN Alauddin Makassar Sambut 101
+                  Mahasiswa Baru, Dua Diantaranya Asal Sudan - UIN Alauddin
+                  Online
+                </h5>
+                <p class="card-text">
+                  UIN Alauddin Online - Prodi Teknik Informatika Fakultas Sains
+                  dan Teknologi (FST) UIN Alauddin Makassar menyambut 101 ...
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">06 September 2023</small>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -274,22 +325,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="News1.png"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://uin-alauddin.ac.id/berita/detail/79-mahasiswa-uin-alauddin-siap-kkn-di-kindang-camat-usul-program-pencegahan-stunting-0824/15661"
+                      >
+                        <h5 class="card-title">79 Mahasiswa UIN..</h5>
+                        <p class="card-text">
+                          Sebanyak 79 mahasiswa Kuliah Kerja Nyata (KKN)
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -298,22 +353,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/114/2024/06/03/SMM-UIN-Alauddin-Makassar-2077633766.jpg"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://sulsel.pojoksatu.id/makassar/1144934169/keren-uin-alauddin-makassar-peringkat-7-lingkup-ptkin-dalam-webometrics-juli-2024"
+                      >
+                        <h5 class="card-title">Masuk Peringkat 7...</h5>
+                        <p class="card-text">
+                          sukses naik peringkat berdasarkan penilaian...
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -322,22 +381,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="https://uin-alauddin.ac.id//assets/file/berita/UIN%20Alauddin%20Makassar%20185421184%2061707756_2715312665207079_9190793923935600640_n.jpg"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://uin-alauddin.ac.id/berita/detail/teknik-informatika-jurusan-paling-diminati-jalur-umptkin-uin-alauddin"
+                      >
+                        <h5 class="card-title">Teknik Informatika..</h5>
+                        <p class="card-text">
+                          Teknik Informatika menjadi jurusan yang paling dimi...
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -346,22 +409,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="https://uin-alauddin.ac.id//assets/file/berita/hmj-ti-uin-alauddin-lakukan-studi-banding-ke-himatik-ft-unm-0624.jpeg"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://uin-alauddin.ac.id/berita/detail/hmj-ti-uin-alauddin-lakukan-studi-banding-ke-himatik-ft-unm-0624"
+                      >
+                        <h5 class="card-title">HMJ TI UIN...</h5>
+                        <p class="card-text">
+                          HMJ TI UINAM Melakukan study banding ke Himpu..
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -370,22 +437,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="https://uin-alauddin.ac.id//assets/file/berita/menuju-liga-rektor-cup-ii-panitia-menggelar-technical-meeting-0824.jpeg"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://uin-alauddin.ac.id/berita/detail/menuju-liga-rektor-cup-ii-panitia-menggelar-technical-meeting-0824/15666"
+                      >
+                        <h5 class="card-title">Menuju Liga Rektor</h5>
+                        <p class="card-text">
+                          Technical meeting ini dihadiri oleh perwakilan tim
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -394,22 +465,26 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="Gedung-Auditorium-Kampus-II-UIN-Alauddin-Makassar-1520528342.webp"
+                      src="https://uin-alauddin.ac.id//assets/file/berita/hmj-ti-uin-alauddin-rayakan-milad-ke-18-dengan-ragam-kegiatan-0522.jpeg"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text be....
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
+                      <a
+                        href="https://uin-alauddin.ac.id/berita/detail/hmj-ti-uin-alauddin-rayakan-milad-ke-18-dengan-ragam-kegiatan-0522/12352"
+                      >
+                        <h5 class="card-title">HMJ TI UINAM Ra...</h5>
+                        <p class="card-text">
+                          Jurusan yang diresmikan pada 29 Mei 2004...
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -478,37 +553,111 @@
       <div id="contactCards" class="contact-cards"></div>
     </main>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <h3>Tentang Kami</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam
-            purus sit amet luctus venenatis.
-          </p>
+    <!-- Footer -->
+    <!-- Footer Start -->
+    <footer class="bg-dark text-white text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!-- About column -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About UIN Alauddin Makassar</h5>
+            <p>
+              UIN Alauddin Makassar is a renowned institution providing quality
+              education and resources for students to thrive in their academic
+              and professional careers. We strive to foster an inclusive and
+              dynamic learning environment.
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!-- Quick Links column -->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Quick Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#home" class="text-white">Home</a>
+              </li>
+              <li>
+                <a href="/Portal_akademik/index.html" class="text-white"
+                  >Portal</a
+                >
+              </li>
+              <li>
+                <a href="https://lentera.uin-alauddin.ac.id/" class="text-white"
+                  >Lentera</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/manajemen_organisasi/content-dashboard/index.html"
+                  class="text-white"
+                  >Organisasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/Sistem_Pelaporan_Bulyying/dashboard_SPB.html"
+                  class="text-white"
+                  >Report</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!-- Address column -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Our Address</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <p class="text-white">
+                  Jl. Sultan Alauddin No.63, Kota Makassar, Sulawesi Selatan,
+                  Indonesia
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!-- Contact column -->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="mailto:info@uin-alauddin.ac.id" class="text-white"
+                  >info@uin-alauddin.ac.id</a
+                >
+              </li>
+              <li>
+                <a href="tel:+624113211111" class="text-white"
+                  >+62 411 321 1111</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps?q=UIN+Alauddin+Makassar"
+                  class="text-white"
+                  target="_blank"
+                  >Campus Map</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
         </div>
-        <div class="footer-center">
-          <h3>Hubungi Kami</h3>
-          <p>Jl. Contoh No. 123, Makassar, Indonesia</p>
-          <p>Email: info@uin-alauddin.ac.id</p>
-          <p>Phone: +62 123 456 789</p>
-        </div>
-        <div class="footer-right">
-          <h3>Sosial Media</h3>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
+        <!--Grid row-->
       </div>
-      <div class="footer-bottom">
-        <p>
-          &copy; 2024 Universitas Islam Negeri Alauddin Makassar. All rights
-          reserved.
-        </p>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 UIN Alauddin Makassar
       </div>
+      <!-- Copyright -->
     </footer>
+    <!-- Footer End -->
 
     <script src="main.js"></script>
     <script
@@ -516,5 +665,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

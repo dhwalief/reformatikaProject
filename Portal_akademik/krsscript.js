@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${kode}</td>
                 <td>${mataKuliah}</td>
                 <td>${sks}</td>
-                <td><button class="hapusBtn">Hapus</button></td>
             </tr>
         `;
         courseTableBody.insertAdjacentHTML('beforeend', newRow);
@@ -114,3 +113,25 @@ let burger = document.querySelector('.burger');
 		close.addEventListener('click', function () {
 			sidenav.classList.remove('active');
 		});
+
+        // navbar bar
+document.addEventListener("DOMContentLoaded", (event) => {
+	const profileLink = document.getElementById("profile-link");
+	const jatuh = document.getElementById("jatuh");
+  
+	profileLink.addEventListener("click", (event) => {
+	  event.preventDefault();
+	  const isjatuhVisible = jatuh.style.display === "block";
+	  jatuh.style.display = isjatuhVisible ? "none" : "block";
+	});
+  
+	// Close the jatuh if user clicks outside of it
+	document.addEventListener("click", (event) => {
+	  if (
+		!profileLink.contains(event.target) &&
+		!jatuh.contains(event.target)
+	  ) {
+		jatuh.style.display = "none";
+	  }
+	});
+  });
