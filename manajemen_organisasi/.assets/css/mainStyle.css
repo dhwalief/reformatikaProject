@@ -87,7 +87,7 @@ body {
 }
 
 #sidebar .brand {
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 700;
 	height: 56px;
 	display: flex;
@@ -96,7 +96,7 @@ body {
 	position: sticky;
 	top: 0;
 	left: 0;
-	
+	margin-left: 6px;
 	background: var(--color-green);
 	/* z-index: 500; */
 	box-sizing: content-box;
@@ -107,6 +107,15 @@ body {
 	display: flex;
 	justify-content: center;
 	color: var(--color-white);
+}
+
+#sidebar .brand img {
+	height: 50px;
+}
+
+#sidebar .brand span {
+	color: #DB504A;
+	font-size: 14px;
 }
 /* 
 #sidebar span {
@@ -200,7 +209,7 @@ body {
 /*? ========== CONTENT ========== */
 
 /*? ========== NAVBAR ========== */
-#content nav {
+/* #content nav {
 	height: 56px;
 	padding: 0 24px;
 	display: flex;
@@ -231,7 +240,7 @@ body {
 	font-size: 24px;
 	cursor: pointer;
 	color: var(--color-dark);
-}
+} */
 
 /* #content nav .nav-link {
 	font-size: 16px;
@@ -242,7 +251,7 @@ body {
 	color: var(--color-blue);
 } */
 
-#content nav .right {
+/* #content nav .right {
 	display: inline-flex;
 	flex-direction: row;
 	gap: 17px;
@@ -268,7 +277,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 /* #content nav .notification .notification-dropdown {
 	position: absolute;
@@ -326,7 +335,7 @@ body {
 #content .notification .notification-dropdown li i {
 	width: 10%;
 } */
-#content nav .notification .notification-dropdown {
+/* #content nav .notification .notification-dropdown {
 	position: absolute;
 	top: 56px;
 	right: 0px;
@@ -347,8 +356,6 @@ body {
 }
 
 #content nav .notification .notification-dropdown .update {
-    /* display: grid;
-    grid-template-rows: 0.2rem auto; */
 	display: flex;
 	flex-direction: column;
     gap: 1rem;
@@ -366,7 +373,7 @@ body {
 
 #content nav .profile i {
 	font-size: 24px;
-}
+} */
 
 /* ?Ganti tema */
 /* #content nav .switch-mode {
@@ -394,6 +401,170 @@ body {
 #content nav #switch-mode:checked + .switch-mode::before {
 	left: calc(100% - (25px - 4px) - 2px);
 } */
+
+#content nav {
+	position: initial;
+	top: 0;
+	height: 56px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background: var(--color-light);
+	box-shadow: var(--box-shadow);
+	color: var(--color-dark);
+	z-index: 5;
+	padding: 0.3em;
+	box-sizing: border-box;
+}
+/* 
+#content .logo {
+	height: 50px;
+	margin: 10px;
+}
+  
+#content .hero {
+	display: flex;
+	align-items: center;
+}
+  
+#content .hero .logo {
+	height: 50px;
+	margin-right: 10px; 
+}
+  
+.hero h1 {
+	font-size: 24px;
+	margin: 0;
+} */
+
+#content nav button {
+	border: none;
+	background: var(--color-light);
+}
+
+#content nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	/* gap: 0.5em; */
+}
+  
+#content nav ul li {
+	margin: 0 1em;
+	position: relative;
+	display: flex;
+	gap: 0px;
+}
+  
+#content nav ul li a {
+	font-family: var(--font);
+	color: var(--color-dark);
+	text-decoration: none;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+  
+#content nav ul li a::after {
+	content: "";
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 2px;
+	background-color: var(--color-dark);
+	transition: width 0.3s ease;
+}
+  
+#content nav ul li a:hover::after {
+	width: calc(100% - 2em);
+}
+  
+#content .profile-pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+  
+#content .profile-dropdown {
+	position: relative;
+}
+  
+#content .dropdown-content {
+	display: none;
+	position: absolute;
+	top: 80px; /* Adjust this value as needed */
+	right: 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	width: 200px;
+	padding: 10px;
+}
+  
+#content .dropdown-content img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+  
+#content .profile-dropdown:hover .dropdown-content {
+	display: block;
+}
+  
+#content .dropdown-content img.dropdown-profile-pic {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	margin: 1rem auto;
+}
+  
+#content .dropdown-content p {
+	color: black;
+	padding: 1px 1px; /* Mengurangi padding atas dan bawah */
+	margin: 0; /* Menghapus margin */
+	text-decoration: none;
+	display: block;
+	line-height: 1.5; /* Menyesuaikan line-height */
+}
+  
+#content .dropdown-content a {
+	color: #007bff;
+	text-decoration: none;
+}
+  
+#content .dropdown-content p a:hover {
+	text-decoration: underline;
+}
+  
+#content .dropdown-content a:hover {
+	text-decoration: underline;
+}
+  
+@keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+}
+  
+
+
+
+
 /*? ========== NAVBAR ==========  */
 
 

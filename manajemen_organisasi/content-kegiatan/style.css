@@ -11,7 +11,7 @@
 	font-size: 36px;
 	font-weight: 600;
 	margin-bottom: 10px;
-	color: var(--color-dark);
+	color: var(--color-dark); 
 }
 
 #content main .head-title .left .path {
@@ -179,6 +179,7 @@
 }
 
 #content main .table-data .event table {
+	height: 70vh;
 	width: 100%;
 	border-collapse: collapse;
 	border-radius: var(--card-borderRadiusMedium);
@@ -216,6 +217,7 @@
 }
 
 #content main .table-data .event table th {
+	position: sticky;
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
@@ -283,7 +285,7 @@
 }
 
 #content .process {
-	color: var(--color-yellow);
+	color: var(--color-blue);
 }
 
 #content .pending {
@@ -293,13 +295,13 @@
 	color: var(--color-red)
 }
 #content .soon {
-	color: var(--color-darkGrey);
+	color: var(--color-yellow);
 }
 /*? ========== TABEL ========== */
 
 
 
-/*? ========== TABEL KEUANGAN ========== */
+/*? ========== TABEL TODO ========== */
 #content main .table-data .todo {
 	max-width: 300px;
 	flex-grow: 1;

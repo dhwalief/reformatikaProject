@@ -17,9 +17,11 @@
 	<!-- SIDEBAR -->
 	<div id="sidebar">
 		<div class="brand">
+			<img src="../../MATERIAL_ASSET/logo_UIN.png" alt="Logo UIN Alauddin Makassar" class="logo"/>
+			<p>UIN Center <span class="text">Admin</span></p>
 			<!-- <i class='bx bx-menu' ></i> -->
-			<i class='bx bxs-spreadsheet'></i>
-			<span class="text">Admin</span>
+			<!-- <i class='bx bxs-spreadsheet'></i>
+			<span class="text">Admin</span> -->
 			<div class="close" id="close-btn">
 				<i class='bx bx-x'></i>
 			</div>
@@ -69,27 +71,47 @@
 			<button class="menu" id="menu-btn">
 				<i class='bx bx-menu' ></i>
 			</button>
-			<!-- Tema Gelap -->
-			<!-- <input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label> -->
-			<div class="right">
-				<div class="notif-div">	
-					<div href="#" class="notification">
-						<i class='bx bxs-bell' ></i>
-						<span class="num">8</span>
-					</div>
+			<!-- <div class="hero">
+			  <img
+				src="../../MATERIAL_ASSET/logo_UIN.png"
+				alt="Logo UIN Alauddin Makassar"
+				class="logo"
+			  />
+			  <h1>UIN Center</h1>
+			</div> -->
+			<ul>
+			  <li class="nav">
+				<a href="#home">Home</a>
+				<a href="#portal">Portal</a>
+				<a href="#lentera">Lentera</a>
+				<a href="#organisasi">Organisasi</a>
+				<a href="#">Report</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#" id="profile-link">
+				  <img
+					src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
+					alt="Profil"
+					class="profile-pic"
+				  />
+				</a>
+				<div id="dropdown" class="dropdown-content">
+				  <img
+					src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
+					alt="Profil"
+					class="dropdown-profile-pic"
+				  />
+				  <p><strong>Wira Fadhil</strong></p>
+				  <p>wirafadhil20@gmail.com</p>
+				  <p><a href="#logout">Logout</a></p>
 				</div>
-				<div class="profile-div">
-					<a href="#" class="profile">
-						<i class='bx bxs-user-circle'></i>
-					</a>
-				</div>
-			</div>
+			  </li>
+			</ul>
 		</nav>
 		<!-- ========= NAVBAR ========= -->
 
 		<!-- ========= MAIN ========= -->
-		<main>
+	<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>Kegiatan</h1>
@@ -102,12 +124,12 @@
 							<a class="active" href="#">Kegiatan</a>
 						</li>
 					</ul>
-					<div class="year-container">
-						<div id="controls">
-							<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
-							<div id="year-display"></div>
-							<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
-						</div>
+				</div>
+				<div class="year-container">
+					<div id="controls">
+						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
+						<div id="year-display"></div>
+						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
 					</div>
 				</div>
 			</div>
@@ -141,9 +163,16 @@
 								<input type="search" placeholder="Search...">
 							</div>
 						</form>
-						<i class='bx bx-dots-vertical-rounded' ></i>
-						<!-- <i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i> -->
+						<div class="head-item">
+							<i class='bx bx-dots-vertical-rounded' ></i>
+							<!-- <div class="item-dropdown">
+								<ul>
+									<li><a href="#">Tambah kegiatan</a></li>
+									<li><a href="#">Pilih</a></li>
+									<li><a href="#">Tambah kegiatan</a></li>
+								</ul>
+							</div> -->
+						</div>
 					</div>
 					<table>
 						<thead>
@@ -185,9 +214,100 @@
 								<td><span class="soon">Segera</span></td>
 								<td>Detail</td>
 							</tr>
+							<tr>
+								<td><p>Rapat Internal</p></td>
+								<td>01-10-2024</td>
+								<td><span class="completed">Selesai</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Kunjungan Desa</p></td>
+								<td>04-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Seminar</p></td>
+								<td>23-11-2024</td>
+								<td><span class="process">Berlangsung</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Rapat</p></td>
+								<td>24-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Talkshow</p></td>
+								<td>30-11-2024</td>
+								<td><span class="soon">Segera</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Rapat Internal</p></td>
+								<td>01-10-2024</td>
+								<td><span class="completed">Selesai</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Kunjungan Desa</p></td>
+								<td>04-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Seminar</p></td>
+								<td>23-11-2024</td>
+								<td><span class="process">Berlangsung</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Rapat</p></td>
+								<td>24-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Talkshow</p></td>
+								<td>30-11-2024</td>
+								<td><span class="soon">Segera</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Rapat Internal</p></td>
+								<td>01-10-2024</td>
+								<td><span class="completed">Selesai</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Kunjungan Desa</p></td>
+								<td>04-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Seminar</p></td>
+								<td>23-11-2024</td>
+								<td><span class="process">Berlangsung</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Rapat</p></td>
+								<td>24-11-2024</td>
+								<td><span class="pending">Ditunda</span></td>
+								<td>Detail</td>
+							</tr>
+							<tr>
+								<td><p>Talkshow</p></td>
+								<td>30-11-2024</td>
+								<td><span class="soon">Segera</span></td>
+								<td>Detail</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
+				
 				<!-- ========= TABEL KEGIATAN ========= -->	
 
 				<!-- ========= Tabel TODO ========= -->
@@ -210,7 +330,6 @@
 					</div> -->
 				</div>
 				<!-- ========= Tabel todo ========= -->
-
 			</div>
 		</main>
 		<!-- ========= MAIN ========= -->
