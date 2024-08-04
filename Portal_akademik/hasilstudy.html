@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Hasil Studi</title>
+    <link rel="stylesheet" href="hasilstudystyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/ace-css/css/ace.min.css">
+</head>
+<body>
+	<header class="bg px2 py1 m0 flex items-center white">
+		<div class="burger pointer flex flex-column justify-between mr2">
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+			<span class="bg-white"></span>
+		</div>
+        <img style="width: 68px;height: 50px" src="uinbg1.png" alt="uin alauddin">
+		<a class="white caps text-decoration-none h3 bold" href="#">PORTAL AKADEMIK UIN ALAUDDIN</a>
+		<nav class="ml-auto">
+			<!-- <ul class="list-reset m0 h5 caps">
+				<li class="inline-block btn p0">V1.1</li>
+			</ul> -->
+			<ul>
+				<li class="nav-item">
+					<a href="#" id="profile-link">
+					  <img
+						src="aaa.png"
+						alt="Profil"
+						class="profile-pic"
+					  />
+					</a>
+					<div id="jatuh" class="jatuh-content">
+					  <img
+						src="aaa.png"
+						alt="Profil"
+						class="jatuh-profile-pic"
+					  />
+					  <p><strong>Wira Fadhil</strong></p>
+					  <p>wirafadhil20@gmail.com</p>
+					  <p><a href="#logout">Logout</a></p>
+					</div>
+				  </li>
+			</ul>
+		</nav>
+	</header>
+<!-- ######## START FOCUS SIDEBAR CODE HERE -->
+	<div id="sidenav" class="fixed z4 top-0 left-0 bg p2">
+		<div class="close flex items-center justify-center relative pointer mb2 right">
+			<div class="absolute cross bg-gray left"></div>
+			<div class="absolute cross bg-gray right"></div>
+		</div>
+
+		<div class="bg circle mb2 flex items-center justify-center white">
+			<!-- <img src="uinbg.png" alt="uin alauddin"> -->
+		</div>
+		<p class="m0 muted bold">V1.1</p>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Landing</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-house" ></i>
+				<span class="align-middle"><a href="#">Home</a></span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="index.html">Portal</a></span>
+			</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Lentera</a></span>
+			</li>
+            <li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Organisasi</a></span>
+			</li>
+            <li class="pointer mb2">
+				<i class="fa-solid fa-door-open"></i>
+				<span class="align-middle"><a href="#">Report</a></span>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="list-reset muted m0">
+			<li class="h6 caps mb2">Academics</li>
+			<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="biodata.html">Biodata</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+					<i class="fa-solid fa-layer-group"></i>
+					<span class="align-middle"><a href="#">Data Orang Tua</a></span>
+				</li>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Data Sma</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Mata Kuliah Yang Ditawarkan</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="krs.html">Kartu Rencana Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="hasilstudy.html">Kartu hasil Studi</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Transkip Nilai</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">SKIP</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Informasi Akademik</a></span>
+			</li>
+			<li class="pointer mb2">
+				<li class="pointer mb2">
+				<i class="fa-solid fa-layer-group"></i>
+				<span class="align-middle"><a href="#">Kegiatan Mahasiswa</a></span>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- ######## END FOCUS SIDEBAR CODE HERE -->
+    <main>
+        <div class="container">
+            <h1>Kartu Hasil Studi</h1>
+            <p class="description">
+                Keterangan: Kartu Hasil Studi merupakan fasilitas yang dapat digunakan untuk melihat hasil studi mahasiswa per semester. Selain dapat dilihat secara online, hasil studi ini juga dapat dicetak.
+            </p>
+            <div class="semester-select">
+                <label for="semester">Semester</label>
+                <select id="semester">
+                    <option value="gasal-2023-2024">Gasal 2023/2024</option>
+                    <option value="genap-2023-2024">Genap 2023/2024</option>
+                </select>
+                <button onclick="showResults()">Lihat</button>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Grafik IP Semester</h2>
+                    <canvas id="ipSemesterChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h2>Grafik IP Komulatif</h2>
+                    <canvas id="ipKumulatifChart"></canvas>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal Box -->
+        <div id="studyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="studyResults">
+                    <!-- Tabel data hasil studi akan ditampilkan di sini -->
+                </div>
+            </div>
+        </div>
+    </main>
+	<footer class="px2 py3 bg navy center">
+		<div class="footer">
+			<p class="muted">Copyright ©2024 → <a class="text-decoration-none navy"
+				href="#">uinalauddin.com</a>. All rights reserved. <a
+				class="text-decoration-none navy" href="https://insertapps.com/privacy/">Privacy</a></p>
+		</div>
+	</footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="hasilstudyscript.js"></script>
+    <script src="https://kit.fontawesome.com/c46b8d745e.js" crossorigin="anonymous"></script>
+</body>
+</html>
