@@ -8,8 +8,44 @@
 	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
 	<link rel="stylesheet" href="style.css">
-
-	<title>Surat | Sistem Manajemen Organisasi</title>
+	<style>
+		.event h3 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		.event .active {
+			color: var(--color-light);
+			background-color: var(--color-green);
+			padding : 7px;
+			border-radius: 5px;
+			width: fit-content;
+		}
+		.event p {
+			margin: 5px 0;
+		}
+		.event .text {
+			text-align: left;
+		}
+		.event .text table {
+			max-width: 300px !important;
+			text-align: left !important;
+		}
+		.event .text table td {
+			border: none !important;
+		}
+		.event .text table tbody td:first-child {
+			width: 50px;
+		}
+		.event .text table tbody td:nth-child(2),
+		.event .text table tbody td:nth-child(3) {
+			text-align: left !important;
+			/*width: 20px;*/
+		}
+		span {
+			margin-left: 10px;
+		}
+	</style>
+	<title>Kegiatan | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -114,14 +150,18 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Surat</h1>
+					<h1>Kegiatan</h1>
 					<ul class="path">
 						<li>
-							<a href="#">Admin</a>
+							<a class="active" href="#">Admin</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Surat</a>
+							<a href="index.html" class="active" href="#">Kegiatan</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a href="#">Rincian</a>
 						</li>
 					</ul>
 				</div>
@@ -131,11 +171,7 @@
 						<div id="year-display"></div>
 						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
 					</div> -->
-					<div class="controls">
-						<button id="prev-year-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="year-display" class="year-display"></span>
-						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
+					
 				</div>
 				<!-- <a href="#" class="btn-download">
 					<i class='bx bxs-cloud-download' ></i>
@@ -143,112 +179,37 @@
 				</a> -->
 			</div>
 
-			<!-- ========= Box Info ========= -->
-			<ul class="box-info">
-				<li>
-					<!-- <i class='bx bx-envelope'></i> -->
-					<span class="text">
-						<h3>13</h3>
-						<p>Acara selesai</p>
-					</span>
-				</li>
-				<li>
-					<!-- <i class='bx bx-calendar-check' ></i> -->
-					<span class="text">
-						<h3>21</h3>
-						<p>Acara akan datang</p>
-					</span>
-				</li>
-			</ul>			
-
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
 				<!-- ======= TABEL KEUANGAN ====== -->
 				<div class="event">
-					<div class="top">
 					<div class="head">
-						<form action="#">
-							<!-- <div class="form-input">
-								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-								<input type="search" placeholder="Search...">
-							</div> -->
-							<div class="search-container">
-								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
-								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
-							</div>
-						</form>
-						<button class="add-btn" onclick="showModal('add')">Tambah Surat</button>
-						<!-- <button onclick="showAddModal()">Tambah Data</button>
-						<i class='bx bx-dots-vertical-rounded' ></i> -->
-						<!-- <i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i> -->
+						<p class="active">Musyawarah</p>
+						<p>Tanggal 	: 2024-03-01</p>
 					</div>
-					<table id="dataTable">
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>Nama</th>
-								<th>Tanggal</th>
-								<th>Kategori</th>
-							</tr>
-						</thead>
-						<tbody id="tableBody">
-							<!-- Rows will be inserted here by JavaScript -->
-						</tbody>
-					</table>
-					</div>
-					<div class="bottom">
-					<div class="pagination">
-						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="pageNumber">1</span>
-						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
+					
+					<div class="text">
+						<table>
+							<tbody>
+								<tr>
+									<td>Rincian<span></span></td>
+									<td>:</td>
+									<td><span></span>-</td>
+								</tr>
+								<tr>
+									<td>Lampiran<span></span></td>
+									<td>:</td>
+									<td><span></span><a href="#">pembahasanRapat.docx</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel todo ========= -->
-			 
-			</div>
+				
 			<!-- ? ===== MODAL ====== -->
-			<div id="myModal" class="modal">
-				<div class="modal-content">
-					<div class="div-close">
-						<span class="close" onclick="hideModal()">&times;</span>
-					</div>
-					<div class="add-data-container" id="modal-content-add">
-						<p>Nama:</p>
-						<input type="text" id="nameInput">
-						<p>Tujuan/Penerima:</p>
-						<input type="text" id="nameInput">
-						<p>Tanggal:</p>
-						<input type="date" id="dateInput">
-						<p>Rincian</p>
-						<textarea id="descriptionInput"></textarea>
-						<p>Lampirkan file</p>
-						<input type="file" id="fileInput">
-						<p>Keterangan</p>
-						<select id="detailInput">
-							<option value="Masuk">Surat Masuk</option>
-							<option value="Keluar">Surat Keluar</option>
-							<option value="Arsip">Arsip</option>
-						</select>
-						<button onclick="addData()">Tambah</button>
-					</div>
-					<div class="edit-data-container" id="modal-content-edit" style="display: none;">
-						<input type="text" id="editNameInput" placeholder="Nama">
-						<input type="date" id="editDateInput">
-						<textarea id="editDescriptionInput" placeholder="Keterangan"></textarea>
-						<input type="file" id="editFileInput">
-						<select id="editDetailInput">
-							<option value="Masuk">Surat Masuk</option>
-							<option value="Keluar">Surat Keluar</option>
-							<option value="Arsip">Arsip</option>
-						</select>
-						<button onclick="saveEditData()">Simpan</button>
-					</div>
-				</div>
-			</div>
+			
 			<!-- ? ===== MODAL ====== -->
 		</main>
 	</div>

@@ -18,7 +18,7 @@
 	<div id="sidebar">
 		<div class="brand">
 			<img src="../../MATERIAL_ASSET/logo_UIN.png" alt="Logo UIN Alauddin Makassar" class="logo"/>
-			<p>UIN Center <span class="text">Admin</span></p>
+			<p>UINAM Center <span class="text">Admin</span></p>
 			<!-- <i class='bx bx-menu' ></i> -->
 			<!-- <i class='bx bxs-spreadsheet'></i>
 			<span class="text">Admin</span> -->
@@ -95,7 +95,7 @@
 					class="profile-pic"
 				  />
 				</a>
-				<div id="dropdown" class="dropdown-content">
+				<div id="dropdown-nav" class="dropdown-content-nav">
 				  <img
 					src="https://cdn.idntimes.com/content-images/community/2021/11/img-20211130-083246-8d569333abbc9e26646dc6a398891324-ce29c808d65c81bf82b95199c11839c2.jpg"
 					alt="Profil"
@@ -126,10 +126,15 @@
 					</ul>
 				</div>
 				<div class="year-container">
-					<div id="controls">
+					<!-- <div id="controls">
 						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
 						<div id="year-display"></div>
 						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
+					</div> -->
+					<div class="controls">
+						<button id="prev-year-btn"><i class='bx bx-chevron-left'></i></button>
+						<span id="year-display" class="year-display"></span>
+						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
 					</div>
 				</div>
 				<!-- <a href="#" class="btn-download">
@@ -143,22 +148,22 @@
 				<li>
 					<!-- <i class='bx bx-envelope'></i> -->
 					<span class="text">
-						<h3>Rp600.000</h3>
-						<p>Saldo</p>
+						<h3>Rp2.300.000</h3>
+						<p>Pemasukan</p>
 					</span>
 				</li>
 				<li>
 					<!-- <i class='bx bx-calendar-check' ></i> -->
 					<span class="text">
-						<h3>Rp200.000</h3>
-						<p>Pemasukan</p>
+						<h3>Rp2.900.000</h3>
+						<p>Pengeluaran</p>
 					</span>
 				</li>
 				<li>
-					<!-- <i class='bx bx-envelope'></i> -->
+					<!-- <i class='bx bx-calendar-check' ></i> -->
 					<span class="text">
-						<h3>Rp56.000</h3>
-						<p>Pengeluaran</p>
+						<h3>-Rp600.000</h3>
+						<p>Saldo</p>
 					</span>
 				</li>
 			</ul>			
@@ -166,146 +171,90 @@
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
 				<!-- ======= TABEL KEUANGAN ====== -->
-				<div class="finance">
+				<div class="event">
+					<div class="top">
 					<div class="head">
 						<form action="#">
-							<div class="form-input">
+							<!-- <div class="form-input">
 								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 								<input type="search" placeholder="Search...">
+							</div> -->
+							<div class="search-container">
+								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
+								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
 							</div>
 						</form>
-						<i class='bx bx-dots-vertical-rounded' ></i>
+						<button class="add-btn" onclick="showModal('add')">Tambah Keuangan</button>
+						<!-- <button onclick="showAddModal()">Tambah Data</button>
+						<i class='bx bx-dots-vertical-rounded' ></i> -->
 						<!-- <i class='bx bx-search' ></i>
 						<i class='bx bx-filter' ></i> -->
 					</div>
-					<table>
+					<table id="dataTable">
 						<thead>
 							<tr>
-								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Tanggal<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Jumlah<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th></th>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Tanggal</th>
+								<th>Status</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>Operasional sekret</td>
-								<td>01-10-2024</td>
-								<td><span class="reject">-Rp250.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Hasil galdan</td>
-								<td>04-11-2024</td>
-								<td><span class="completed">+Rp200.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Iuran</td>
-								<td>23-11-2024</td>
-								<td><span class="completed">+Rp300.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Operasional sekret</td>
-								<td>24-11-2024</td>
-								<td><span class="reject">-Rp50.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Bansos</td>
-								<td>30-11-2024</td>
-								<td><span class="completed">+Rp500.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Hasil galdan</td>
-								<td>04-11-2024</td>
-								<td><span class="completed">+Rp150.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Iuran</td>
-								<td>23-11-2024</td>
-								<td><span class="completed">+Rp100.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
-								<td>Operasional sekret</td>
-								<td>24-11-2024</td>
-								<td><span class="reject">-Rp50.000</span></td>
-								<td>Detail</td>
-							</tr>
-							<tr>
+						<tbody id="tableBody">
+							<!-- Rows will be inserted here by JavaScript -->
 						</tbody>
 					</table>
+					</div>
+					<div class="bottom">
+					<div class="pagination">
+						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
+						<span id="pageNumber">1</span>
+						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
+					</div>
+					</div>
 				</div>
 				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel todo ========= -->
-				<!-- 
-
+				
+			<!-- ? ===== MODAL ====== -->
+			<!-- Modal -->
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal()">&times;</span>
+			
+					<!-- Add Data Container -->
+					<div class="modal-container" id="modal-content-add">
+						<h2>Tambah Data</h2>
+						<input type="text" id="nameInput" placeholder="Nama">
+						<input type="date" id="dateInput">
+						<select id="categoryInput">
+							<option value="pemasukan">Pemasukan</option>
+							<option value="pengeluaran">Pengeluaran</option>
+						</select>
+						<input type="number" id="amountInput" placeholder="Jumlah Nominal">
+						<textarea id="descriptionInput" placeholder="Keterangan"></textarea>
+						<input type="file" id="fileInput">
+						<button onclick="addData()">Tambah</button>
+					</div>
+					
+					<!-- Edit Data Container -->
+					<div class="modal-container" id="modal-content-edit" style="display: none;">
+						<h2>Edit Data</h2>
+						<input type="text" id="editNameInput" placeholder="Nama">
+						<input type="date" id="editDateInput">
+						<select id="editCategoryInput">
+							<option value="pemasukan">Pemasukan</option>
+							<option value="pengeluaran">Pengeluaran</option>
+						</select>
+						<input type="number" id="editAmountInput" placeholder="Jumlah Nominal">
+						<textarea id="editDescriptionInput" placeholder="Keterangan"></textarea>
+						<input type="file" id="editFileInput">
+						<button onclick="updateData()">Update</button>
+					</div>
+				</div>
 			</div>
-		</main>
-		<!-- ========= MAIN ========= -->
 
-		<!-- <div class="coming-event">
-			<h2>Acara mendatang</h2>
-			<table>
-				<thead>
-					<th>Nama</th>
-					<th>Tanggal</th>
-					<th>Status</th>
-					<th></th>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="success">Selesai</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="warning">Ditunda</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="success">Selesai</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="danger">Dibatalkan</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="danger">Dibatalkan</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="danger">Dibatalkan</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-					<tr>
-						<td>Rapat</td>
-						<td>2 April 2024</td>
-						<td class="danger">Dibatalkan</td>
-						<td class="primary"><a href="#">Detail</a></td>
-					</tr>
-				</tbody>
-			</table>
-			<a href="#">Show all</a>
-		</div> -->
-	
+			<!-- ? ===== MODAL ====== -->
+		</main>
 	</div>
 	<!-- CONTENT -->
 

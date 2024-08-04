@@ -36,21 +36,103 @@ document.getElementById('next-year-btn').addEventListener('click', () => {
 
 // Data untuk beberapa tahun
 let data2023 = [
-    { id: 1, name: "Nama 1", detail: "Selesai", date: "2023-01-01" },
-    { id: 2, name: "Nama 2", detail: "Ditunda", date: "2023-02-15" },
+    { id: 1, name: "Rapat Kerja 1", detail: "Selesai", date: "2023-01-01" },
+    { id: 2, name: "Rapat Kerja 2", detail: "Ditunda", date: "2023-02-15" },
+    { id: 3, name: "Rapat Kerja 3", detail: "Selesai", date: "2023-01-01" },
+    { id: 4, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
+    { id: 5, name: "Orientasi", detail: "Selesai", date: "2023-01-01" },
+    { id: 6, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
+    { id: 7, name: "Futsal", detail: "Selesai", date: "2023-01-01" },
+    { id: 8, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
+    { id: 9, name: "Galdan", detail: "Selesai", date: "2023-01-01" },
+    { id: 10, name: "Nobar", detail: "Ditunda", date: "2023-02-15" },
+    { id: 11, name: "Musyawarah", detail: "Selesai", date: "2023-01-01" },
+    { id: 12, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
+    { id: 13, name: "Gotong royong", detail: "Selesai", date: "2023-01-01" },
+    { id: 14, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
+    { id: 15, name: "Seminar", detail: "Selesai", date: "2023-01-01" },
+    { id: 16, name: "Rapat", detail: "Ditunda", date: "2023-02-15" },
     // ... data lainnya untuk tahun 2023
 ];
 
 let data2024 = [
-    { id: 1, name: "Nama 1", detail: "Selesai", date: "2024-01-01" },
-    { id: 2, name: "Nama 2", detail: "Ditunda", date: "2024-02-15" },
+    { id: 1, name: "Musyawarah", detail: "Selesai", date: "2024-01-01" },
+    { id: 2, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 3, name: "Seminar", detail: "Selesai", date: "2024-01-01" },
+    { id: 4, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 5, name: "Orientasi", detail: "Selesai", date: "2024-01-01" },
+    { id: 6, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 7, name: "Futsal", detail: "Selesai", date: "2024-01-01" },
+    { id: 8, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 9, name: "Galdan", detail: "Selesai", date: "2024-01-01" },
+    { id: 10, name: "Nobar", detail: "Ditunda", date: "2024-02-15" },
+    { id: 11, name: "Musyawarah", detail: "Selesai", date: "2024-01-01" },
+    { id: 12, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 13, name: "Gotong royong", detail: "Selesai", date: "2024-01-01" },
+    { id: 14, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
+    { id: 15, name: "Seminar", detail: "Selesai", date: "2024-01-01" },
+    { id: 16, name: "Rapat", detail: "Ditunda", date: "2024-02-15" },
     // ... data lainnya untuk tahun 2024
 ];
 
-let data2025 = [
-    { id: 1, name: "Nama 1", detail: "Selesai", date: "2025-01-01" },
-    { id: 2, name: "Nama 2", detail: "Ditunda", date: "2025-02-15" },
-    // ... data lainnya untuk tahun 2025
+let data2022 = [
+    { id: 1, name: "Musyawarah", detail: "Selesai", date: "2022-01-01" },
+    { id: 2, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 3, name: "Seminar", detail: "Selesai", date: "2022-01-01" },
+    { id: 4, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 5, name: "Orientasi", detail: "Selesai", date: "2022-01-01" },
+    { id: 6, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 7, name: "Futsal", detail: "Selesai", date: "2022-01-01" },
+    { id: 8, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 9, name: "Galdan", detail: "Selesai", date: "2022-01-01" },
+    { id: 10, name: "Nobar", detail: "Ditunda", date: "2022-02-15" },
+    { id: 11, name: "Musyawarah", detail: "Selesai", date: "2022-01-01" },
+    { id: 12, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 13, name: "Gotong royong", detail: "Selesai", date: "2022-01-01" },
+    { id: 14, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    { id: 15, name: "Seminar", detail: "Selesai", date: "2022-01-01" },
+    { id: 16, name: "Rapat", detail: "Ditunda", date: "2022-02-15" },
+    // ... data lainnya untuk tahun 2022
+];
+
+let data2021 = [
+    { id: 1, name: "Musyawarah", detail: "Selesai", date: "2021-01-01" },
+    { id: 2, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 3, name: "Seminar", detail: "Selesai", date: "2021-01-01" },
+    { id: 4, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 5, name: "Orientasi", detail: "Selesai", date: "2021-01-01" },
+    { id: 6, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 7, name: "Futsal", detail: "Selesai", date: "2021-01-01" },
+    { id: 8, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 9, name: "Galdan", detail: "Selesai", date: "2021-01-01" },
+    { id: 10, name: "Nobar", detail: "Ditunda", date: "2021-02-15" },
+    { id: 11, name: "Musyawarah", detail: "Selesai", date: "2021-01-01" },
+    { id: 12, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 13, name: "Gotong royong", detail: "Selesai", date: "2021-01-01" },
+    { id: 14, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    { id: 15, name: "Seminar", detail: "Selesai", date: "2021-01-01" },
+    { id: 16, name: "Rapat", detail: "Ditunda", date: "2021-02-15" },
+    // ... data lainnya untuk tahun 2022
+];
+
+let data2020 = [
+    { id: 1, name: "Musyawarah", detail: "Selesai", date: "2020-01-01" },
+    { id: 2, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 3, name: "Seminar", detail: "Selesai", date: "2020-01-01" },
+    { id: 4, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 5, name: "Orientasi", detail: "Selesai", date: "2020-01-01" },
+    { id: 6, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 7, name: "Futsal", detail: "Selesai", date: "2020-01-01" },
+    { id: 8, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 9, name: "Galdan", detail: "Selesai", date: "2020-01-01" },
+    { id: 10, name: "Nobar", detail: "Ditunda", date: "2020-02-15" },
+    { id: 11, name: "Musyawarah", detail: "Selesai", date: "2020-01-01" },
+    { id: 12, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 13, name: "Gotong royong", detail: "Selesai", date: "2020-01-01" },
+    { id: 14, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    { id: 15, name: "Seminar", detail: "Selesai", date: "2020-01-01" },
+    { id: 16, name: "Rapat", detail: "Ditunda", date: "2020-02-15" },
+    // ... data lainnya untuk tahun 2022
 ];
 
 // ... tambahkan data untuk tahun lainnya jika diperlukan
@@ -59,21 +141,26 @@ let data = getDataByYear(selectedYear);
 
 function getDataByYear(year) {
     switch(year) {
+        case 2020:
+            return data2020;
+        case 2021:
+            return data2021;
+        case 2022:
+            return data2022;
         case 2023:
             return data2023;
         case 2024:
             return data2024;
         case 2025:
             return data2025;
-        // ... tambahkan case untuk tahun lainnya jika diperlukan
+        // tambahkan kasus untuk tahun lainnya jika diperlukan
         default:
             return [];
     }
 }
 
-const rowsPerPage = 10;
 let currentPage = 1;
-let editRowId = null;
+const rowsPerPage = 5;
 
 function displayTable(data, page) {
     const startIndex = (page - 1) * rowsPerPage;
@@ -100,27 +187,28 @@ function displayTable(data, page) {
                 break;
         }
 
+        // Tambahkan logika untuk memeriksa tahun dan menghilangkan tombol aksi
         const rowYear = new Date(row.date).getFullYear();
-        const isCurrentYearOrFuture = rowYear >= currentYear;
-        const editButton = isCurrentYearOrFuture 
-            ? `<button onclick="editData(${row.id})">Edit</button>` 
-            : `<button disabled>Edit</button>`;
+        const showActionButtons = rowYear >= currentYear;
+        const actionButtons = showActionButtons ? `
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown(${row.id})"><i class='bx bx-dots-vertical-rounded' ></i></button>
+                <div id="dropdown-${row.id}" class="dropdown-content">
+                    <button onclick="editData(${row.id})">Edit</button>
+                    <button onclick="deleteData(${row.id})">Hapus Data</button>
+                </div>
+            </div>
+        ` : '';
 
-        tr.innerHTML = `<td>${row.id}</td><td>${row.name}</td><td>${row.date}</td><td class="${statusClass}">${row.detail}</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="dropbtn" onclick="toggleDropdown(${row.id})"><i class='bx bx-dots-vertical-rounded' ></i></button>
-                                <div id="dropdown-${row.id}" class="dropdown-content">
-                                    ${editButton}
-                                    <button onclick="deleteData(${row.id})">Hapus Data</button>
-                                </div>
-                            </div>
-                        </td>`;
+        tr.innerHTML = `<td>${row.id}</td><td><a href="indexRincian.html">${row.name}</a></td><td>${row.date}</td><td class="${statusClass}">${row.detail}</td>
+                        <td>${actionButtons}</td>`;
         tableBody.appendChild(tr);
     });
 
     document.getElementById('pageNumber').innerText = currentPage;
 }
+
+
 
 function toggleDropdown(id) {
     const dropdownContent = document.getElementById('dropdown-' + id);
@@ -178,6 +266,8 @@ function addData() {
     const name = document.getElementById('nameInput').value;
     const date = document.getElementById('dateInput').value;
     const detail = document.getElementById('detailInput').value;
+    const description = document.getElementById('descriptionInput').value; // Keterangan
+    const file = document.getElementById('fileInput').files[0]; // File
 
     if (name && date && detail) {
         const newId = data.length ? data[data.length - 1].id + 1 : 1;
@@ -194,9 +284,12 @@ function editData(id) {
         document.getElementById('editNameInput').value = row.name;
         document.getElementById('editDateInput').value = row.date;
         document.getElementById('editDetailInput').value = row.detail;
+        document.getElementById('editDescriptionInput').value = ""; // Reset keterangan
+        document.getElementById('editFileInput').value = ""; // Reset file
         showModal('edit');
     }
 }
+
 
 function saveEditData() {
     const name = document.getElementById('editNameInput').value;

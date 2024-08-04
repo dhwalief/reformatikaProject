@@ -77,14 +77,15 @@
 
 /*? ========== TABEL BOX INFO ========== */
 #content main .box-info {
-	display: grid;
-	grid-template-columns: repeat( 4, minmax(250px, 1fr));
+	/* display: grid;
+	grid-template-columns: repeat( 4, minmax(250px, 1fr)); */
 	/* grid-template-columns: minmax(240px, 1fr); */
-	/* display: flex;
+	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap; */
+	flex-wrap: wrap;
 	grid-gap: 24px;
 	margin-top: 36px;
+	z-index: 1;
 }
 
 #content main .box-info li {
@@ -147,8 +148,6 @@
 	width: 100%;
 	color: var(--color-dark);
 }
-/*? ========== TABEL ========== */
-/*? ========== TABEL KEUANGAN ========== */
 #content main .table-data > div {
 	border-radius: var(--card-borderRadiusMedium);
 	border: 1px solid rgba(132, 139, 200, 0.18);
@@ -171,31 +170,163 @@
 	font-weight: 600;
 }
 
-#content main .table-data .head .bx {
+/* #content main .table-data .head .bx {
 	cursor: pointer;
-}
+} */
+/*? ========== TABEL ========== */
 
-
-/* Tabel  */
-#content main .table-data .mail {
+/*? ========== TABEL KEUANGAN ========== */
+#content main .table-data .event {
+	display: flex;
 	flex-grow: 1;
 	flex-basis: 500px;
-	border-radius: var(--card-borderRadiusMedium);
+	overflow-x: hidden;
+	flex-direction: column;
+	justify-content: space-between;
 }
-
-#content main .table-data .mail table {
+#content main .table-data .event table {
 	width: 100%;
 	border-collapse: collapse;
 	border-radius: var(--card-borderRadiusMedium);
 }
 
-#content main .table-data .mail .head form {
+#content main .table-data .event .head {
+	display: flex;
+	justify-content: space-between;
+}
+
+#content main .table-data .event .head form .search-container {
+	display: flex;
+	/* flex-grow: 1; */
+	align-items: center;
+	border: 1px solid var(--color-darkGrey);
+	border-radius: 10px;
+	padding: 10px;
+	background: var(--color-grey);    
+}
+
+#content main .table-data .event .head form .search-container input {
+	flex-grow: 1;
+	border: none;
+	background: var(--color-grey);
+	outline: none;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event .head form .search-container button {
+	border: none;
+	background: var(--color-grey);
+	margin-right: 8px;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event .head .add-btn {
+	border: none;
+	color: var(--color-light);
+	background: var(--color-green);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#content main .table-data .event table th {
+	text-align: left;
+}
+
+#content main .table-data .event table tbody td a {
+	color: var(--color-dark);
+	text-decoration: underline;
+}
+
+#content main .table-data .event table tbody td {
+	padding: 16px 0;
+	border-bottom: 1px solid var(--color-darkGrey);
+}
+
+.status-selesai {
+	color: var(--color-green);
+}
+.status-ditunda {
+	color: var(--color-red);
+}
+.status-dibatalkan {
+	color: var(--color-red);
+}
+.status-akan-berlangsung {
+	color: var(--color-yellow);
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+/* .dropdown button {
+	border: none;
+	background: none;
+	cursor: pointer;
+} */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 5;
+}
+.dropdown-content button {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+#dropdown{
+	max-width: fit-content;
+}
+
+.dropdown-content button {
+	width: 100%;
+}
+
+
+.dropdown-content button:hover {
+	background-color: #f1f1f1;
+}
+#content main .table-data .event .pagination{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin-top: 10px;
+}
+/* ? ===== TABEL EVENT ===== */
+
+
+
+
+
+/*! Tabel  */
+/* #content main .table-data .event {
+	flex-grow: 1;
+	flex-basis: 500px;
+	border-radius: var(--card-borderRadiusMedium);
+}
+
+#content main .table-data .event table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: var(--card-borderRadiusMedium);
+}
+
+#content main .table-data .event .head form {
 	max-width: 400px;
 	width: 100%;
 	margin-right: auto;
 }
 
-#content main .table-data .mail .head form .form-input {
+#content main .table-data .event .head form .form-input {
 	--padding: 10px;
 	display: flex;
 	align-items: center;
@@ -205,7 +336,7 @@
 	background: var(--color-grey);    
 }
 
-#content main .table-data .mail .head form .form-input input {
+#content main .table-data .event .head form .form-input input {
 	flex-grow: 1;
 	border: none;
 	background: var(--color-grey);
@@ -213,14 +344,14 @@
 	color: var(--color-dark);
 }
 
-#content main .table-data .mail .head form .form-input button {
+#content main .table-data .event .head form .form-input button {
 	border: none;
 	background: var(--color-grey);
 	margin-right: 8px;
 	color: var(--color-dark);
 }
 
-#content main .table-data .mail table th {
+#content main .table-data .event table th {
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
@@ -228,61 +359,36 @@
 	cursor: pointer;
 }
 
-#content main .table-data .mail table th.active {
+#content main .table-data .event table th.active {
 	color: var(--color-green);
 }
 
-#content main .table-data .mail table th:last-child {
+#content main .table-data .event table th:last-child {
 	display: none;
 }
 
-#content main .table-data .mail table th span.icon-arrow {
+#content main .table-data .event table th span.icon-arrow {
 	display: inline-block;
 	margin-left: 5px;
 }
 
-#content main .table-data .mail table th.asc span.icon-arrow {
+#content main .table-data .event table th.asc span.icon-arrow {
 	transform: rotate(180deg);
 }
 
-#content main .table-data .mail table td {
+#content main .table-data .event table td {
 	padding: 16px 0;
 	border-bottom: 1px solid var(--color-darkGrey);
 }
 
-#content main .table-data .mail table td:last-child {
+#content main .table-data .event table td:last-child {
 	cursor: pointer;
 }
 
-/* #content main table tbody td {
-	border-bottom: 10 solid var(--color-dark);
-} */
-/* #content main .table-data .mail table tr td:first-child {
-	display: flex;
-	align-items: center;
-	grid-gap: 12px;
-	padding-left: 6px;
-} */
 
-/* #content main .table-data .mail table td img {
-	width: 36px;
-	height: 36px;
-	border-radius: var(--card-borderRadiusMedium)50%;
-	object-fit: cover;
-} */
-
-#content main .table-data .mail table tbody tr:hover {
+#content main .table-data .event table tbody tr:hover {
 	background: var(--color-grey);
 }
-
-/* #content main .table-data .mail table tr td .status {
-	font-size: 10px;
-	padding: 6px 16px;
-	color: var(--color-light);
-	border-radius: var(--card-borderRadiusMedium)var(--card-borderRadiusSmall);
-	font-weight: 700;
-} */
-/*? fungsi warna pada font*/
 #content .completed {
 	color: var(--color-green);
 }
@@ -299,104 +405,97 @@
 }
 #content .soon {
 	color: var(--color-darkGrey);
-}
+} */
 /*? ========== TABEL KEUANGAN ========== */
 
-
-
-#content main .coming-event {
-    margin-top: 2rem;
+/*? ========== MODAL ========== */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
-#content main .coming-event h2 {
-    margin-bottom: 0.8rem;
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-#content main .coming-event table {
-    background: var(--color-white);
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal container for form content */
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-data-container input,
+.add-data-container select,
+.add-data-container textarea,
+.edit-data-container input,
+.edit-data-container select,
+.edit-data-container textarea {
     width: 100%;
-    border-radius: var(--card-borderRadiusMedium);
-    padding: var(--card-padding);
-    text-align: left;
-    box-shadow: var(--box-shadow);
-    transition: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
-#content main .coming-event table:hover{
-    box-shadow: none;
-}
-
-#content main table tbody td {
-    height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
-}
-
-#content main table tbody td:last-child td {
+.add-data-container button,
+.edit-data-container button {
+	background: var(--color-green);
+    /* background-color: #007bff; */
+    color: white;
     border: none;
+    cursor: pointer;
 }
 
-#content main .coming-event a {
-    text-align: center;
-    display: block;
-    margin: 1rem auto;
-    color: var(--color-primary);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*? ========== TABEL TODO ========== */
-#content main .table-data .todo {
-	flex-grow: 1;
-	flex-basis: 300px;
-}
-
-#content main .table-data .todo .todo-list {
+.add-data-container button,
+.edit-data-container button {
+    background-color: var(--color-darkGreen);
 	width: 100%;
+	padding: 10px;
 }
 
-#content main .table-data .todo .todo-list li {
-	width: 100%;
-	margin-bottom: 16px;
-	background: var(--color-grey);
-	border-radius: var(--card-borderRadiusMedium);
-	padding: 14px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
-#content main .table-data .todo .todo-list li .bx {
-	cursor: pointer;
-}
- 
-/* #content main .table-data .todo .todo-list li.completed {
-	border-right: 10px solid var(--color-green);
-}
-
-#content main .table-data .todo .todo-list li.not-completed {
-	border-right: 10px solid var(--color-red);
-} */
-
-#content main .table-data .todo .todo-list li:last-child {
-	margin-bottom: 0;
-}
-/*? ========== TABEL TODO ========== */
+/*? ========== MODAL ========== */
 
 
 
 /*? ========== MEDIA QUERIS ========== */
- @media screen and (max-width:1200px) {
+@media screen and (max-width:1200px) {
 	#content .box-info {
 		grid-template-columns: 1fr;
 		grid-gap: 16px;
@@ -417,16 +516,38 @@
 	#content main .table-data .head {
 		min-width: 420px;
 	}
-	#content main .table-data .mail table {
+	#content main .table-data .event table {
 		min-width: 420px;
 	}
-	#content table thead th:nth-child(2){
+	#content table thead th:first-child{
 		display: none;
 	}
-	#content main .table-data .todo .todo-list {
-		min-width: 420px;
+	#content table tbody td:first-child{
+		display: none;
 	}
+	#content table thead th:nth-child(3){
+		display: none;
+	}
+	#content table tbody td:nth-child(3){
+		display: none;
+	}
+	#content table thead th:last-child{
+		display: inline-block;
+	}
+	#content table tbody td:last-child{
+		display: inline-block;
+	}
+	#content .event  {
+		overflow: auto;
+	}
+	/* #content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}*/
 	#content main .table-data .todo {
-		flex-basis: 2500px;
+		overflow: auto;
+		width: fit-content;
+	}
+	.modal-content {
+		width: 250px;
 	}
 }

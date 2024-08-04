@@ -199,9 +199,9 @@
 					</div>
 					<div class="bottom">
 					<div class="pagination">
-						<button onclick="prevPage()"><i class='bx bx-chevron-left'></i></button>
+						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
 						<span id="pageNumber">1</span>
-						<button onclick="nextPage()"><i class='bx bx-chevron-right'></i></button>
+						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
 					</div>
 					</div>
 				</div>
@@ -233,10 +233,19 @@
 			<!-- ? ===== MODAL ====== -->
 			<div id="myModal" class="modal">
 				<div class="modal-content">
-					<span class="close" onclick="hideModal()">&times;</span>
+					<div class="div-close">
+						<span class="close" onclick="hideModal()">&times;</span>
+					</div>
 					<div class="add-data-container" id="modal-content-add">
-						<input type="text" id="nameInput" placeholder="Nama">
+						<p>Nama:</p>
+						<input type="text" id="nameInput">
+						<p>Tanggal:</p>
 						<input type="date" id="dateInput">
+						<p>Rincian</p>
+						<textarea id="descriptionInput"></textarea>
+						<p>Lampirkan file</p>
+						<input type="file" id="fileInput">
+						<p>Keterangan</p>
 						<select id="detailInput">
 							<option value="Selesai">Selesai</option>
 							<option value="Ditunda">Ditunda</option>
@@ -248,6 +257,8 @@
 					<div class="edit-data-container" id="modal-content-edit" style="display: none;">
 						<input type="text" id="editNameInput" placeholder="Nama">
 						<input type="date" id="editDateInput">
+						<textarea id="editDescriptionInput" placeholder="Keterangan"></textarea>
+						<input type="file" id="editFileInput">
 						<select id="editDetailInput">
 							<option value="Selesai">Selesai</option>
 							<option value="Ditunda">Ditunda</option>
