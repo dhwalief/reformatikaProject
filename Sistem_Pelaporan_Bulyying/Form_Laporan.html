@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulir Laporan Bullying</title>
-    <link
-      rel="shortcut icon"
-      href="/Media_Asset/logo_UIN.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="Form_Laporan.css" />
+    <link rel="shortcut icon" href="/Media/logo_UIN.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/Form_Laporan.css" />
   </head>
   <body>
     <div class="container">
@@ -28,7 +24,11 @@
           sedangkan lainnya, bersifat opsional.
         </p>
       </header>
-      <form>
+      <form
+        action="submitReport.php"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <label for="status-pelapor"
           >Status pelapor (<span style="color: rgb(254, 6, 6)">*</span>)</label
         >
@@ -108,7 +108,7 @@
         </div>
 
         <div class="camera">
-          <img src="/Media_Asset/camera.png" alt="x" />
+          <img src="/Media/camera.png" alt="x" />
         </div>
 
         <p id="file-size" class="file-info"></p>
@@ -132,7 +132,7 @@
         <div id="modal" class="modal">
           <div class="modal-content">
             <p class="peringatan">Peringatan !</p>
-            <img src="/Media_Asset/peringatan.png" class="Peringatan" />
+            <img src="/Media/peringatan.png" class="Peringatan" />
             <p>
               Apakah Anda yakin ingin mengirimkan data ini? <br />
               data tidak dapat diubah setelah ini
@@ -157,5 +157,5 @@
       </div>
     </footer>
   </body>
-  <script src="/Sistem_Pelaporan_Bulyying/Form_Laporan.js"></script>
+  <script src="/js/Form_Laporan.js"></script>
 </html>

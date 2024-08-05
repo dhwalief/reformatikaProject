@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISTEM PELAPORAN BULLYING</title>
+
+    <!-- Linking -->
+    <link
+      rel="shortcut icon"
+      href="/Media/logo_UIN.png"
+      type="image/icon"
+    />
+    <link rel="stylesheet" href="/css/dashboard_SPB.css" />
+  </head>
+  <body>
+   <nav> 
+      <div class="hero">
+        <div class="hamburger" onclick="toggleSidebar()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      
+        <img
+          src="/Media/uin-white (1).png"
+          alt="Logo UIN Alauddin Makassar"
+          class="logo"
+        />
+        <h1>UINAM CENTER</h1>
+       </div>
+      <ul>
+        <li class="nav">
+          <a href="/index.html">Home</a>
+          <a href="/Portal_akademik/index.html">Portal</a>
+          <a href="https://lentera.uin-alauddin.ac.id/">Lentera</a>
+          <a href="/manajemen_organisasi/content-dashboard/index.html">Organisasi</a>
+          <a href="/Sistem_Pelaporan_Bulyying/index.html">Report</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="profile-link">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNDggNDgiPjxnIGZpbGw9IndoaXRlIj48cGF0aCBkPSJNMzIgMjBhOCA4IDAgMSAxLTE2IDBhOCA4IDAgMCAxIDE2IDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy4xODQgNDMuOTg0QzEyLjUxNyA0My41NTYgNCAzNC43NzIgNCAyNEM0IDEyLjk1NCAxMi45NTQgNCAyNCA0czIwIDguOTU0IDIwIDIwcy04Ljk1NCAyMC0yMCAyMGgtLjI3NHEtLjI3MiAwLS41NDItLjAxNk0xMS4xNjYgMzYuNjJhMy4wMjggMy4wMjggMCAwIDEgMi41MjMtNC4wMDVjNy43OTYtLjg2MyAxMi44NzQtLjc4NSAyMC42MzIuMDE4YTIuOTkgMi45OSAwIDAgMSAyLjQ5OCA0LjAwMkExNy45NCAxNy45NCAwIDAgMCA0MiAyNGMwLTkuOTQxLTguMDU5LTE4LTE4LTE4UzYgMTQuMDU5IDYgMjRjMCA0LjkxNiAxLjk3MSA5LjM3MyA1LjE2NiAxMi42MjEiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4="
+              alt="Profil"
+              class="profile-pic"
+            />
+          </a>
+          <div id="dropdown" class="dropdown-content">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNDggNDgiPjxnIGZpbGw9IndoaXRlIj48cGF0aCBkPSJNMzIgMjBhOCA4IDAgMSAxLTE2IDBhOCA4IDAgMCAxIDE2IDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy4xODQgNDMuOTg0QzEyLjUxNyA0My41NTYgNCAzNC43NzIgNCAyNEM0IDEyLjk1NCAxMi45NTQgNCAyNCA0czIwIDguOTU0IDIwIDIwcy04Ljk1NCAyMC0yMCAyMGgtLjI3NHEtLjI3MiAwLS41NDItLjAxNk0xMS4xNjYgMzYuNjJhMy4wMjggMy4wMjggMCAwIDEgMi41MjMtNC4wMDVjNy43OTYtLjg2MyAxMi44NzQtLjc4NSAyMC42MzIuMDE4YTIuOTkgMi45OSAwIDAgMSAyLjQ5OCA0LjAwMkExNy45NCAxNy45NCAwIDAgMCA0MiAyNGMwLTkuOTQxLTguMDU5LTE4LTE4LTE4UzYgMTQuMDU5IDYgMjRjMCA0LjkxNiAxLjk3MSA5LjM3MyA1LjE2NiAxMi42MjEiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4="
+              alt="Profil"
+              class="dropdown-profile-pic"
+            />
+            <p><strong>user test</strong></p>
+            <p>username@gmail.com</p>
+            <p><a href="#logout">Logout</a></p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="nav-links">
+        <li><a href="Form_Laporan.html">Laporan</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#dampak">Dampak</a></li>
+        <li><a href="#solusi">Solusi</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+      <!-- Header Section -->
+      <header id="home">
+        <div class="header-content">
+          <h1>SISTEM PELAPORAN BULLYING</h1>
+          <p>Solusi baru untuk kampus peradaban yang lebih maju</p>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Tentang Section -->
+         <div class="background_tentang">
+        <section id="tentang" class="background-section">
+          <div class="section-content">
+            <h2>TENTANG</h2>
+            <div class="about-content">
+              <img src="/Media/bully1.png" alt="Gambar Bullying" />
+              <p>
+                Bullying Atau Pembulian secara bahasa disebut menyakat yang
+                artinya mengusik (supaya menjadi takut, menangis, dan
+                sebagainya), sedangkan secara istilah berarti tindakan agresif
+                yang dilakukan seseorang untuk mengintimidasi atau mendominasi
+                orang lain yang dinilai lebih lemah. Bullying dapat terjadi di
+                mana saja, mulai dari lingkungan pendidikan hingga lingkungan
+                kerja.
+              </p>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <!-- Dampak Bullying Section -->
+<div class="dampak_background">
+        <section id="dampak" class="background-section">
+          <div class="section-content">
+            <h2>DAMPAK BULLYING</h2>
+            <div class="impact-grid">
+              <div class="impact-item">
+                <strong>Masalah Mental</strong> Korban mengalami kecemasan,
+                depresi, harga diri rendah, dan gangguan mental lainnya.
+              </div>
+              <div class="impact-item">
+                <strong>Gangguan Tidur</strong> Korban mengalami insomnia, mimpi
+                buruk, dan gangguan tidur lainnya.
+              </div>
+              <div class="impact-item">
+                <strong>Performa Akademik</strong> Korban mengalami penurunan
+                peforma dalam prestasi akademik. Secara umum ditandai dengan
+                nilai-nilai yang turun.
+              </div>
+              <div class="impact-item">
+                <strong>Melukai Diri Sendiri</strong> Korban mungkin melukai
+                diri sendiri atau berpikir tentang bunuh diri.
+              </div>
+              <div class="impact-item">
+                <strong>Pola Makan</strong> Korban mengalami masalah makan
+                seperti makan terlalu sedikit atau terlalu banyak.
+              </div>
+              <div class="impact-item">
+                <strong>Isolasi Sosial</strong> Korban mengalami kesulitan dalam
+                berinteraksi dengan orang lain dan mungkin menghindari situasi
+                sosial.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <!-- Solusi Section -->
+         <div class="background_solusi">
+        <section id="solusi" class="background-section">
+          <div class="section-content">
+            <h2>SOLUSI</h2>
+            <p>
+              Ditengah maraknya kasus pembulian yang terjadi di lingkungan
+              kampus sistem pelaporan bullying hadir dalam menangani hal serupa
+              agar dapat di tindaklanjuti secara mendalam <br /><br />
+              <i>klik disini untuk mulai melaporkan</i>
+            </p>
+            <button class="laporkan" onclick="pindahHalaman()">
+              <b
+                ><a href="/Sistem_Pelaporan_Bulyying/Form_Laporan.html"
+                  >Laporkan Sekarang</a
+                ></b
+              >
+            </button>
+          </div>
+        </section>
+      </div>
+      </main>
+      <footer id="contact">
+        <p>&copy; 2024 Dashboard-SPB. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="/js/dashboard_SPB.js"></script>
+  </body>
+</html>

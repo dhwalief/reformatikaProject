@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Akademik - UIN Alauddin Makassar</title>
-    <link rel="stylesheet" href="styles.css">
+	<link
+	rel="shortcut icon"
+	href="/Media/logo_UIN.png"
+	type="image/icon"
+  />
+	<link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/ace-css/css/ace.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <header class="bg px2 py1 m0 flex items-center white">
-		<div class="burger pointer flex flex-column justify-between mr2">
-			<span class="bg-white"></span>
-			<span class="bg-white"></span>
-			<span class="bg-white"></span>
+    <nav class="bg px2 py1 m0 flex items-center white">
+		<div class="header-left">
+				<div class="burger pointer flex flex-column justify-between">
+					<span class="bg-white"></span>
+					<span class="bg-white"></span>
+					<span class="bg-white"></span>
+				</div>
+				<img style="width: 58px;height: 40px" class="" src="/Media/uinbg1.png" alt="">
+				<a class="white caps text-decoration-none h3 bold" href="#">UINAM CENTER</a>
 		</div>
-        <img style="width: 68px;height: 50px" src="uinbg1.png" alt="uin alauddin">
-		<a class="white caps text-decoration-none h3 bold" href="#">PORTAL AKADEMIK UIN ALAUDDIN</a>
-		<nav class="ml-auto">
-			<!-- <ul class="list-reset m0 h5 caps">
-				<li class="inline-block btn p0">V1.1</li>
-			</ul> -->
-			<ul>
-				<li class="nav-item">
-					<a href="#" id="profile-link">
-					  <img
-						src="aaa.png"
-						alt="Profil"
-						class="profile-pic"
-					  />
-					</a>
-					<div id="jatuh" class="jatuh-content">
-					  <img
-						src="aaa.png"
-						alt="Profil"
-						class="jatuh-profile-pic"
-					  />
-					  <p><strong>Wira Fadhil</strong></p>
-					  <p>wirafadhil20@gmail.com</p>
-					  <p><a href="#logout">Logout</a></p>
-					</div>
-				  </li>
-			</ul>
-		</nav>
-	</header>
+			<div class="header-right">
+				<ul>
+					<li class="nav">
+					  <a href="/index.html">Home</a>
+					  <a href="/Portal_akademik/index.html">Portal</a>
+					  <a href="https://lentera.uin-alauddin.ac.id/">Lentera</a>
+					  <a href="/manajemen_organisasi/content-dashboard/index.html">Organisasi</a>
+					  <a href="/Sistem_Pelaporan_Bulyying/index.html">Report</a>
+					</li>
+					<li class="nav-item">
+					  <a href="#" id="profile-link">
+						<img
+						  src="/Media/aaa.png"
+						  alt="Profil"
+						  class="profile-pic"
+						/>
+					  </a>
+					  <div id="jatuh" class="jatuh-content">
+						<img
+						  src="/Media/aaa.png"
+						  alt="Profil"
+						  class="jatuh-profile-pic"
+						/>
+						<p><strong>Wira Fadhil</strong></p>
+						<p>wirafadhil20@gmail.com</p>
+						<p><a href="#logout">Logout</a></p>
+					  </div>
+					</li>
+				</ul>
+		</div>
+		<!-- </nav> -->
+	</nav>
 <!-- ######## START FOCUS SIDEBAR CODE HERE -->
 	<div id="sidenav" class="fixed z4 top-0 left-0 bg p2">
 		<div class="close flex items-center justify-center relative pointer mb2 right">
@@ -52,7 +64,6 @@
 		</div>
 
 		<div class="bg circle mb2 flex items-center justify-center white">
-			<!-- <img src="uinbg.png" alt="uin alauddin"> -->
 		</div>
 		<p class="m0 muted bold">V1.1</p>
 
@@ -62,23 +73,23 @@
 			<li class="h6 caps mb2">Landing</li>
 			<li class="pointer mb2">
 				<i class="fa-solid fa-house" ></i>
-				<span class="align-middle"><a href="#">Home</a></span>
+				<span class="align-middle"><a href="/index.html">Home</a></span>
 			</li>
 			<li class="pointer mb2">
 				<i class="fa-solid fa-door-open"></i>
-				<span class="align-middle"><a href="#">Portal</a></span>
+				<span class="align-middle"><a href="/Portal_akademik/index.html">Portal</a></span>
 			</li>
 			<li class="pointer mb2">
 				<i class="fa-solid fa-door-open"></i>
-				<span class="align-middle"><a href="#">Lentera</a></span>
+				<span class="align-middle"><a href="https://lentera.uin-alauddin.ac.id/">Lentera</a></span>
 			</li>
             <li class="pointer mb2">
 				<i class="fa-solid fa-door-open"></i>
-				<span class="align-middle"><a href="#">Organisasi</a></span>
+				<span class="align-middle"><a href="/manajemen_organisasi/content-dashboard/index.html">Organisasi</a></span>
 			</li>
             <li class="pointer mb2">
 				<i class="fa-solid fa-door-open"></i>
-				<span class="align-middle"><a href="#">Report</a></span>
+				<span class="align-middle"><a href="/Sistem_Pelaporan_Bulyying/index.html">Report</a></span>
 			</li>
 		</ul>
 
@@ -143,21 +154,26 @@
 
         <div id="main">
         <main>
-			<h2 class="center">Selamat Datang Ali Mikhailovna</h2>
-            <section class="welcome-section">
-                <div class="profile">
-                    <img src="aaa.png" alt="Profile Picture">
-                    <div class="profile-info">
-                        <p><strong>Nama:</strong> Ali Mikhailovna</p>
-                        <p><strong>NIM:</strong> 60200127100</p>
-                        <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                        <p><strong>Status:</strong> Mahasiswa Aktif</p>
-                    </div>
-                </div>
-            </section>
+			<div class="kartu-nama">
+				<div class="kiri">
+					<h2 class="center">Selamat Datang di Bagian</h2>
+					<h2 class="center">Portal Akademik <i>Ali Mikhailovna</i></h2>
+				</div>
+					<section class="welcome-section">
+						<div class="profile">
+							<img src="/Media/aaa.png" alt="Profile Picture">
+							<div class="profile-info">
+								<h6><strong>Nama:</strong> Ali Mikhailovna</h6>
+								<h6><strong>NIM:</strong> 60200127100</h6>
+								<h6><strong>Jurusan:</strong> Teknik Informatika</h6>
+								<h6><strong>Status:</strong> Mahasiswa Aktif</h6>
+							</div>
+						</div>
+					</section>
+			</div>
             <div class="sec">
 				<section class="academics">
-					<h2 class="center">Academics</h2>
+					<h2 class="center">Akademik</h2>
 					<div class="academic-options">
 						<div class="card">
 							<i class="fa-solid fa-folder"></i>
@@ -189,7 +205,7 @@
 						  </div>
 						  <div class="card">
 							<i class="fa-solid fa-graduation-cap"></i>
-							<h4>Study</h4>
+							<h4>Kuliah</h4>
 								<a href="">Mata Kuliah Yang Ditawarkan</a><br>
 								<a href="krs.html">Kartu Rencana Studi</a><br>
 								<a href="hasilstudy.html" title="atribut">Kartu Hasil Study</a><br>
@@ -291,7 +307,7 @@
 				class="text-decoration-none navy" href="https://insertapps.com/privacy/">Privacy</a></p>
 		</div>
 	</footer>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 	<script src="https://kit.fontawesome.com/c46b8d745e.js" crossorigin="anonymous"></script>
 </body>
 </html>
