@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Laporan Bullying</title>
+    <link rel="shortcut icon" href="/Media/logo_UIN.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/Form_Laporan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Formulir Laporan Bullying</h1>
+        <p class="note">
+          Laporan dan data hanya bisa dilihat oleh Pelapor dan Tim Investigasi.
+          <br />
+          Informasi Nama dan NIM Pelapor opsional, namun dibutuhkan untuk
+          mempercepat proses Investigasi.
+          <br />
+          Informasi Email Pelapor opsional, namun dibutuhkan untuk menerima
+          status tracking laporan.
+          <br />
+          (<span style="color: rgb(254, 6, 6)">*</span>) data wajib diisi
+          sedangkan lainnya, bersifat opsional.
+        </p>
+      </header>
+      <form>
+        <label for="status-pelapor"
+          >Status pelapor (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <select id="status-pelapor" name="status-pelapor" required>
+          <option value="">--Pilih Status--</option>
+          <option value="Mahasiswa">Mahasiswa</option>
+          <option value="Dosen">Dosen</option>
+          <option value="Staf">Staf</option>
+        </select>
+
+        <label for="nama-korban"
+          >Nama Korban (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input type="text" id="nama-korban" name="nama-korban" required />
+
+        <label for="nim-korban"
+          >NIM Korban (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input type="text" id="nim-korban" name="nim-korban" />
+
+        <label for="prodi-korban"
+          >Prodi Korban (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input type="text" id="prodi-korban" name="prodi-korban" required />
+
+        <label for="nama-pelaku"
+          >Nama Pelaku (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input type="text" id="nama-pelaku" name="nama-pelaku" required />
+
+        <label for="frekuensi-kejadian"
+          >Frekuensi Kejadian (<span style="color: rgb(254, 6, 6)">*</span
+          >)</label
+        >
+        <select id="frekuensi-kejadian" name="frekuensi-kejadian" required>
+          <option value="">--Pilih Frekuensi--</option>
+          <option value="Satu Kali">Sekali</option>
+          <option value="Kadang kadang">kadang Kadang</option>
+          <option value="Berulang">Sering</option>
+          <option value="Selalu">Selalu</option>
+        </select>
+
+        <label for="lokasi-kejadian"
+          >Lokasi Kejadian (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input
+          type="text"
+          id="lokasi-kejadian"
+          name="lokasi-kejadian"
+          placeholder="Cth: Ruangan kelas"
+          required
+        />
+
+        <label for="tanggal-kejadian"
+          >Tanggal Kejadian (<span style="color: rgb(254, 6, 6)">*</span
+          >)</label
+        >
+        <input
+          type="date"
+          id="tanggal-kejadian"
+          name="tanggal-kejadian"
+          required
+        />
+
+        <label for="deskripsi-kejadian">Deskripsi Kejadian (Opsional)</label>
+        <textarea
+          id="deskripsi-kejadian"
+          name="deskripsi-kejadian"
+          maxlength="500"
+        ></textarea>
+
+        <label for="lampiran-bukti">Lampiran Bukti (Opsional)</label>
+
+        <!-- Div untuk gambar preview -->
+        <div id="preview-container">
+          <img id="preview-image" alt="" />
+        </div>
+
+        <div class="camera">
+          <img src="/Media/camera.png" alt="x" />
+        </div>
+
+        <p id="file-size" class="file-info"></p>
+        <input
+          type="file"
+          id="lampiran-bukti"
+          name="lampiran-bukti"
+          accept="image/*"
+        />
+        <label for="nomor-kontak"
+          >Nomor Handphone (<span style="color: rgb(254, 6, 6)">*</span>)</label
+        >
+        <input type="tel" id="nomor-kontak" name="nomor-kontak" required />
+
+        <label for="email-kontak">Email (opsional)</label>
+        <input type="email" id="email-kontak" name="email-kontak" required />
+
+        <button type="submit" class="btn btn-submit">
+          <a href="/Sistem_Pelaporan_Bulyying/laporanDiterima.html">Kirim</a>
+        </button>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <p class="peringatan">Peringatan !</p>
+            <img src="/Media/peringatan.png" class="Peringatan" />
+            <p>
+              Apakah Anda yakin ingin mengirimkan data ini? <br />
+              data tidak dapat diubah setelah ini
+            </p>
+            <button
+              id="confirm-submit"
+              class="btn btn-confirm"
+              onclick="laporanDiterima()"
+            >
+              <a
+                href="/Sistem_Pelaporan_Bulyying/spb-laporanditerima-index.html"
+                >Setuju</a
+              >
+            </button>
+            <button id="cancel-submit" class="btn btn-cancel">Batal</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>Powered by UIN Alauddin Makassar</p>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/spb-formlaporan-script.js"></script>
+</html>

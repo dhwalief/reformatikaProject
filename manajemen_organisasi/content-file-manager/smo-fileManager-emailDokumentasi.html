@@ -5,12 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<!-- style.css -->
-	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/css/smo-style.css">
+	<link rel="stylesheet" href="style-emailContain.css">
 
-	<title>Keuangan | Sistem Manajemen Organisasi</title>
+	<title>File manager | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -19,7 +18,7 @@
 	<div id="sidebar">
 		<div class="brand">
 			<img src="../../MATERIAL_ASSET/logo_UIN.png" alt="Logo UIN Alauddin Makassar" class="logo"/>
-			<p>UINAM Center <span class="text">Admin</span></p>
+			<p>UIN Center <span class="text">Admin</span></p>
 			<!-- <i class='bx bx-menu' ></i> -->
 			<!-- <i class='bx bxs-spreadsheet'></i>
 			<span class="text">Admin</span> -->
@@ -51,7 +50,7 @@
 					<i class='bx bxs-envelope'></i>
 					<span class="text">Surat</span>
 				</a>
-			</li> 
+			</li>
 			<li>
 				<a href="../content-file-manager/index.html">
 					<i class='bx bxs-folder-open'></i>
@@ -115,128 +114,127 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Keuangan</h1>
+					<h1>File Manager</h1>
 					<ul class="path">
 						<li>
-							<a href="#">Admin</a>
+							<a class="active" href="index.html">File manager</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Keuangan</a>
+							<a class="active" href="index - email1.html">hmmuin@uin-alauddin.ac.id</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a href="#">Dokumentasi</a>
 						</li>
 					</ul>
-				</div>
-				<div class="year-container">
-					<!-- <div id="controls">
-						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
-						<div id="year-display"></div>
-						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
-					</div> -->
-					<div class="controls">
-						<button id="prev-year-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="year-display" class="year-display"></span>
-						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
 				</div>
 			</div>
 
 			<!-- ========= Box Info ========= -->
 			<ul class="box-info">
 				<li>
-					<!-- <i class='bx bx-envelope'></i> -->
-					<span class="text">
-						<h3>Rp2.300.000</h3>
-						<p>Pemasukan</p>
-					</span>
+					<a href="../content-file-manager/index - email.html" id="boxInfo-active">
+						<img src="../.assets/icon/logo-google-drive.png" alt="">
+						<div class="information-container">
+							<h3>hm@uin-alauddin.ac.id</h3>
+							<div class="capacity-container">
+								<div class="capacity-text">
+									<p>21.4 GB</p>
+									<p>50 GB</p>
+								</div>
+								<div class="capacity-block">
+									<div class="capacity-block-contain"></div>
+								</div>
+							</div>
+						</div>
+					</a>
 				</li>
 				<li>
-					<!-- <i class='bx bx-calendar-check' ></i> -->
-					<span class="text">
-						<h3>Rp2.900.000</h3>
-						<p>Pengeluaran</p>
-					</span>
-				</li>
-				<li>
-					<!-- <i class='bx bx-calendar-check' ></i> -->
-					<span class="text">
-						<h3>-Rp600.000</h3>
-						<p>Saldo</p>
-					</span>
+					<a href="../content-file-manager/index - email.html" id="boxInfo-nonactive">
+						<img src="../.assets/icon/logo-google-drive.png" alt="">
+						<div class="information-container">
+							<h3>hmuin-backup@gmail.com</h3>
+							<div class="capacity-container">
+								<div class="capacity-text">
+									<p>21.4 GB</p>
+									<p>50 GB</p>
+								</div>
+								<div class="capacity-block">
+									<div class="capacity-block-contain"></div>
+								</div>
+							</div>
+						</div>
+					</a>
 				</li>
 			</ul>			
 
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
-				<!-- ======= TABEL KEUANGAN ====== -->
-				<div class="event">
-					<div class="top">
+				<!-- ======= TABEL FILE ====== -->
+				<div class="folder">
 					<div class="head">
 						<form action="#">
-							<!-- <div class="form-input">
+							<div class="form-input">
 								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 								<input type="search" placeholder="Search...">
-							</div> -->
-							<div class="search-container">
-								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
-								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
-								<!-- <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Cari ..."> -->
 							</div>
 						</form>
-						<div class="right">
-							<button class="add-btn" ><a href="index-add.html">Tambah Keuangan</a></button>
-							<div class="export__file">
-								<label for="export-file" class="export__file-btn" title="Export File">Ekspor<i class="bx bxs-file-export"></i></label>
-								<input type="checkbox" id="export-file">
-								<div class="export__file-options">
-									<label>Export As &nbsp; &#10140;</label>
-									<label for="export-file" id="export-pdf-btn"></i>PDF</label>
-									<label for="export-file" id="export-excel-btn">Excel</label>
-									<label for="export-file" id="export-csv-btn">CSV</label>
-								</div>
-							</div>
-						</div>
+						<a href="#" class="btn-upload">
+							<i class='bx bxs-cloud-upload' ></i>
+							<span class="text">Upload</span>
+						</a>
 					</div>
-					<table id="dataTable">
+					<table>
 						<thead>
 							<tr>
-								<th onclick="sortTable(0)">No<i class='bx bxs-down-arrow'></i></th>
-								<th onclick="sortTable(1)">Nama<i class='bx bxs-down-arrow'></i></i></th>
-								<th onclick="sortTable(2)">Tanggal<i class='bx bxs-down-arrow'></i></th>
-								<th onclick="sortTable(3)">Kategori<i class='bx bxs-down-arrow'></i></th>
+								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th>Ukuran<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th>Modifikasi terakhir<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
+								<th></th>
 							</tr>
 						</thead>
-						<tbody id="tableBody">
-							<!-- Rows will be inserted here by JavaScript -->
+						<tbody>
+							<tr>
+								<td><a href="index - email1.html"><i class='bx bxs-folder'></i>..</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td id="firstRow_lastColumn"></td>
+							</tr>
+							<tr>
+								<td><a href="index-containSurat.html"><i class='bx bxs-folder'></i>Dokumentasi-musyawarah besar</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
+							</tr>
+							<tr>
+								<td><a href="#"><i class='bx bxs-folder'></i>Dokumentasi-Seminar</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
+							</tr>
+							<tr>
+								<td><a href="#"><i class='bx bxs-folder'></i>Dokumentasi-acara</a></td>
+								<td>12 KB</td>
+								<td>2/8/2024 08.15</td>
+								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
+							</tr>
 						</tbody>
 					</table>
-					</div>
-					<div class="bottom">
-					<div class="pagination">
-						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="pageNumber">1</span>
-						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
-					</div>
 				</div>
 				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel todo ========= -->
-			 
-				
-			</div>
 			
 
-			<!-- ? ===== MODAL ====== -->
+			</div>
 		</main>
+		
 	</div>
 	<!-- CONTENT -->
 
 	<!-- JS AND CDN -->
 	<script src="../.assets/js/mainJs.js"></script>
 	<script src="script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-	<script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </body>
 </html>

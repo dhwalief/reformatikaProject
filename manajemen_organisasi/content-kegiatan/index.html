@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
 	<link rel="stylesheet" href="style.css">
@@ -50,7 +51,7 @@
 					<i class='bx bxs-envelope'></i>
 					<span class="text">Surat</span>
 				</a>
-			</li>
+			</li> 
 			<li>
 				<a href="../content-file-manager/index.html">
 					<i class='bx bxs-folder-open'></i>
@@ -137,10 +138,6 @@
 						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
 					</div>
 				</div>
-				<!-- <a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
-				</a> -->
 			</div>
 
 			<!-- ========= Box Info ========= -->
@@ -175,21 +172,30 @@
 							<div class="search-container">
 								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
 								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
+								<!-- <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Cari ..."> -->
 							</div>
 						</form>
-						<button class="add-btn" onclick="showModal('add')">Tambah Kegiatan</button>
-						<!-- <button onclick="showAddModal()">Tambah Data</button>
-						<i class='bx bx-dots-vertical-rounded' ></i> -->
-						<!-- <i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i> -->
+						<div class="right">
+							<button class="add-btn" ><a href="index-add.html">Tambah Kegiatan</a></button>
+							<div class="export__file">
+								<label for="export-file" class="export__file-btn" title="Export File">Ekspor<i class="bx bxs-file-export"></i></label>
+								<input type="checkbox" id="export-file">
+								<div class="export__file-options">
+									<label>Export As &nbsp; &#10140;</label>
+									<label for="export-file" id="export-pdf-btn"></i>PDF</label>
+									<label for="export-file" id="export-excel-btn">Excel</label>
+									<label for="export-file" id="export-csv-btn">CSV</label>
+								</div>
+							</div>
+						</div>
 					</div>
 					<table id="dataTable">
 						<thead>
 							<tr>
-								<th>No</th>
-								<th>Nama</th>
-								<th>Tanggal</th>
-								<th>Status</th>
+								<th onclick="sortTable(0)">No<i class='bx bxs-down-arrow'></i></th>
+								<th onclick="sortTable(1)">Nama<i class='bx bxs-down-arrow'></i></i></th>
+								<th onclick="sortTable(2)">Tanggal<i class='bx bxs-down-arrow'></i></th>
+								<th onclick="sortTable(3)">Status<i class='bx bxs-down-arrow'></i></th>
 							</tr>
 						</thead>
 						<tbody id="tableBody">
@@ -199,9 +205,9 @@
 					</div>
 					<div class="bottom">
 					<div class="pagination">
-						<button onclick="prevPage()"><i class='bx bx-chevron-left'></i></button>
+						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
 						<span id="pageNumber">1</span>
-						<button onclick="nextPage()"><i class='bx bx-chevron-right'></i></button>
+						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
 					</div>
 					</div>
 				</div>
@@ -212,8 +218,8 @@
 				<div class="todo">
 					<div class="head">
 						<h3>To do</h3>
-						<!-- <i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i> -->
+						<i class='bx bx-plus' ></i>
+						<!--<i class='bx bx-filter' ></i> -->
 					</div>
 					<ul class="todo-list">
 						<li><input type="checkbox"><p>Operasional kegiatan</p>	</span></li>
@@ -230,34 +236,8 @@
 					</div> -->
 				</div>
 			</div>
-			<!-- ? ===== MODAL ====== -->
-			<div id="myModal" class="modal">
-				<div class="modal-content">
-					<span class="close" onclick="hideModal()">&times;</span>
-					<div class="add-data-container" id="modal-content-add">
-						<input type="text" id="nameInput" placeholder="Nama">
-						<input type="date" id="dateInput">
-						<select id="detailInput">
-							<option value="Selesai">Selesai</option>
-							<option value="Ditunda">Ditunda</option>
-							<option value="Dibatalkan">Dibatalkan</option>
-							<option value="Akan Berlangsung">Akan Berlangsung</option>
-						</select>
-						<button onclick="addData()">Tambah</button>
-					</div>
-					<div class="edit-data-container" id="modal-content-edit" style="display: none;">
-						<input type="text" id="editNameInput" placeholder="Nama">
-						<input type="date" id="editDateInput">
-						<select id="editDetailInput">
-							<option value="Selesai">Selesai</option>
-							<option value="Ditunda">Ditunda</option>
-							<option value="Dibatalkan">Dibatalkan</option>
-							<option value="Akan Berlangsung">Akan Berlangsung</option>
-						</select>
-						<button onclick="saveEditData()">Simpan</button>
-					</div>
-				</div>
-			</div>
+			
+
 			<!-- ? ===== MODAL ====== -->
 		</main>
 	</div>
@@ -266,6 +246,9 @@
 	<!-- JS AND CDN -->
 	<script src="../.assets/js/mainJs.js"></script>
 	<script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+	<script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </body>
 </html>

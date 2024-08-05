@@ -5,12 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
-	<link rel="stylesheet" href="style.css">
-
-	<title>Keuangan | Sistem Manajemen Organisasi</title>
+	<link rel="stylesheet" href="style-addOrEdit.css">
+	<title>Keuangan| Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -51,7 +49,7 @@
 					<i class='bx bxs-envelope'></i>
 					<span class="text">Surat</span>
 				</a>
-			</li> 
+			</li>
 			<li>
 				<a href="../content-file-manager/index.html">
 					<i class='bx bxs-folder-open'></i>
@@ -115,14 +113,18 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Keuangan</h1>
+					<h1>Kegiatan</h1>
 					<ul class="path">
 						<li>
-							<a href="#">Admin</a>
+							<a class="active" href="#">Admin</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Keuangan</a>
+							<a href="index.html" class="active" href="#">Keuangan</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a href="#">Edit Keuangan</a>
 						</li>
 					</ul>
 				</div>
@@ -132,111 +134,89 @@
 						<div id="year-display"></div>
 						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
 					</div> -->
-					<div class="controls">
-						<button id="prev-year-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="year-display" class="year-display"></span>
-						<button id="next-year-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
+					
 				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
 			</div>
-
-			<!-- ========= Box Info ========= -->
-			<ul class="box-info">
-				<li>
-					<!-- <i class='bx bx-envelope'></i> -->
-					<span class="text">
-						<h3>Rp2.300.000</h3>
-						<p>Pemasukan</p>
-					</span>
-				</li>
-				<li>
-					<!-- <i class='bx bx-calendar-check' ></i> -->
-					<span class="text">
-						<h3>Rp2.900.000</h3>
-						<p>Pengeluaran</p>
-					</span>
-				</li>
-				<li>
-					<!-- <i class='bx bx-calendar-check' ></i> -->
-					<span class="text">
-						<h3>-Rp600.000</h3>
-						<p>Saldo</p>
-					</span>
-				</li>
-			</ul>			
 
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
 				<!-- ======= TABEL KEUANGAN ====== -->
 				<div class="event">
-					<div class="top">
 					<div class="head">
-						<form action="#">
-							<!-- <div class="form-input">
-								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-								<input type="search" placeholder="Search...">
-							</div> -->
-							<div class="search-container">
-								<button onclick="searchTable()"><i class='bx bx-search'></i></button>
-								<input type="text" id="searchInput" placeholder="Cari..." onkeypress="handleKeyPress(event)">
-								<!-- <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Cari ..."> -->
-							</div>
-						</form>
-						<div class="right">
-							<button class="add-btn" ><a href="index-add.html">Tambah Keuangan</a></button>
-							<div class="export__file">
-								<label for="export-file" class="export__file-btn" title="Export File">Ekspor<i class="bx bxs-file-export"></i></label>
-								<input type="checkbox" id="export-file">
-								<div class="export__file-options">
-									<label>Export As &nbsp; &#10140;</label>
-									<label for="export-file" id="export-pdf-btn"></i>PDF</label>
-									<label for="export-file" id="export-excel-btn">Excel</label>
-									<label for="export-file" id="export-csv-btn">CSV</label>
-								</div>
-							</div>
+						<p class="active">Edit Keuangan</p>
+						<!-- <p>Tanggal 	: 2024-03-01</p> -->
+					</div>
+					
+					<div class="text">
+						<table>
+							<tbody>
+								<tr>
+									<td>Nama<span></span></td>
+									<td>:</td>
+									<td>
+										<input type="text" required="">
+									</td>
+								</tr>
+								<tr>
+									<td>Rincian<span></span></td>
+									<td>:</td>
+									<td><span></span><textarea id="descriptionInput"></textarea></td>
+								</tr>
+								<tr>
+									<td>Tanggal<span></span></td>
+									<td>:</td>
+									<td><span></span><input type="date" name="dateInput" id=""></td>	
+								</tr>
+								<tr>
+									<td><label for="kategori">Kategori</label><span></span></td>
+									<td>:</td>
+									<td>
+										<!-- <span style="color: rgb(254, 6, 6)">*</span>) -->
+										<span></span>
+											<select id="kategori" name="frekuensi-kejadian" required>
+												<option value="">Pilih Kategori</option>
+												<option value="completed">KeuanganMasuk</option>
+												<option value="delay">Keuangankeluar</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Lampiran<span></span></td>
+									<td>:</td>
+									<td><span></span><input type="file"></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="add">
+							<button type="submit" class="add-btn" onclick="showModal()">
+								Update
+							</button>
 						</div>
-					</div>
-					<table id="dataTable">
-						<thead>
-							<tr>
-								<th onclick="sortTable(0)">No<i class='bx bxs-down-arrow'></i></th>
-								<th onclick="sortTable(1)">Nama<i class='bx bxs-down-arrow'></i></i></th>
-								<th onclick="sortTable(2)">Tanggal<i class='bx bxs-down-arrow'></i></th>
-								<th onclick="sortTable(3)">Kategori<i class='bx bxs-down-arrow'></i></th>
-							</tr>
-						</thead>
-						<tbody id="tableBody">
-							<!-- Rows will be inserted here by JavaScript -->
-						</tbody>
-					</table>
-					</div>
-					<div class="bottom">
-					<div class="pagination">
-						<button id="prev-btn"><i class='bx bx-chevron-left'></i></button>
-						<span id="pageNumber">1</span>
-						<button id="next-btn"><i class='bx bx-chevron-right'></i></button>
-					</div>
 					</div>
 				</div>
 				<!-- ======= TABEL KEUANGAN ====== -->
 
-				<!-- ========= Tabel todo ========= -->
-			 
 				
-			</div>
-			
-
 			<!-- ? ===== MODAL ====== -->
 		</main>
+		<div id="successModal" class="modal">
+			<div class="modal-content">
+				<p>Keuangantelah di update</p>
+				<button><a href="index.html">Kembali</a></button>
+			</div>
+		</div>
+			<!-- ? ===== MODAL ====== -->
+		
 	</div>
 	<!-- CONTENT -->
 
 	<!-- JS AND CDN -->
 	<script src="../.assets/js/mainJs.js"></script>
-	<script src="script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-	<script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
+	<script src="main-addOrEdit.js"></script>
+    <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </body>
 </html>
