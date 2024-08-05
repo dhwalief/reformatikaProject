@@ -1,4 +1,8 @@
 /* ? Content */
+#content a {
+	color: none;
+	text-decoration: none;
+}
 #content main .head-title {
 	display: flex;
 	align-items: center;
@@ -111,6 +115,21 @@
 	align-items: center;
 }
 
+/* #content main .box-info li:nth-child(1) .bx {
+	background: var(--color-lightBlue);
+	color: var(--color-blue);
+}
+
+#content main .box-info li:nth-child(2) .bx {
+	background: var(--color-lightYellow);
+	color: var(--color-yellow);
+}
+
+#content main .box-info li:nth-child(3) .bx {
+	background: var(--light-red);
+	color: var(--color-red);
+} */
+
 #content main .box-info li .text h3 {
 	font-size: 24px;
 	font-weight: 600;
@@ -182,7 +201,8 @@
 
 #content main .table-data .event .head form .search-container {
 	display: flex;
-	/* flex-grow: 1; */
+	flex-grow: 1;
+	flex-basis: 100px;
 	align-items: center;
 	border: 1px solid var(--color-darkGrey);
 	border-radius: 10px;
@@ -191,7 +211,7 @@
 }
 
 #content main .table-data .event .head form .search-container input {
-	flex-grow: 1;
+	/* flex-grow: 1; */
 	border: none;
 	background: var(--color-grey);
 	outline: none;
@@ -204,7 +224,11 @@
 	margin-right: 8px;
 	color: var(--color-dark);
 }
-
+#content main .table-data .event .head .right {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
 #content main .table-data .event .head .add-btn {
 	border: none;
 	color: var(--color-light);
@@ -213,67 +237,285 @@
 	border-radius: 5px;
 }
 
+#content main .table-data .event .head .add-btn a{
+	color: var(--color-light);
+}
+
+#content main .table-data .event .head .add-btn:hover {
+	background: var(--color-darkGreen);
+}
+.export__file {
+    position: relative;
+}
+
+.export__file .export__file-btn {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 5px;
+	color: var(--color-light);
+	background: var(--color-green);
+	border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-btn:hover { 
+    background-color: var(--color-darkGreen);
+    /* transform: scale(1.15); */
+    cursor: pointer;
+}
+
+.export__file input {
+    display: none;
+}
+
+.export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    
+    box-shadow: 0 .2rem .5rem #0004;
+    
+    transition: .2s;
+}
+
+.export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+}
+
+.export__file .export__file-options label{
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: var(--color-grey);
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+	cursor: pointer;
+	border-bottom: 1px solid var(--color-darkGrey);
+
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-options label:first-of-type{
+    /* padding: 1rem 0; */
+    background: var(--color-grey)!important;
+}
+
+/* .export__file .export__file-options label:hover{
+	color: var(--color-dark);
+    background: var(--color-light) solid;
+    cursor: pointer;
+} */
+
+/* .export__file .export__file-options img{
+    width: 2rem;
+    height: auto;
+} */
+
 #content main .table-data .event table th {
 	text-align: left;
+	cursor: pointer;
 }
 
-#content main .table-data .event table tbody td {
-	padding: 16px 0;
-	color: var(--color-dark);
-	border-bottom: 1px solid var(--color-darkGrey);
+#content main .table-data .event table th .bx {
+	align-items: center;
+	margin-left: 5px;
+	font-size: 10px;
 }
-
+#content main .table-data .event table th.active {
+	color: var(--color-green);
+}
 #content main .table-data .event table tbody td a {
 	color: var(--color-dark);
 	text-decoration: underline;
 }
-
+#content main .table-data .event table tbody td {
+	padding: 16px 0;
+	border-bottom: 1px solid var(--color-darkGrey);
+}
+#content main .table-data .event table tbody tr:hover {
+	background: var(--color-grey);
+}
 .status-selesai {
-    /* background-color: #d4edda; */
-    color: var(--color-green);
+	color: var(--color-green);
 }
-.status-akan-datang {
-    /* background-color: #f8d7da; */
-    color: var(--color-red);
+.status-ditunda {
+	color: var(--color-orange);
 }
-
+.status-dibatalkan {
+	color: var(--color-red);
+}
+.status-akan-berlangsung {
+	color: var(--color-red);
+}
+/* Existing Styles */
 .dropdown {
-	position: relative;
-	display: inline-block;
-}
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 5;
-}
-.dropdown-content button {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	width: 100%;
-	text-align: left;
-	border: none;
-	background: none;
-	cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
 
-#dropdown{
-	max-width: fit-content;
+/* Ensuring dropdown-content is displayed when dropdown is hovered or clicked */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Retaining the existing style for dropdown-content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.dropdown a {
+    text-decoration: none;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .dropdown-content button:hover {
-	background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
+
+/* Adjusting the dropdown's maximum width to fit the content */
+#dropdown {
+    max-width: fit-content;
+}
+
 #content main .table-data .event .pagination{
 	display: flex;
 	justify-content: center;
 	gap: 5px;
 	margin-top: 10px;
 }
+/* ? ===== TABEL EVENT ===== */
+
+
+
+
+
+/*! Tabel  */
+/* #content main .table-data .event {
+	flex-grow: 1;
+	flex-basis: 500px;
+	border-radius: var(--card-borderRadiusMedium);
+}
+
+#content main .table-data .event table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: var(--card-borderRadiusMedium);
+}
+
+#content main .table-data .event .head form {
+	max-width: 400px;
+	width: 100%;
+	margin-right: auto;
+}
+
+#content main .table-data .event .head form .form-input {
+	--padding: 10px;
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color-darkGrey);
+	border-radius:var(--card-borderRadiusSmall);
+	padding: var(--padding);
+	background: var(--color-grey);    
+}
+
+#content main .table-data .event .head form .form-input input {
+	flex-grow: 1;
+	border: none;
+	background: var(--color-grey);
+	outline: none;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event .head form .form-input button {
+	border: none;
+	background: var(--color-grey);
+	margin-right: 8px;
+	color: var(--color-dark);
+}
+
+#content main .table-data .event table th {
+	padding-bottom: 12px;
+	font-size: 13px;
+	text-align: left;
+	border-bottom: 1px solid var(--color-darkGrey);
+	cursor: pointer;
+}
+
+#content main .table-data .event table th.active {
+	color: var(--color-green);
+}
+
+#content main .table-data .event table th:last-child {
+	display: none;
+}
+
+#content main .table-data .event table th span.icon-arrow {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+#content main .table-data .event table th.asc span.icon-arrow {
+	transform: rotate(180deg);
+}
+
+#content main .table-data .event table td {
+	padding: 16px 0;
+	border-bottom: 1px solid var(--color-darkGrey);
+}
+
+#content main .table-data .event table td:last-child {
+	cursor: pointer;
+}
+
+
+
+#content .completed {
+	color: var(--color-green);
+}
+
+#content .process {
+	color: var(--color-yellow);
+}
+
+#content .pending {
+	color: var(--color-orange);
+}
+#content .reject {
+	color: var(--color-red)
+}
+#content .soon {
+	color: var(--color-darkGrey);
+} */
 /*? ========== TABEL KEUANGAN ========== */
 
 
@@ -323,9 +565,6 @@
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 }
-#myModal {
-	background: #eee;
-}
 
 /* Modal content */
 .modal-content {
@@ -361,10 +600,12 @@
     gap: 10px;
 }
 
-.modal-container input,
-.modal-container select,
-.modal-container textarea,
-.modal-container button {
+.add-data-container input,
+.add-data-container select,
+.add-data-container textarea,
+.edit-data-container input,
+.edit-data-container select,
+.edit-data-container textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -372,7 +613,8 @@
     border: 1px solid #ddd;
 }
 
-.modal-container button {
+.add-data-container button,
+.edit-data-container button {
 	background: var(--color-green);
     /* background-color: #007bff; */
     color: white;
@@ -380,15 +622,17 @@
     cursor: pointer;
 }
 
-.modal-container button:hover {
-    background-color: #0056b3;
+.add-data-container button,
+.edit-data-container button {
+    background-color: var(--color-darkGreen);
+	width: 100%;
+	padding: 10px;
 }
 
 h2 {
     margin-top: 0;
     font-size: 1.5em;
 }
-
 
 /*? ========== MODAL ========== */
 

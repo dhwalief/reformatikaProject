@@ -7,9 +7,8 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- style.css -->
 	<link rel="stylesheet" href="../.assets/css/mainStyle.css">
-	<link rel="stylesheet" href="style-emailContain.css">
-
-	<title>File manager | Sistem Manajemen Organisasi</title>
+	<link rel="stylesheet" href="style-addOrEdit.css">
+	<title>Kauangan | Sistem Manajemen Organisasi</title>
 </head>
 <body>
 
@@ -18,7 +17,7 @@
 	<div id="sidebar">
 		<div class="brand">
 			<img src="../../MATERIAL_ASSET/logo_UIN.png" alt="Logo UIN Alauddin Makassar" class="logo"/>
-			<p>UIN Center <span class="text">Admin</span></p>
+			<p>UINAM Center <span class="text">Admin</span></p>
 			<!-- <i class='bx bx-menu' ></i> -->
 			<!-- <i class='bx bxs-spreadsheet'></i>
 			<span class="text">Admin</span> -->
@@ -114,127 +113,110 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>File Manager</h1>
+					<h1>Kegiatan</h1>
 					<ul class="path">
 						<li>
-							<a class="active" href="index.html">File manager</a>
+							<a class="active" href="#">Admin</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="index - email1.html">hmmuin@uin-alauddin.ac.id</a>
+							<a href="index.html" class="active" href="#">Kauangan</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a href="#">Dokumentasi</a>
+							<a href="#">Tambah Kauangan</a>
 						</li>
 					</ul>
 				</div>
+				<div class="year-container">
+					<!-- <div id="controls">
+						<button id="prev-btn"><i class='bx bx-chevron-left' ></i></button>
+						<div id="year-display"></div>
+						<button id="next-btn"><i class='bx bx-chevron-right' ></i></button>
+					</div> -->
+					
+				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
 			</div>
-
-			<!-- ========= Box Info ========= -->
-			<ul class="box-info">
-				<li>
-					<a href="../content-file-manager/index - email.html" id="boxInfo-active">
-						<img src="../.assets/icon/logo-google-drive.png" alt="">
-						<div class="information-container">
-							<h3>hm@uin-alauddin.ac.id</h3>
-							<div class="capacity-container">
-								<div class="capacity-text">
-									<p>21.4 GB</p>
-									<p>50 GB</p>
-								</div>
-								<div class="capacity-block">
-									<div class="capacity-block-contain"></div>
-								</div>
-							</div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="../content-file-manager/index - email.html" id="boxInfo-nonactive">
-						<img src="../.assets/icon/logo-google-drive.png" alt="">
-						<div class="information-container">
-							<h3>hmuin-backup@gmail.com</h3>
-							<div class="capacity-container">
-								<div class="capacity-text">
-									<p>21.4 GB</p>
-									<p>50 GB</p>
-								</div>
-								<div class="capacity-block">
-									<div class="capacity-block-contain"></div>
-								</div>
-							</div>
-						</div>
-					</a>
-				</li>
-			</ul>			
 
 			<!-- ========= Tabel ========= -->
 			<div class="table-data">
-				<!-- ======= TABEL FILE ====== -->
-				<div class="folder">
+				<!-- ======= TABEL KEUANGAN ====== -->
+				<div class="event">
 					<div class="head">
-						<form action="#">
-							<div class="form-input">
-								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-								<input type="search" placeholder="Search...">
-							</div>
-						</form>
-						<a href="#" class="btn-upload">
-							<i class='bx bxs-cloud-upload' ></i>
-							<span class="text">Upload</span>
-						</a>
+						<p class="active">Tambah Kauangan Baru</p>
+						<!-- <p>Tanggal 	: 2024-03-01</p> -->
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Nama<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Ukuran<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th>Modifikasi terakhir<span class="icon-arrow"><i class='bx bxs-down-arrow' ></i></span></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="index - email1.html"><i class='bx bxs-folder'></i>..</a></td>
-								<td>-</td>
-								<td>-</td>
-								<td id="firstRow_lastColumn"></td>
-							</tr>
-							<tr>
-								<td><a href="index-containSurat.html"><i class='bx bxs-folder'></i>Dokumentasi-musyawarah besar</a></td>
-								<td>12 KB</td>
-								<td>2/8/2024 08.15</td>
-								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
-							</tr>
-							<tr>
-								<td><a href="#"><i class='bx bxs-folder'></i>Dokumentasi-Seminar</a></td>
-								<td>12 KB</td>
-								<td>2/8/2024 08.15</td>
-								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
-							</tr>
-							<tr>
-								<td><a href="#"><i class='bx bxs-folder'></i>Dokumentasi-acara</a></td>
-								<td>12 KB</td>
-								<td>2/8/2024 08.15</td>
-								<td><i class='bx bx-dots-vertical-rounded' ></i></td>
-							</tr>
-						</tbody>
-					</table>
+					
+					<div class="text">
+						<table>
+							<tbody>
+								<tr>
+									<td>Nama<span></span></td>
+									<td>:</td>
+									<td>
+										<input type="text" required="">
+									</td>
+								</tr>
+								<tr>
+									<td>Rincian<span></span></td>
+									<td>:</td>
+									<td><span></span><textarea id="descriptionInput"></textarea></td>
+								</tr>
+								<tr>
+									<td>Tanggal<span></span></td>
+									<td>:</td>
+									<td><span></span><input type="date" name="dateInput" id=""></td>	
+								</tr>
+								<tr>
+									<td><label for="kategori">Kategori</label><span></span></td>
+									<td>:</td>
+									<td>
+										<!-- <span style="color: rgb(254, 6, 6)">*</span>) -->
+										<span></span>
+											<select id="kategori" name="frekuensi-kejadian" required>
+												<option value="">Pilih Kategori</option>
+												<option value="completed">Kauangan Masuk</option>
+												<option value="delay">Kauangan keluar</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Lampiran<span></span></td>
+									<td>:</td>
+									<td><span></span><input type="file"></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="add">
+							<button type="submit" class="add-btn" onclick="showModal()">
+								Tambah
+							</button>
+						</div>
+					</div>
 				</div>
 				<!-- ======= TABEL KEUANGAN ====== -->
 
-			
-
-			</div>
+				
+			<!-- ? ===== MODAL ====== -->
 		</main>
+		<div id="successModal" class="modal">
+			<div class="modal-content">
+				<p>Kauangan telah ditambahkan</p>
+				<button><a href="index.html">Kembali</a></button>
+			</div>
+		</div>
+			<!-- ? ===== MODAL ====== -->
 		
 	</div>
 	<!-- CONTENT -->
 
 	<!-- JS AND CDN -->
 	<script src="../.assets/js/mainJs.js"></script>
-	<script src="script.js"></script>
+	<script src="main-addOrEdit.js"></script>
     <script src="https://kit.fontawesome.com/0b00ca19ec.js" crossorigin="anonymous"></script>
 </body>
 </html>

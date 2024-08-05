@@ -213,7 +213,7 @@
 	color: var(--color-red)
 }
 #content .soon {
-	color: var(--color-darkGrey);
+	color: var(--color-greyDark);
 }
 /*? ========== TABEL ========== */
 
@@ -252,14 +252,6 @@
 }
 
 
-/* #content main .table-data .finance .showall {
-	width: 100%;
-}
-
-#content main .table-data .finance .showall a {
-	justify-content: center;
-} */
-
 /*? ========== TABEL TODO ========== */
 
 
@@ -287,13 +279,16 @@
 		min-width: 420px;
 	}
 	#content main .table-data .order table {
-		min-width: 420px;
+		min-width: fit-content;
 	}
 	#content table thead th:nth-child(2){
 		display: none;
 	}
+	#content table tbody td:nth-child(2){
+		display: none;
+	}
 	#content main .table-data .finance .finance-list {
-		min-width: 420px;
+		min-width: fit-content;
 	}
 	#content main .table-data .finance {
 		flex-basis: 2500px;

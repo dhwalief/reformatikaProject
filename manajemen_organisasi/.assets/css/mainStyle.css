@@ -24,6 +24,7 @@ li {
 	--color-grey: #f6f6f6;
 	/* --color-grey: #dce1eb;  */
 	--color-darkGrey: rgba(132, 139, 200, 0.18);
+	--color-greyDark: #C0CAF5;
 	--color-dark: #342E37;
 	--color-red: #DB504A;
 	--color-yellow: #FFCE26;
@@ -117,19 +118,7 @@ body {
 	color: #DB504A;
 	font-size: 14px;
 }
-/* 
-#sidebar span {
-	! Tes
-	color: var(--color-green);
-}
-#sidebar .side-menu i .bx {
-	! Tes
-	color: var(--color-green);
-} */
-/* 
-#sidebar .brand span {
-	color: var(--color-white);
-} */
+
 
 #sidebar .side-menu {
 	width: 100%;
@@ -230,6 +219,7 @@ body {
 
 #content nav button {
 	height: 20px;
+	align-items: center;
 	width: 20px;
 	color: var(--color-dark);
 	border: none;
@@ -439,8 +429,9 @@ body {
 } */
 
 #content nav button {
-	border: none;
+	align-items: center;
 	background: var(--color-light);
+	cursor: pointer;
 }
 
 #content nav ul {
@@ -634,10 +625,16 @@ body {
 	}
 	#content nav button {
 		display: block;
+		align-items: center;
+		margin-left: 10px;
+		font-size: 18px;
+		cursor: pointer;
+		border: none;
 	}
 	#sidebar .close {
 		display: inline-block;
 		cursor: pointer;
+		font-size: 18px;
 	}
 	#content {
 		width: 100vw !important;

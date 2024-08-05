@@ -1,3 +1,73 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const table_headings = document.querySelectorAll('table th'),
+          table_rows = document.querySelectorAll('table tbody tr');
+
+    table_headings.forEach((head, i) => {
+        let sort_asc = true;
+        head.onclick = () => {
+            table_headings.forEach(head => head.classList.remove('active'));
+            head.classList.add('active');
+
+            document.querySelectorAll('td').forEach(td => td.classList.remove('active'));
+            table_rows.forEach(row => {
+                row.querySelectorAll('td')[i].classList.add('active');
+            });
+
+            sortTable(i);  // Gunakan i sebagai columnIndex untuk sortTable
+        };
+    });
+
+    function sortTable(columnIndex) {
+        const table = document.getElementById('dataTable');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.rows);
+        const isAscending = tbody.getAttribute('data-sort-order') === 'asc';
+        
+        rows.sort((a, b) => {
+            const cellA = a.cells[columnIndex].textContent.trim();
+            const cellB = b.cells[columnIndex].textContent.trim();
+            
+            if (!isNaN(cellA) && !isNaN(cellB)) {
+                return isAscending ? cellA - cellB : cellB - cellA;
+            }
+            
+            return isAscending 
+                ? cellA.localeCompare(cellB) 
+                : cellB.localeCompare(cellA);
+        });
+        
+        tbody.setAttribute('data-sort-order', isAscending ? 'desc' : 'asc');
+        
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    function searchTable() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById('dataTable');
+        const tbody = table.querySelector('tbody');
+        const rows = tbody.getElementsByTagName('tr');
+        
+        for (let i = 0; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let match = false;
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j]) {
+                    if (cells[j].textContent.toLowerCase().indexOf(filter) > -1) {
+                        match = true;
+                        break;
+                    }
+                }
+            }
+            rows[i].style.display = match ? '' : 'none';
+        }
+    }
+
+    window.searchTable = searchTable; // Menambahkan searchTable ke window agar bisa diakses di onkeyup
+});
+
+
+
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 let selectedYear = currentYear;
@@ -194,7 +264,7 @@ function displayTable(data, page) {
             <div class="dropdown">
                 <button class="dropbtn" onclick="toggleDropdown(${row.id})"><i class='bx bx-dots-vertical-rounded' ></i></button>
                 <div id="dropdown-${row.id}" class="dropdown-content">
-                    <button onclick="editData(${row.id})">Edit</button>
+                    <button onclick="editData(${row.id})"><a href="index-dit.html">Edit</a></button>
                     <button onclick="deleteData(${row.id})">Hapus Data</button>
                 </div>
             </div>
@@ -242,71 +312,6 @@ function searchTable() {
     displayTable(filteredData, 1);
 }
 
-function showModal(type) {
-    const modal = document.getElementById("myModal");
-    const addContent = document.getElementById("modal-content-add");
-    const editContent = document.getElementById("modal-content-edit");
-
-    if (type === 'add') {
-        addContent.style.display = 'block';
-        editContent.style.display = 'none';
-    } else if (type === 'edit') {
-        addContent.style.display = 'none';
-        editContent.style.display = 'block';
-    }
-
-    modal.style.display = "block";
-}
-
-function hideModal() {
-    document.getElementById("myModal").style.display = "none";
-}
-
-function addData() {
-    const name = document.getElementById('nameInput').value;
-    const date = document.getElementById('dateInput').value;
-    const detail = document.getElementById('detailInput').value;
-    const description = document.getElementById('descriptionInput').value; // Keterangan
-    const file = document.getElementById('fileInput').files[0]; // File
-
-    if (name && date && detail) {
-        const newId = data.length ? data[data.length - 1].id + 1 : 1;
-        data.push({ id: newId, name, date, detail });
-        displayTable(data, currentPage);
-        hideModal();
-    }
-}
-
-function editData(id) {
-    const row = data.find(item => item.id === id);
-    if (row) {
-        editRowId = id;
-        document.getElementById('editNameInput').value = row.name;
-        document.getElementById('editDateInput').value = row.date;
-        document.getElementById('editDetailInput').value = row.detail;
-        document.getElementById('editDescriptionInput').value = ""; // Reset keterangan
-        document.getElementById('editFileInput').value = ""; // Reset file
-        showModal('edit');
-    }
-}
-
-
-function saveEditData() {
-    const name = document.getElementById('editNameInput').value;
-    const date = document.getElementById('editDateInput').value;
-    const detail = document.getElementById('editDetailInput').value;
-
-    if (editRowId !== null) {
-        const row = data.find(item => item.id === editRowId);
-        if (row) {
-            row.name = name;
-            row.date = date;
-            row.detail = detail;
-            displayTable(data, currentPage);
-            hideModal();
-        }
-    }
-}
 
 function deleteData(id) {
     data = data.filter(item => item.id !== id);
@@ -331,3 +336,60 @@ document.getElementById('next-btn').addEventListener('click', () => {
         displayTable(data, currentPage);
     }
 });
+
+
+// Tabel ke file tertentu
+document.getElementById('export-pdf-btn').addEventListener('click', () => {
+    exportToPDF(selectedYear, data);
+});
+
+document.getElementById('export-excel-btn').addEventListener('click', () => {
+    exportToExcel(selectedYear, data, 'xlsx');
+});
+
+document.getElementById('export-csv-btn').addEventListener('click', () => {
+    exportToExcel(selectedYear, data, 'csv');
+});
+
+function exportToPDF(year, data) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const title = `Tabel kegiatan ${year}`;
+    doc.text(title, 10, 10);
+
+    const tableColumn = ["ID", "Name", "Date", "Detail"];
+    const tableRows = [];
+
+    data.forEach(row => {
+        const rowData = [
+            row.id,
+            row.name,
+            row.date,
+            row.detail,
+        ];
+        tableRows.push(rowData);
+    });
+
+    // Menambahkan tabel ke dokumen PDF
+    doc.autoTable({
+        head: [tableColumn],
+        body: tableRows,
+        startY: 20,
+    });
+
+    doc.save(`${title}.pdf`);
+}
+
+function exportToExcel(year, data, fileType) {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, `Tabel kegiatan ${year}`);
+
+    const fileName = `Tabel kegiatan ${year}.${fileType}`;
+    XLSX.writeFile(workbook, fileName);
+}
+
+displayYear();
+displayTable(data, currentPage);
+updateButtons();
