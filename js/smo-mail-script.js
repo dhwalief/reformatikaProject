@@ -258,13 +258,13 @@ function displayTable(data, page) {
             <div class="dropdown">
                 <button class="dropbtn" onclick="toggleDropdown(${row.id})"><i class='bx bx-dots-vertical-rounded' ></i></button>
                 <div id="dropdown-${row.id}" class="dropdown-content">
-                    <button onclick="editData(${row.id})"><a href="index-dit.html">Edit</a></button>
+                    <button onclick="editData(${row.id})"><a href="/manajemen_organisasi/content-surat/smo-mail-edit-index.html">Edit</a></button>
                     <button onclick="deleteData(${row.id})">Hapus Data</button>
                 </div>
             </div>
         ` : '';
 
-        tr.innerHTML = `<td>${row.id}</td><td><a href="indexRincian.html">${row.name}</a></td><td>${row.date}</td><td class="${statusClass}">${row.detail}</td>
+        tr.innerHTML = `<td>${row.id}</td><td><a href="/manajemen_organisasi/content-surat/smo-mail-detail-index.html">${row.name}</a></td><td>${row.date}</td><td class="${statusClass}">${row.detail}</td>
                         <td>${actionButtons}</td>`;
         tableBody.appendChild(tr);
     });

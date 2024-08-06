@@ -261,13 +261,13 @@ function displayTable(data, page) {
             <div class="dropdown">
                 <button class="dropbtn" onclick="toggleDropdown(${row.id})"><i class='bx bx-dots-vertical-rounded' ></i></button>
                 <div id="dropdown-${row.id}" class="dropdown-content">
-                    <button onclick="editData(${row.id})"><a href="index-dit.html">Edit</a></button>
+                    <button onclick="editData(${row.id})"><a href="/manajemen_organisasi/content-keuangan/smo-finance-edit-index.html">Edit</a></button>
                     <button onclick="deleteData(${row.id})">Hapus Data</button>
                 </div>
             </div>
         ` : '';
 
-        tr.innerHTML = `<td>${row.id}</td><td><a href="indexRincian.html">${row.name}</a></td><td>${row.date}</td><td class="${statusClass}">Rp${row.detail}.000</td>
+        tr.innerHTML = `<td>${row.id}</td><td><a href="/manajemen_organisasi/content-keuangan/smo-finance-detail-index.html">${row.name}</a></td><td>${row.date}</td><td class="${statusClass}">Rp${row.detail}.000</td>
                         <td>${actionButtons}</td>`;
         tableBody.appendChild(tr);
     });
@@ -309,71 +309,6 @@ function searchTable() {
     displayTable(filteredData, 1);
 }
 
-// function showModal(type) {
-//     const modal = document.getElementById("myModal");
-//     const addContent = document.getElementById("modal-content-add");
-//     const editContent = document.getElementById("modal-content-edit");
-
-//     if (type === 'add') {
-//         addContent.style.display = 'block';
-//         editContent.style.display = 'none';
-//     } else if (type === 'edit') {
-//         addContent.style.display = 'none';
-//         editContent.style.display = 'block';
-//     }
-
-//     modal.style.display = "block";
-// }
-
-// function hideModal() {
-//     document.getElementById("myModal").style.display = "none";
-// }
-
-// function addData() {
-//     const name = document.getElementById('nameInput').value;
-//     const date = document.getElementById('dateInput').value;
-//     const detail = document.getElementById('detailInput').value;
-//     const description = document.getElementById('descriptionInput').value; // Keterangan
-//     const file = document.getElementById('fileInput').files[0]; // File
-
-//     if (name && date && detail) {
-//         const newId = data.length ? data[data.length - 1].id + 1 : 1;
-//         data.push({ id: newId, name, date, detail });
-//         displayTable(data, currentPage);
-//         hideModal();
-//     }
-// }
-
-// function editData(id) {
-//     const row = data.find(item => item.id === id);
-//     if (row) {
-//         editRowId = id;
-//         document.getElementById('editNameInput').value = row.name;
-//         document.getElementById('editDateInput').value = row.date;
-//         document.getElementById('editDetailInput').value = row.detail;
-//         document.getElementById('editDescriptionInput').value = ""; // Reset keterangan
-//         document.getElementById('editFileInput').value = ""; // Reset file
-//         showModal('edit');
-//     }
-// }
-
-
-// function saveEditData() {
-//     const name = document.getElementById('editNameInput').value;
-//     const date = document.getElementById('editDateInput').value;
-//     const detail = document.getElementById('editDetailInput').value;
-
-//     if (editRowId !== null) {
-//         const row = data.find(item => item.id === editRowId);
-//         if (row) {
-//             row.name = name;
-//             row.date = date;
-//             row.detail = detail;
-//             displayTable(data, currentPage);
-//             hideModal();
-//         }
-//     }
-// }
 
 function deleteData(id) {
     data = data.filter(item => item.id !== id);
